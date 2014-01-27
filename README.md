@@ -1,4 +1,4 @@
 naked-docs
 ==========
 
-Documentation for Naked
+Documentation for [Naked](https://github.com/chrissimpkins/naked)
