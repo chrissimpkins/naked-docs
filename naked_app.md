@@ -1,13 +1,6 @@
 ## About
 
-Naked is a Python command line application framework that:
+Naked is a Python command line application framework.
 
- - Simplifies the command line logic
- - Eliminates repetitive tasks
- 
-## The Naked Command Line Application
- 
- 
- 
-## The Naked Library
- 
+Documentation is available at http://docs.naked-py.com/
+

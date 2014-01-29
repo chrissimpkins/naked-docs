@@ -107,7 +107,7 @@ Here is a sample:
 
 * **The Ink Templating System** - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the ``Naked.toolshed.ink`` library module.
 
-* **The StateObject** - a compendium of automatically generated user state information on StateObject instantation from the ``Naked.toolshed.state`` library module. It includes data such as the Python interpreter version, operating system, user path, current working directory, date, time, and more.
+* **The StateObject** - a compendium of automatically generated user state information on StateObject instantation from the ``Naked.toolshed.state`` library module. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.
 
 .. code-block:: python
 
@@ -137,12 +137,13 @@ Contents
    upgrade
    definitions
    quickstart
-   naked_executable
+   executable
    naked_project_structure
+   help_usage_version
 
    ...
 
 .. _PyPI: https://pypi.python.org/pypi?name=Naked&:action=display
 .. _GitHub: https://github.com/chrissimpkins/naked
-.. _naked executable: naked_executable.html
+.. _naked executable: executable.html
 

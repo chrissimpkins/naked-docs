@@ -249,7 +249,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Naked', u'Naked Documentation',
-   u'Christopher Simpkins', 'Naked', 'One line description of project.',
+   u'Christopher Simpkins', 'Naked', 'A Python command line application framework',
    'Miscellaneous'),
 ]
 
@@ -272,7 +272,7 @@ texinfo_documents = [
 epub_title = u'Naked'
 epub_author = u'Christopher Simpkins'
 epub_publisher = u'Christopher Simpkins'
-epub_copyright = u'2013, Christopher Simpkins'
+epub_copyright = u'2014, Christopher Simpkins'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Naked'

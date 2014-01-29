@@ -1,0 +1,261 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Naked Executable &mdash; Naked 0.1.16 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.16',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.16 documentation" href="index.html"/>
+        <link rel="next" title="Naked Project Structure" href="naked_project_structure.html"/>
+        <link rel="prev" title="Quickstart Guide" href="quickstart.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Naked Executable</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="naked-executable">
+<h1>Naked Executable<a class="headerlink" href="#naked-executable" title="Permalink to this headline">¶</a></h1>
+<p>The naked executable is a command line tool for application development, testing, and deployment.</p>
+<p>The primary commands include:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#build-command-label"><em>The Build Command</em></a>   - Compile Naked C library code</li>
+<li><a class="reference internal" href="#dist-command-label"><em>The Dist Command</em></a>    - Deployment to PyPI</li>
+<li><a class="reference internal" href="#locate-command-label"><em>The Locate Command</em></a>  - Locate important project files</li>
+<li><a class="reference internal" href="#make-command-label"><em>The Make Command</em></a>    - Generate a new project</li>
+<li><a class="reference internal" href="#test-command-label"><em>The Test Command</em></a>    - Project testing</li>
+</ul>
+<div class="section" id="the-build-command">
+<span id="build-command-label"></span><h2>The Build Command<a class="headerlink" href="#the-build-command" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The build command requires an installed C compiler.  Naked does not install a compiler or confirm that one is installed on the user&#8217;s system.</p>
+</div>
+<p>The Naked C toolshed library can be compiled from the C source code files with the <em>build</em> command.  Navigate to any level of your project directory and use the command:</p>
+<div class="section" id="build-command-usage">
+<h3>Build Command Usage<a class="headerlink" href="#build-command-usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>naked build
+</pre></div>
+</div>
+<p>This will compile the C library files in the <tt class="docutils literal"><span class="pre">`Naked.toolshed.c.&lt;module&gt;</span></tt> path.  See the library documentation for more information about the available Naked toolshed modules.</p>
+</div>
+<div class="section" id="build-command-help">
+<h3>Build Command Help<a class="headerlink" href="#build-command-help" title="Permalink to this headline">¶</a></h3>
+<p>Help is available with:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked build <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-dist-command">
+<span id="dist-command-label"></span><h2>The Dist Command<a class="headerlink" href="#the-dist-command" title="Permalink to this headline">¶</a></h2>
+<p>The dist command</p>
+</div>
+<div class="section" id="the-locate-command">
+<span id="locate-command-label"></span><h2>The Locate Command<a class="headerlink" href="#the-locate-command" title="Permalink to this headline">¶</a></h2>
+<p>The locate command</p>
+</div>
+<div class="section" id="the-make-command">
+<span id="make-command-label"></span><h2>The Make Command<a class="headerlink" href="#the-make-command" title="Permalink to this headline">¶</a></h2>
+<p>The <em>make</em> command builds the directory tree and project files for a new Naked project.  You have the option to configure your project with a YAML settings file <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> or via command line prompts.</p>
+<p>The file and directory structure for command line parsing logic, command development, testing, profiling/benchmarking, licensing, application documentation, and deployment are included in a new Naked project.  Help, version, and usage command handling is automatically implemented for you. Complete the strings that you intend to display to users (in the project <tt class="docutils literal"><span class="pre">settings.py</span></tt> file), and standard requests for help (e.g. <tt class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">--help</span></tt>), usage (e.g. <tt class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">usage</span></tt>), and version (e.g. <tt class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">--version</span></tt>) will display the corresponding text.  For more information about these automatically generated commands, see <a class="reference internal" href="help_usage_version.html"><em>Help, Usage, and Version Commands</em></a>.</p>
+<p>The goal is to allow you to click and begin coding your project without the tedious setup tasks that are common to new projects.</p>
+<div class="section" id="naked-yaml-settings-file-project-generation">
+<h3>naked.yaml Settings File Project Generation<a class="headerlink" href="#naked-yaml-settings-file-project-generation" title="Permalink to this headline">¶</a></h3>
+<p>The structure of a <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> project settings file is:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;application-name&gt;</span>
+<span class="l-Scalar-Plain">developer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;developer-name&gt;</span>
+<span class="l-Scalar-Plain">license</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">&lt;license-name&gt;</span>
+</pre></div>
+</div>
+<p>Here is an example of the <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> file for <a class="reference external" href="https://pypi.python.org/pypi/status">status</a>:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">status</span>
+<span class="l-Scalar-Plain">developer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Christopher Simpkins</span>
+<span class="l-Scalar-Plain">license</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">MIT License</span>
+</pre></div>
+</div>
+<p>Save your <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> file in the top level of your new project directory and then run the following command in the same directory:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked make
+</pre></div>
+</div>
+<p>Naked will detect the settings file, prompt you to confirm your settings, and then use this information to build the new project.  You will have the option to modify your project settings before the project writes to disk.</p>
+</div>
+<div class="section" id="command-line-prompt-project-generation">
+<h3>Command Line Prompt Project Generation<a class="headerlink" href="#command-line-prompt-project-generation" title="Permalink to this headline">¶</a></h3>
+<p>Use the following command syntax to initiate the command line prompts for a new Naked project:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked make &lt;application-name&gt;
+</pre></div>
+</div>
+<p>Naked will then prompt you to enter the developer or organization name and the license type.</p>
+</div>
+<div class="section" id="where-the-information-is-used">
+<h3>Where the Information is Used<a class="headerlink" href="#where-the-information-is-used" title="Permalink to this headline">¶</a></h3>
+<p>Your application name becomes the executable command that is used at the command line and is also the top level of your Python module directory structure for module imports.  The information is also used to generate your main application module, LICENSE file, README file, and settings.py file.</p>
+</div>
+<div class="section" id="the-project-license">
+<h3>The Project License<a class="headerlink" href="#the-project-license" title="Permalink to this headline">¶</a></h3>
+<p>Naked parses your license response and attempts to generate your project LICENSE file.  This is performed with a case-insensitive attempt to match one of the following strings at <em>the beginning</em> of your response:</p>
+<ul class="simple">
+<li>Apache</li>
+<li>BSD</li>
+<li>GPL</li>
+<li>LGPL</li>
+<li>MIT</li>
+<li>Mozilla</li>
+</ul>
+<p>If your license type is identified, the entire text of the license is populated in your LICENSE file with the copyright statement, year, and the developer/organization name that you submitted.</p>
+<p>For more information on the structure of a generated Naked project, see <a class="reference internal" href="naked_project_structure.html"><em>Naked Project Structure</em></a>.</p>
+</div>
+<div class="section" id="make-command-help">
+<h3>Make Command Help<a class="headerlink" href="#make-command-help" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>naked make <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-test-command">
+<span id="test-command-label"></span><h2>The Test Command<a class="headerlink" href="#the-test-command" title="Permalink to this headline">¶</a></h2>
+<p>The test command</p>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="naked_project_structure.html" class="btn btn-neutral float-right" title="Naked Project Structure"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral" title="Quickstart Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
