@@ -5,11 +5,11 @@ Naked
 A Python Command Line Application Framework
 --------------------------------------------
 
-Naked (source: `PyPI`_, `GitHub`_) is a MIT licensed command line application framework that provides a range of features for Python application developers.
+Naked (source: `PyPI`_, `GitHub`_) is a MIT licensed command line application framework that provides a variety of features for Python application developers.
 
-Examples include:
+Here is a sample:
 
-* **New Project Generator** : Create the directory structure and project file stubs with the naked executable:
+* **New Project Generator** : Create your project directory structure and project file stubs with the `naked executable`_:
 
 .. code-block:: bash
 
@@ -19,6 +19,10 @@ Examples include:
 
 .. code-block:: python
 
+    # positional strings in the command are command object attributes
+    # short- (e.g. '-p') and long-form (e.g. '--print') options are tested with a method
+
+    # user enters: <executable> hello world --print
     c = Naked.commandline.Command(sys.argv[0], sys.argv[1:])
     if c.cmd == 'hello' and c.cmd2 == "world":
         if c.option('--print'):
@@ -28,14 +32,19 @@ Examples include:
 
 .. code-block:: python
 
+    # argument testing and assignment by command object methods
+
+    # user enters: <executable> -l Python --framework Naked
     if c.option_with_arg('-l') and c.option_with_arg('--framework'):
-        language = c.arg('-l')               # user entered '-l Python'
-        framework = c.arg('--framework')     # user entered '--framework Naked'
+        language = c.arg('-l')
+        framework = c.arg('--framework')
         print(framework + ' ' + language)   # prints 'Naked Python' to standard out
 
 * **Simple Command Switch Management** :
 
 .. code-block:: python
+
+    # switch testing by command object method
 
     if c.option('-s'):
         # do something
@@ -46,37 +55,75 @@ Examples include:
 
 .. code-block:: python
 
-    if c.option('--string'):
-        c.string = True
-        c.number = False
-    if c.option('--number'):
-        c.string = False
-        c.number = True
+    # assign your own attributes to the command object for later use in your coding logic
+
+    if c.option('--spam'):
+        c.spam = True
+        c.eggs = False
+    if c.option('--eggs'):
+        c.spam = False
+        c.eggs = True
 
     # other stuff
 
-    if c.string:
-        # do this
-    elif c.number:
-        # do that
+    if c.spam:
+        print("yum")
+    elif c.eggs:
+        print("yum"*2)
+
+* **Simple System Subprocess Execution** : with non-zero exit code status handling & std err stream writes
+
+.. code-block:: python
+
+    from Naked.toolshed.shell import run
+
+    print(run('curl http://www.naked-py.com'))
+
+* **Simple Ruby Script Execution** : with non-zero exit code status handling & std err stream writes
+
+.. code-block:: python
+
+    from Naked.toolshed.shell import run_rb
+
+    print(run_rb('ruby/testscript.rb'))
+
+* **Simple Node.js Script Execution** : with non-zero exit code status handling & std err stream writes
+
+.. code-block:: python
+
+    from Naked.toolshed.shell import run_js
+
+    print(run_js('node/testscript.js'))
 
 * **The Naked toolshed types library** includes extensions of commonly used Python types:
 
-    * **XString** extends string
-    * **XDict** extends dictionary
-    * **XList** extends list
-    * **XSet** extends set
-    * **XFSet** extends frozenset
-    * **XQueue** extends deque
+    * **XString** extends the Python string
+    * **XDict** extends the Python dictionary
+    * **XList** extends the Python list
+    * **XSet** extends the Python set
+    * **XFSet** extends the Python frozenset
+    * **XQueue** extends the Python deque
     * **XPriorityQueue** adds a new type
 
-* **The Ink Templating System** - a lightweight, flexible text templating system that allows you to define the replacement tag syntax.
+* **The Ink Templating System** - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the ``Naked.toolshed.ink`` library module.
 
-* **The Naked StateObject** - a compendium of useful state information that is available with the instantation of a single object from any module. It includes data such as the Python interpreter version, operating system, date, time,
+* **The StateObject** - a compendium of automatically generated user state information on StateObject instantation from the ``Naked.toolshed.state`` library module. It includes data such as the Python interpreter version, operating system, user path, current working directory, date, time, and more.
 
-* **Faster compiled Naked C toolshed library** with an *optional* post-install compile
+.. code-block:: python
 
-* **Every component of the framework is 100% optional**.  There is no project overhead if you don't want it.  You can build a new project and use ``argparse``, create your own project layout and use the Naked command line parser, or import one part of the library in a single module without the need to import it anywhere else in your project.  The goal is for Naked to help when you need it and get out of the way when you don't.  Naked + no long term commitment = win-win.
+    from Naked.toolshed.state import StateObject
+
+    state = StateObject() # collects state information at time of instantiation
+
+    working_directory = state.cwd
+    if state.py2:
+        print("In the directory " + cwd + " and using the Python 2 interpreter")
+    else:
+        print("In the directory " + cwd + " and using the Python 3 interpreter")
+
+* **Faster, compiled C versions of every toolshed library module** with an *optional* post-install compile for those who need the speed.
+
+* **Every component of the framework is 100% optional**.  There is no project overhead that you don't need.  Import parts of the framework as necessary for your project requirements. The goal is to help when you need it and get out of the way when you don't.  Naked + no commitment = win-win.
 
 
 
@@ -98,4 +145,5 @@ Contents
 
 .. _PyPI: https://pypi.python.org/pypi?name=Naked&:action=display
 .. _GitHub: https://github.com/chrissimpkins/naked
+.. _naked executable: naked_executable.html
 
