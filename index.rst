@@ -133,7 +133,6 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   index
    installation
    upgrade
    definitions
