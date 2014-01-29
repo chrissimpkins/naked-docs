@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install Guide &mdash; Naked 0.1.10 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.10',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.10 documentation" href="index.html"/>
+        <link rel="next" title="Upgrade Guide" href="upgrade.html"/>
+        <link rel="prev" title="The Naked Executable" href="naked_executable.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Naked</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#a-python-command-line-application-framework">A Python Command Line Application Framework</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-your-upgrade">Confirm Your Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naked_executable.html">The Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Install Guide</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="install-guide">
+<h1>Install Guide<a class="headerlink" href="#install-guide" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you have an installed version of Naked and want to upgrade it, see the <a class="reference internal" href="upgrade.html"><em>Upgrade Guide</em></a>.</p>
+</div>
+<p>Use one of the following methods to install your first version of Naked.</p>
+<div class="section" id="install-with-pip">
+<h2>Install with pip<a class="headerlink" href="#install-with-pip" title="Permalink to this headline">¶</a></h2>
+<p>To install Naked with <a class="reference external" href="http://www.pip-installer.org/">pip</a>, use the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pip install Naked
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-clone-and-install">
+<h2>Git Clone and Install<a class="headerlink" href="#git-clone-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Navigate to the directory where you would like to pull the Naked source and then use git to clone the Naked repository with the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/chrissimpkins/naked.git
+</pre></div>
+</div>
+<p>Navigate to the top level of the source repository and run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
+<p>The cloned repository can be safely deleted after the install.</p>
+</div>
+<div class="section" id="download-and-install">
+<h2>Download and Install<a class="headerlink" href="#download-and-install" title="Permalink to this headline">¶</a></h2>
+<p>Download the <a class="reference external" href="https://github.com/chrissimpkins/naked/zipball/master">zip</a> or <a class="reference external" href="https://github.com/chrissimpkins/naked/tarball/master">tar.gz</a> source archive and decompress it locally. Navigate to the top level of the source directory and run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
+<p>The downloaded source file archive can be safely deleted after the install.</p>
+</div>
+<div class="section" id="confirm-install">
+<h2>Confirm Install<a class="headerlink" href="#confirm-install" title="Permalink to this headline">¶</a></h2>
+<p>To confirm your install, type <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">--version</span></tt> on the command line.  This will display the installed version of the Naked framework.</p>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="upgrade.html" class="btn btn-neutral float-right" title="Upgrade Guide"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="naked_executable.html" class="btn btn-neutral" title="The Naked Executable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2013, Christopher Simpkins.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

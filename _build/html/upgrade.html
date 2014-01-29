@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Naked 0.1.10 documentation</title>
+  <title>Upgrade Guide &mdash; Naked 0.1.10 documentation</title>
   
 
   
@@ -31,7 +31,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
     
 
@@ -45,13 +44,8 @@
 
   
     <link rel="top" title="Naked 0.1.10 documentation" href="index.html"/>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+        <link rel="next" title="Quickstart Guide" href="quickstart.html"/>
+        <link rel="prev" title="Install Guide" href="installation.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -65,7 +59,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="#" method="get">
+        <form class="wy-form" action="search.html" method="get">
   <input type="text" name="q" placeholder="Search docs" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
@@ -75,10 +69,10 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix">
         
         
-            <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Naked</a><ul>
+            <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Naked</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#a-python-command-line-application-framework">A Python Command Line Application Framework</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#contents">Contents</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#contents">Contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
@@ -88,14 +82,13 @@
 <li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#confirm-upgrade">Confirm Upgrade</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="naked_executable.html">The Naked Executable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-build-command">The Build Command</a></li>
@@ -105,7 +98,6 @@
 <li class="toctree-l2"><a class="reference internal" href="naked_executable.html#the-test-command">The Test Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a></li>
 </ul>
 
         
@@ -127,27 +119,59 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href=""></a></li>
+  <li><a href="">Upgrade Guide</a></li>
   
 </ul>
 <hr/>
 
           
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="upgrade-guide">
+<h1>Upgrade Guide<a class="headerlink" href="#upgrade-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="upgrade-with-pip">
+<h2>Upgrade with pip<a class="headerlink" href="#upgrade-with-pip" title="Permalink to this headline">¶</a></h2>
+<p>To upgrade Naked with <a class="reference external" href="http://www.pip-installer.org/">pip</a>, use the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>pip install --upgrade Naked
+</pre></div>
+</div>
+<p>This will pull the most recent version from PyPI and install it on your system.</p>
+</div>
+<div class="section" id="git-clone-and-upgrade">
+<h2>Git Clone and Upgrade<a class="headerlink" href="#git-clone-and-upgrade" title="Permalink to this headline">¶</a></h2>
+<p>Navigate to the directory where you would like to pull the new version of the Naked source and then use git to clone the Naked repository with the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/chrissimpkins/naked.git
+</pre></div>
+</div>
+<p>Navigate to the top level of the source repository and run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
+<p>The cloned repository can be safely deleted after the upgrade.</p>
+</div>
+<div class="section" id="download-and-upgrade">
+<h2>Download and Upgrade<a class="headerlink" href="#download-and-upgrade" title="Permalink to this headline">¶</a></h2>
+<p>Download the new version of the <a class="reference external" href="https://github.com/chrissimpkins/naked/zipball/master">zip</a> or <a class="reference external" href="https://github.com/chrissimpkins/naked/tarball/master">tar.gz</a> source archive and decompress it locally. Navigate to the top level of the source directory and run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
+<p>The downloaded source file archive can be safely deleted after the upgrade.</p>
+</div>
+<div class="section" id="confirm-upgrade">
+<h2>Confirm Upgrade<a class="headerlink" href="#confirm-upgrade" title="Permalink to this headline">¶</a></h2>
+<p>Type <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">--version</span></tt> to confirm that you have the latest version of Naked.</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
           <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="Quickstart Guide"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Install Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
