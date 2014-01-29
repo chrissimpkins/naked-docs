@@ -43,7 +43,63 @@ Help is available with:
 
 The Dist Command
 -----------------
-The dist command
+The dist command assists with the distribution of your Naked project to the `Python Package Index`_ (PyPI). This command can be used from any working directory in your Naked project.
+
+The available secondary commands include:
+
+all
+^^^^
+The ``all`` secondary command builds a source distribution, wheel distribution, and Windows installer distribution by running the distutils command ``python setup.py sdist bdist_wheel bdist_wininst upload``.  It is run with the following command:
+
+.. code-block:: bash
+
+	naked dist all
+
+register
+^^^^^^^^^
+The ``register`` secondary command registers your Python project with PyPI.  This is a mandatory first step to distribute your project through PyPI and should be the first dist secondary command that you use for new project releases.  It is not necessary to run this again after the initial registration.
+
+``register`` runs the distutils command ``python setup.py register`` and is run with:
+
+.. code-block:: bash
+
+	naked dist register
+
+If you have not registered a project on PyPI from your local system before, you will receive prompts for your PyPI account information.
+
+sdist
+^^^^^^
+The ``sdist`` secondary command prepares a source distribution for your current release and pushes it to PyPI.  This is performed by running the command ``python setup.py sdist upload`` and is run from the command line with:
+
+.. code-block:: bash
+
+	naked dist sdist
+
+wheel
+^^^^^^
+The ``wheel`` secondary command prepares a wheel distribution for your current release and pushes it to PyPI.  This is performed by running the command ``python setup.py bdist_wheel upload`` and is run from the command line with:
+
+.. code-block:: bash
+
+	naked dist wheel
+
+win
+^^^^
+The ``win`` secondary command prepares a Windows installer for your current release and pushes it to PyPI.  This is performed by running the command ``python setup.py bdist_wininst upload`` and is run from the command line with:
+
+.. code-block:: bash
+
+	naked dist win
+
+For more information about distutils and these release forms, please refer to the Python documentation.
+
+Dist Command Help
+^^^^^^^^^^^^^^^^^^^
+Help is available for the dist command with:
+
+.. code-block:: bash
+
+	naked dist help
 
 .. _locate-command-label:
 
@@ -129,3 +185,5 @@ Make Command Help
 The Test Command
 -----------------
 The test command
+
+.. _Python Package Index: http://pypi.python.org
