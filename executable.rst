@@ -1,7 +1,7 @@
 Naked Executable
 ==================
 
-The naked executable is a command line tool for application development, testing, and deployment.
+The naked executable is a command line tool for application development, testing, profiling, and deployment.
 
 The primary commands include:
 
@@ -105,7 +105,41 @@ Help is available for the dist command with:
 
 The Locate Command
 -------------------
-The locate command
+The locate command identifies several important file paths in your project.  We all forget.  It's simply there to help you remember.
+
+The secondary commands are:
+
+main
+^^^^^
+The main secondary command displays the file path to the project ``app.py`` file where you main application script is located.  You use the command like this:
+
+.. code-block:: bash
+
+	naked locate main
+
+setup
+^^^^^^
+The setup secondary command displays the file path to the project ``setup.py`` file.
+
+.. code-block:: bash
+
+	naked locate setup
+
+settings
+^^^^^^^^^
+The settings secondary command displays the file path to the project ``settings.py`` file. This is where your Naked project settings are located.
+
+.. code-block:: bash
+
+	naked locate settings
+
+Locate Command Help
+^^^^^^^^^^^^^^^^^^^^^
+You can get help for the locate command with:
+
+.. code-block:: bash
+
+	naked locate help
 
 .. _make-command-label:
 
@@ -157,6 +191,8 @@ Where the Information is Used
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Your application name becomes the executable command that is used at the command line and is also the top level of your Python module directory structure for module imports.  The information is also used to generate your main application module, LICENSE file, README file, and settings.py file.
 
+You can examine the project file templates in the `source repository`_ to see all of the string replacement sites.
+
 The Project License
 ^^^^^^^^^^^^^^^^^^^^
 Naked parses your license response and attempts to generate your project LICENSE file.  This is performed with a case-insensitive attempt to match one of the following strings at *the beginning* of your response:
@@ -184,6 +220,7 @@ Make Command Help
 
 The Test Command
 -----------------
-The test command
+The test command runs tox on your project in order to perform your unit tests across multiple versions of Python.
 
 .. _Python Package Index: http://pypi.python.org
+.. _source repository: https://github.com/chrissimpkins/naked/tree/master/lib/Naked/templates

@@ -125,7 +125,7 @@
           
   <div class="section" id="naked-executable">
 <h1>Naked Executable<a class="headerlink" href="#naked-executable" title="Permalink to this headline">¶</a></h1>
-<p>The naked executable is a command line tool for application development, testing, and deployment.</p>
+<p>The naked executable is a command line tool for application development, testing, profiling, and deployment.</p>
 <p>The primary commands include:</p>
 <ul class="simple">
 <li><a class="reference internal" href="#build-command-label"><em>The Build Command</em></a>   - Compile Naked C library code</li>
@@ -208,7 +208,36 @@
 </div>
 <div class="section" id="the-locate-command">
 <span id="locate-command-label"></span><h2>The Locate Command<a class="headerlink" href="#the-locate-command" title="Permalink to this headline">¶</a></h2>
-<p>The locate command</p>
+<p>The locate command identifies several important file paths in your project.  We all forget.  It&#8217;s simply there to help you remember.</p>
+<p>The secondary commands are:</p>
+<div class="section" id="main">
+<h3>main<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h3>
+<p>The main secondary command displays the file path to the project <tt class="docutils literal"><span class="pre">app.py</span></tt> file where you main application script is located.  You use the command like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked locate main
+</pre></div>
+</div>
+</div>
+<div class="section" id="setup">
+<h3>setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h3>
+<p>The setup secondary command displays the file path to the project <tt class="docutils literal"><span class="pre">setup.py</span></tt> file.</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked locate setup
+</pre></div>
+</div>
+</div>
+<div class="section" id="settings">
+<h3>settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>The settings secondary command displays the file path to the project <tt class="docutils literal"><span class="pre">settings.py</span></tt> file. This is where your Naked project settings are located.</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked locate settings
+</pre></div>
+</div>
+</div>
+<div class="section" id="locate-command-help">
+<h3>Locate Command Help<a class="headerlink" href="#locate-command-help" title="Permalink to this headline">¶</a></h3>
+<p>You can get help for the locate command with:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked locate <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="the-make-command">
 <span id="make-command-label"></span><h2>The Make Command<a class="headerlink" href="#the-make-command" title="Permalink to this headline">¶</a></h2>
@@ -246,6 +275,7 @@
 <div class="section" id="where-the-information-is-used">
 <h3>Where the Information is Used<a class="headerlink" href="#where-the-information-is-used" title="Permalink to this headline">¶</a></h3>
 <p>Your application name becomes the executable command that is used at the command line and is also the top level of your Python module directory structure for module imports.  The information is also used to generate your main application module, LICENSE file, README file, and settings.py file.</p>
+<p>You can examine the project file templates in the <a class="reference external" href="https://github.com/chrissimpkins/naked/tree/master/lib/Naked/templates">source repository</a> to see all of the string replacement sites.</p>
 </div>
 <div class="section" id="the-project-license">
 <h3>The Project License<a class="headerlink" href="#the-project-license" title="Permalink to this headline">¶</a></h3>
@@ -270,7 +300,7 @@
 </div>
 <div class="section" id="the-test-command">
 <span id="test-command-label"></span><h2>The Test Command<a class="headerlink" href="#the-test-command" title="Permalink to this headline">¶</a></h2>
-<p>The test command</p>
+<p>The test command runs tox on your project in order to perform your unit tests across multiple versions of Python.</p>
 </div>
 </div>
 
