@@ -43,7 +43,7 @@ Help is available with:
 
 The Dist Command
 -----------------
-The dist command assists with the distribution of your Naked project to the `Python Package Index`_ (PyPI). This command can be used from any working directory in your Naked project.
+The dist command assists with distribution of your project to the `Python Package Index`_ (PyPI). This command can be used from any working directory in your Naked project.
 
 The available secondary commands include:
 

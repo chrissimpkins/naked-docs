@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Naked'
-copyright = u'2014, Christopher Simpkins'
+copyright = u'2014, Christopher Simpkins. CC BY-SA 4.0 license'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

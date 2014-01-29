@@ -140,6 +140,8 @@ Contents
    executable
    naked_project_structure
    help_usage_version
+   change_log
+   licenses
 
    ...
 
