@@ -1,4 +1,4 @@
 Changelog
 ===========
 
-version 0.1.x : description
+version 0.1.x : open testing versions

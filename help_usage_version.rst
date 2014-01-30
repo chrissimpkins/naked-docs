@@ -1,3 +1,4 @@
 Help, Usage, and Version Commands
 ===================================
-The help
+
+Documentation is coming soon...stay tuned.

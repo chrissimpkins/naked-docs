@@ -123,9 +123,9 @@ Here is a sample:
 
 * **Faster, compiled C versions of every toolshed library module** with an *optional* post-install compile for those who need the speed.
 
-* **Every component of the framework is 100% optional**.  There is no project overhead that you don't need.  Import parts of the framework as necessary for your project requirements. The goal is to help when you need it and get out of the way when you don't.
+* **Every component of the framework is 100% optional**.  You determine how much (if any) of the Naked source you need in your project.  Building a project with the executable does not mandate use of the command parser, the automatically implemented help, usage, and version commands, or any part of the Naked toolshed library.
 
-
+The goal is to help when you need it and get out of the way when you don't.
 
 Contents
 --------------

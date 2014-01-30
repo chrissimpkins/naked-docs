@@ -1,15 +1,16 @@
 Naked Executable
 ==================
 
-The naked executable is a command line tool for application development, testing, profiling, and deployment.
+The naked executable is a command line tool for application development, testing, profiling, and deployment. It is distributed with the Naked framework install.
 
 The primary commands include:
 
 * :ref:`build-command-label`   - Compile Naked C library code
-* :ref:`dist-command-label`    - Deployment to PyPI
+* :ref:`dist-command-label`    - Project deployment
 * :ref:`locate-command-label`  - Locate important project files
 * :ref:`make-command-label`    - Generate a new project
-* :ref:`test-command-label`    - Project testing
+* :ref:`profile-command-label` - Project profiling
+* :ref:`test-command-label`    - Project unit testing
 
 .. _build-command-label:
 
@@ -34,7 +35,7 @@ Build Command Help
 ^^^^^^^^^^^^^^^^^^
 Help is available with:
 
-.. code-block:: bash
+.. code-block:: python
 
 	naked build help
 
@@ -97,7 +98,7 @@ Dist Command Help
 ^^^^^^^^^^^^^^^^^^^
 Help is available for the dist command with:
 
-.. code-block:: bash
+.. code-block:: python
 
 	naked dist help
 
@@ -105,7 +106,7 @@ Help is available for the dist command with:
 
 The Locate Command
 -------------------
-The locate command identifies several important file paths in your project.  We all forget.  It's simply there to help you remember.
+The locate command identifies several important file paths in your project.  I forget.  You forget.  It's simply there to help you remember.
 
 The secondary commands are:
 
@@ -137,7 +138,7 @@ Locate Command Help
 ^^^^^^^^^^^^^^^^^^^^^
 You can get help for the locate command with:
 
-.. code-block:: bash
+.. code-block:: python
 
 	naked locate help
 
@@ -149,7 +150,7 @@ The *make* command builds the directory tree and project files for a new Naked p
 
 The file and directory structure for command line parsing logic, command development, testing, profiling/benchmarking, licensing, application documentation, and deployment are included in a new Naked project.  Help, version, and usage command handling is automatically implemented for you. Complete the strings that you intend to display to users (in the project ``settings.py`` file), and standard requests for help (e.g. ``<executable> --help``), usage (e.g. ``<executable> usage``), and version (e.g. ``<executable> --version``) will display the corresponding text.  For more information about these automatically generated commands, see :doc:`help_usage_version`.
 
-The goal is to allow you to click and begin coding your project without the tedious setup tasks that are common to new projects.
+The goal is to allow you to click and begin coding your project without the tedious setup tasks that are common to many/most new projects.
 
 naked.yaml Settings File Project Generation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -211,16 +212,106 @@ For more information on the structure of a generated Naked project, see :doc:`na
 Make Command Help
 ^^^^^^^^^^^^^^^^^^
 
-.. code-block:: bash
+.. code-block:: python
 
 	naked make help
 
+
+.. _profile-command-label:
+
+The Profile Command
+---------------------
+The profile command runs cProfile and pstats on the code that you enter in test code block of your PROJECT/lib/profiler.py file.
+
+Usage
+^^^^^^^
+
+.. code-block:: bash
+
+	naked profile
+
+The Profile
+^^^^^^^^^^^^
+The default profiler.py file sorts the pstats results with the 'time' argument.  You can modify this default in the profiler.py file.
+
+Identification of the profiler.py File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+naked performs a bottom up search over up to 6 directory levels from the working directory to identify the ``lib/profiler.py`` path.  Unless you have a deep project directory structure (and are in the bottom of one of these paths), this should allow you to run the command from any directory in your project.  It is not necessary for lib to be your working directory.
+
+Profile Command Help
+^^^^^^^^^^^^^^^^^^^^^^
+Help is available for the profile command with:
+
+.. code-block:: python
+
+	naked profile help
 
 .. _test-command-label:
 
 The Test Command
 -----------------
-The test command runs tox on your project in order to perform your unit tests across multiple versions of Python.
+The test command allows you to run unit tests with the built-in Python unittest module (`v2`_, `v3`_), `nose`_, `pytest`_, or `tox`_.  The commands can be run from any directory level in your project (when the tests are located in your PROJECT/tests directory).
+
+Usage
+^^^^^^
+.. code-block:: python
+
+	naked test <secondary command> [argument]
+
+The available secondary commands include:
+
+nose
+^^^^^
+Runs nosetests on your PROJECT/tests directory
+
+.. code-block:: python
+
+	naked test nose
+
+pytest
+^^^^^^^
+Runs py.test on your PROJECT/tests directory
+
+.. code-block:: python
+
+	naked test pytest
+
+tox
+^^^^
+Runs tox on your PROJECT/tests directory.  This uses your tox.ini file settings by default.  To run a specific Python version, pass the **tox Python version argument** to the command (see examples below)
+
+.. code-block:: python
+
+	naked test tox        #runs tests with Python interpreter versions specified in tox.ini
+	naked test tox py27   #runs tests with Python v2.7.x interpreter (must be installed)
+	naked test tox py33   #runs tests with Python v3.3.x interpreter (must be installed)
+	naked test tox pypy   #runs tests with pypy (installed version, must be installed)
+
+unittest
+^^^^^^^^^
+Runs the built-in Python unittest module on the unit testing file that you specify as an argument to the command.  The file path argument is mandatory.  naked attempts to locate this test runner in your PROJECT/tests directory.
+
+.. code-block:: python
+
+	naked test unittest test_app.py
+
+Identification of the tests Directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A bottom up search is performed from the working directory over up to 6 directory levels to identify your tests directory.  If naked is not able to locate your tests directory, or if your files are in a different location, you will receive a failure message.
+
+Test Command Help
+^^^^^^^^^^^^^^^^^^
+Help is available for the command with:
+
+.. code-block:: python
+
+	naked test help
 
 .. _Python Package Index: http://pypi.python.org
 .. _source repository: https://github.com/chrissimpkins/naked/tree/master/lib/Naked/templates
+.. _v2: http://docs.python.org/2/library/unittest.html
+.. _v3: http://docs.python.org/3/library/unittest.html
+.. _nose: https://nose.readthedocs.org/en/latest/
+.. _pytest: http://pytest.org/latest/
+.. _tox: http://tox.readthedocs.org/en/latest/
+
