@@ -190,6 +190,10 @@ Profiling
 ^^^^^^^^^^
 * The ``profiler.py`` script is added to every project in the path ``PROJECT/lib/profiler.py``. Insert your test code in the designated testing block and then run ``naked profile`` from any directory in your project.  cProfile and pstats profiling is implemented with default report settings (which you can modify in the ``profiler.py`` file if you'd like).
 
+Testing
+^^^^^^^^
+* Testing with the tox, nose, py.test, and the built-in Python unittest test runners is automated with the ``naked test`` command.  Use the included tests project directory for your unit test files and run the command from any level of your project.
+
 Flexible and No Commitment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
