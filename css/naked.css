@@ -1,0 +1,98 @@
+body {
+	background-image:url('../img/nf-logo-875.png');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-color: #212121;
+	font-family:'Raleway', 'Helvetica Neue', Helvetica, Arial, sans;
+	color:#CDC7C7;
+}
+
+body:after {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 10%;
+    border-left: 4px solid #25B0CA;
+}
+
+a:link {
+	color:#eaeaea;
+	text-decoration:none;
+}
+
+a:visited {
+	color:#eaeaea;
+}
+
+a:hover{
+	color:#A7D1D9;
+	border-bottom: 5px solid #000;
+}
+
+#logo {
+	margin-top: 75px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.main {
+	background-color: rgba(167,209,217,0.2);
+ 	border-top: 1px solid #eaeaea;
+ 	margin-left: -8px;
+	font-size:30px;
+	padding-bottom:35px;
+	padding-top:25px;
+	width:100% !important;
+	text-align:center;
+	position:fixed;
+    bottom: 0;
+}
+
+/* Change image and font-size based upon resized screens */
+@media screen and (max-width:1060px) and (min-width:550px){
+	body {
+		background-image:url('../img/nf-logo-450.png') !important;
+	}
+	body:after {
+    	border-left: 3px solid #25B0CA;
+	}
+	.main {
+		font-size:28px !important;
+	}
+}
+
+@media screen and (max-width:549px) and (min-width: 321px) {
+	body {
+		background-image:url('../img/nf-logo-310.png') !important;
+	}
+	body:after {
+    	border-left: 2px solid #25B0CA;
+	}
+	.main {
+		font-size:18px !important;
+	}
+}
+
+/* iPhone portrait */
+@media screen and (max-width:320px) {
+	body {
+		background-image:url('../img/nf-logo-310.png') !important;
+	}
+
+	body:after {
+    	border-left: 2px solid #25B0CA;
+    	left: 5%;
+	}
+
+	.main{
+		font-size:16px;
+	}
+}
+
+
+
+
