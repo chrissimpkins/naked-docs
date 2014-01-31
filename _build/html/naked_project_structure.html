@@ -95,7 +95,11 @@
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Naked Project Structure</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#project-description">Project Description</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
@@ -132,7 +136,85 @@
           
   <div class="section" id="naked-project-structure">
 <h1>Naked Project Structure<a class="headerlink" href="#naked-project-structure" title="Permalink to this headline">¶</a></h1>
-<p>The Naked project structure documentation is coming soon...stay tuned.</p>
+<div class="section" id="a-naked-project">
+<h2>A Naked Project<a class="headerlink" href="#a-naked-project" title="Permalink to this headline">¶</a></h2>
+<p>A Naked project is generated with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command.  Here is the structure of the project.</p>
+<div class="section" id="directory-structure">
+<h3>Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>PROJECT---|
+          |
+          docs---|
+          |      LICENSE
+          |      |
+          |      README.rst
+          |
+          tests---<span class="o">(</span>__init__.py<span class="o">)</span>
+          |
+          |
+          lib----|
+          |      PROJECT---|
+          |                commands---<span class="o">(</span>__init__.py<span class="o">)</span>
+          |                |
+          |                app.py
+          |                |
+          |                settings.py
+          |
+          MANIFEST.in
+          |
+          README.md
+          |
+          setup.cfg
+          |
+          setup.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="project-description">
+<h2>Project Description<a class="headerlink" href="#project-description" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="docs-directory">
+<h3>docs Directory<a class="headerlink" href="#docs-directory" title="Permalink to this headline">¶</a></h3>
+<p>This directory contains your LICENSE and README.rst files.  The <tt class="docutils literal"><span class="pre">naked</span></tt> executable will make an attempt to generate a complete license file for you if you use the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command.  See the <a class="reference external" href="executable.html#the-project-license">naked executable documentation</a> for details.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Your README.rst file is used to generate the long description of your project in the setup.py file. This becomes the description that is displayed on your PyPI application page if you push to the PyPI repository.  You can use reStructuredText in this document.</p>
+</div>
+</div>
+<div class="section" id="tests-directory">
+<h3>tests Directory<a class="headerlink" href="#tests-directory" title="Permalink to this headline">¶</a></h3>
+<p>This is an &#8220;empty&#8221; directory (it actually includes an <tt class="docutils literal"><span class="pre">__init__.py</span></tt> file) for your unit tests if you choose to include them.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt> command expects your unit tests and/or test runners to be in this directory in order to run the tests.</p>
+</div>
+</div>
+<div class="section" id="lib-directory">
+<h3>lib Directory<a class="headerlink" href="#lib-directory" title="Permalink to this headline">¶</a></h3>
+<p>This directory is designated as the site of your application source code in the setup.py file.  In order to establish your project name as the top level directory for Python imports, the project name is repeated as a sub-directory in the lib directory (with an associated <tt class="docutils literal"><span class="pre">__init__.py</span></tt> file).  This allows you to perform imports with the syntax: <tt class="docutils literal"><span class="pre">import</span> <span class="pre">&lt;PROJECT&gt;.commands.&lt;COMMAND-MODULE&gt;</span></tt>, or if you develop a library for other users, imports can be performed with the syntax: <tt class="docutils literal"><span class="pre">from</span> <span class="pre">&lt;PROJECT&gt;.&lt;directory&gt;.&lt;module&gt;</span> <span class="pre">import</span> <span class="pre">&lt;object&gt;</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">lib/PROJECT</span></tt> directory contains:</p>
+<ul class="simple">
+<li><strong>commands</strong> directory : the location for your application command modules</li>
+<li><strong>app.py</strong> : your main application script</li>
+<li><strong>settings.py</strong> : a project settings script. This is also the location of your help, usage, and version strings if you use the commands that the <tt class="docutils literal"><span class="pre">naked</span></tt> executable generates for you with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> (<a class="reference external" href="executable.html#the-make-command">Make Command Docs</a>).</li>
+</ul>
+</div>
+<div class="section" id="manifest-in-file">
+<h3>MANIFEST.in File<a class="headerlink" href="#manifest-in-file" title="Permalink to this headline">¶</a></h3>
+<p>A distutils source distribution file include spec file (<a class="reference external" href="http://docs.python.org/2/distutils/sourcedist.html#manifest-template">MANIFEST documentation</a>).</p>
+</div>
+<div class="section" id="readme-md-file">
+<h3>README.md File<a class="headerlink" href="#readme-md-file" title="Permalink to this headline">¶</a></h3>
+<p>This Markdown file is populated with the name of your project.  It is simply there in case you choose to use <a class="reference external" href="https://github.com">GitHub</a> as a source repository and would like to display a message that differs from the one in your README.rst file (which ends up as your project description on PyPI).  It is safe to remove this file if you do not need it.</p>
+</div>
+<div class="section" id="setup-cfg-file">
+<h3>setup.cfg File<a class="headerlink" href="#setup-cfg-file" title="Permalink to this headline">¶</a></h3>
+<p>A Python setup configuration file (<a class="reference external" href="http://docs.python.org/2/distutils/configfile.html">config documentation</a>).</p>
+</div>
+<div class="section" id="setup-py-file">
+<h3>setup.py File<a class="headerlink" href="#setup-py-file" title="Permalink to this headline">¶</a></h3>
+<p>A Python project distribution &amp; install settings file.  <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> populates this file with your project name, developer/organization name, and license type. (<a class="reference external" href="http://docs.python.org/2/distutils/setupscript.html">setup documentation</a>)</p>
+</div>
+</div>
 </div>
 
 
