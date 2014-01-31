@@ -9,11 +9,17 @@ Naked (source: `PyPI`_, `GitHub`_) is a MIT licensed command line application fr
 
 Here is a sample:
 
-* **New Project Generator** : Create your project directory structure and project file stubs with the `naked executable`_:
+New Projects
+^^^^^^^^^^^^^
+
+* **New Project Generator** : Create a complete project directory structure and project file stubs with the `naked executable`_:
 
 .. code-block:: bash
 
     naked make
+
+Command Line Parser
+^^^^^^^^^^^^^^^^^^^^^
 
 * **Simple Command to Python Object Parser** :
 
@@ -51,6 +57,9 @@ Here is a sample:
     elif c.option('-l'):
         # do something else
 
+State Data
+^^^^^^^^^^^^^
+
 * **Simple State Management** :
 
 .. code-block:: python
@@ -70,6 +79,54 @@ Here is a sample:
         print("yum")
     elif c.eggs:
         print("yum"*2)
+
+* **The StateObject** : a compendium of automatically generated user state information. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.
+
+.. code-block:: python
+
+    from Naked.toolshed.state import StateObject
+
+    state = StateObject() # collects state information at time of instantiation
+
+    working_directory = state.cwd
+    if state.py2:
+        print("In the directory " + cwd + " and using the Python 2 interpreter")
+    else:
+        print("In the directory " + cwd + " and using the Python 3 interpreter")
+
+
+Networking
+^^^^^^^^^^^
+* GET and POST requests are as simple as:
+
+.. code-block:: python
+
+    from Naked.toolshed.network import HTTP
+
+    http = HTTP("http://www.google.com")
+    print(http.get())
+
+    http = HTTP("http://httpbin.org/post")
+    print(http.post())
+
+
+File I/O
+^^^^^^^^^
+* Unicode (UTF-8) reads and writes:
+
+.. code-block:: python
+
+    from Naked.toolshed.file import FileReader, FileWriter
+
+    r = FileReader('myfile.txt')
+    u_txt = r.read_utf8()
+
+    w = FileWriter('newfile.txt')
+    w.write_utf8(u_txt)
+
+
+Execution of System Applications and Scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * **Simple System Subprocess Execution** : with non-zero exit code status handling & std err stream writes
 
@@ -95,6 +152,10 @@ Here is a sample:
 
     print(run_js('node/testscript.js'))
 
+
+Function, Method, Class Extensions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * **The Naked toolshed types library** includes extensions of commonly used Python types:
 
     * **XString** extends the Python string
@@ -105,23 +166,28 @@ Here is a sample:
     * **XQueue** extends the Python deque
     * **XPriorityQueue** adds a new type
 
+* **Faster, compiled C versions of the library modules** with an *optional* post-install compile for those who need the speed.
+
+
+Text Templates
+^^^^^^^^^^^^^^^
+
 * **The Ink Templating System** - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the ``Naked.toolshed.ink`` library module.
 
-* **The StateObject** - a compendium of automatically generated user state information on StateObject instantation from the ``Naked.toolshed.state`` library module. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.
+Benchmarking
+^^^^^^^^^^^^^^
+* Benchmarking decorators are available for your methods and functions.  Insert it in your code and get repeat trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it's gone.
 
 .. code-block:: python
 
-    from Naked.toolshed.state import StateObject
+    from Naked.toolshed.benchmarking import timer_trials_benchmark
 
-    state = StateObject() # collects state information at time of instantiation
+    @timer_trials_benchmark
+    def your_function(arg1, arg2):
+        # your code
 
-    working_directory = state.cwd
-    if state.py2:
-        print("In the directory " + cwd + " and using the Python 2 interpreter")
-    else:
-        print("In the directory " + cwd + " and using the Python 3 interpreter")
-
-* **Faster, compiled C versions of every toolshed library module** with an *optional* post-install compile for those who need the speed.
+Flexible and No Commitment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * **Every component of the framework is 100% optional**.  You determine how much (if any) of the Naked source you need in your project.  Building a project with the executable does not mandate use of the command parser, the automatically implemented help, usage, and version commands, or any part of the Naked toolshed library.
 

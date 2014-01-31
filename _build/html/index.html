@@ -135,12 +135,17 @@
 <h2>A Python Command Line Application Framework<a class="headerlink" href="#a-python-command-line-application-framework" title="Permalink to this headline">¶</a></h2>
 <p>Naked (source: <a class="reference external" href="https://pypi.python.org/pypi?name=Naked&amp;:action=display">PyPI</a>, <a class="reference external" href="https://github.com/chrissimpkins/naked">GitHub</a>) is a MIT licensed command line application framework that provides a variety of features for Python application developers.</p>
 <p>Here is a sample:</p>
+<div class="section" id="new-projects">
+<h3>New Projects<a class="headerlink" href="#new-projects" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>New Project Generator</strong> : Create your project directory structure and project file stubs with the <a class="reference external" href="executable.html">naked executable</a>:</li>
+<li><strong>New Project Generator</strong> : Create a complete project directory structure and project file stubs with the <a class="reference external" href="executable.html">naked executable</a>:</li>
 </ul>
 <div class="highlight-bash"><div class="highlight"><pre>naked make
 </pre></div>
 </div>
+</div>
+<div class="section" id="command-line-parser">
+<h3>Command Line Parser<a class="headerlink" href="#command-line-parser" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>Simple Command to Python Object Parser</strong> :</li>
 </ul>
@@ -177,6 +182,9 @@
     <span class="c"># do something else</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="state-data">
+<h3>State Data<a class="headerlink" href="#state-data" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>Simple State Management</strong> :</li>
 </ul>
@@ -197,6 +205,53 @@
     <span class="k">print</span><span class="p">(</span><span class="s">&quot;yum&quot;</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><strong>The StateObject</strong> : a compendium of automatically generated user state information. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.state</span> <span class="kn">import</span> <span class="n">StateObject</span>
+
+<span class="n">state</span> <span class="o">=</span> <span class="n">StateObject</span><span class="p">()</span> <span class="c"># collects state information at time of instantiation</span>
+
+<span class="n">working_directory</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">cwd</span>
+<span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 2 interpreter&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 3 interpreter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="networking">
+<h3>Networking<a class="headerlink" href="#networking" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>GET and POST requests are as simple as:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&quot;http://httpbin.org/post&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">post</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-i-o">
+<h3>File I/O<a class="headerlink" href="#file-i-o" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Unicode (UTF-8) reads and writes:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span><span class="p">,</span> <span class="n">FileWriter</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;myfile.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read_utf8</span><span class="p">()</span>
+
+<span class="n">w</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;newfile.txt&#39;</span><span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">write_utf8</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="execution-of-system-applications-and-scripts">
+<h3>Execution of System Applications and Scripts<a class="headerlink" href="#execution-of-system-applications-and-scripts" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>Simple System Subprocess Execution</strong> : with non-zero exit code status handling &amp; std err stream writes</li>
 </ul>
@@ -221,6 +276,9 @@
 <span class="k">print</span><span class="p">(</span><span class="n">run_js</span><span class="p">(</span><span class="s">&#39;node/testscript.js&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="function-method-class-extensions">
+<h3>Function, Method, Class Extensions<a class="headerlink" href="#function-method-class-extensions" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first"><strong>The Naked toolshed types library</strong> includes extensions of commonly used Python types:</p>
 <blockquote>
@@ -235,27 +293,36 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first"><strong>The Ink Templating System</strong> - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the <tt class="docutils literal"><span class="pre">Naked.toolshed.ink</span></tt> library module.</p>
-</li>
-<li><p class="first"><strong>The StateObject</strong> - a compendium of automatically generated user state information on StateObject instantation from the <tt class="docutils literal"><span class="pre">Naked.toolshed.state</span></tt> library module. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.</p>
+<li><p class="first"><strong>Faster, compiled C versions of the library modules</strong> with an <em>optional</em> post-install compile for those who need the speed.</p>
 </li>
 </ul>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.state</span> <span class="kn">import</span> <span class="n">StateObject</span>
+</div>
+<div class="section" id="text-templates">
+<h3>Text Templates<a class="headerlink" href="#text-templates" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><strong>The Ink Templating System</strong> - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the <tt class="docutils literal"><span class="pre">Naked.toolshed.ink</span></tt> library module.</li>
+</ul>
+</div>
+<div class="section" id="benchmarking">
+<h3>Benchmarking<a class="headerlink" href="#benchmarking" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Benchmarking decorators are available for your methods and functions.  Insert it in your code and get repeat trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it&#8217;s gone.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.benchmarking</span> <span class="kn">import</span> <span class="n">timer_trials_benchmark</span>
 
-<span class="n">state</span> <span class="o">=</span> <span class="n">StateObject</span><span class="p">()</span> <span class="c"># collects state information at time of instantiation</span>
-
-<span class="n">working_directory</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">cwd</span>
-<span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 2 interpreter&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 3 interpreter&quot;</span><span class="p">)</span>
+<span class="nd">@timer_trials_benchmark</span>
+<span class="k">def</span> <span class="nf">your_function</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">):</span>
+    <span class="c"># your code</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="flexible-and-no-commitment">
+<h3>Flexible and No Commitment<a class="headerlink" href="#flexible-and-no-commitment" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><strong>Faster, compiled C versions of every toolshed library module</strong> with an <em>optional</em> post-install compile for those who need the speed.</li>
 <li><strong>Every component of the framework is 100% optional</strong>.  You determine how much (if any) of the Naked source you need in your project.  Building a project with the executable does not mandate use of the command parser, the automatically implemented help, usage, and version commands, or any part of the Naked toolshed library.</li>
 </ul>
 <p>The goal is to help when you need it and get out of the way when you don&#8217;t.</p>
+</div>
 </div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
