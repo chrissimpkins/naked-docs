@@ -218,9 +218,9 @@
 
 <span class="n">working_directory</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">cwd</span>
 <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 2 interpreter&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">working_directory</span> <span class="o">+</span> <span class="s">&quot; and using the Python 2 interpreter&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">cwd</span> <span class="o">+</span> <span class="s">&quot; and using the Python 3 interpreter&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&quot;In the directory &quot;</span> <span class="o">+</span> <span class="n">working_directory</span> <span class="o">+</span> <span class="s">&quot; and using the Python 3 interpreter&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -310,7 +310,7 @@
 <div class="section" id="benchmarking">
 <h3>Benchmarking<a class="headerlink" href="#benchmarking" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Benchmarking decorators are available for your methods and functions.  Insert it in your code and get repeat trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it&#8217;s gone.</li>
+<li>Benchmarking decorators are available for your methods and functions.  Insert a decorator above your function or method and get 10 trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it&#8217;s gone.</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.benchmarking</span> <span class="kn">import</span> <span class="n">timer_trials_benchmark</span>
 
@@ -319,6 +319,12 @@
     <span class="c"># your code</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="profiling">
+<h3>Profiling<a class="headerlink" href="#profiling" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The <tt class="docutils literal"><span class="pre">profiler.py</span></tt> script is added to every project in the path <tt class="docutils literal"><span class="pre">PROJECT/lib/profiler.py</span></tt>. Insert your test code in the designated testing block and then run <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt> from any directory in your project.  cProfile and pstats profiling is implemented with default report settings (which you can modify in the <tt class="docutils literal"><span class="pre">profiler.py</span></tt> file if you&#8217;d like).</li>
+</ul>
 </div>
 <div class="section" id="flexible-and-no-commitment">
 <h3>Flexible and No Commitment<a class="headerlink" href="#flexible-and-no-commitment" title="Permalink to this headline">¶</a></h3>

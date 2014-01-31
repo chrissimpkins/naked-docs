@@ -176,7 +176,7 @@ Text Templates
 
 Benchmarking
 ^^^^^^^^^^^^^^
-* Benchmarking decorators are available for your methods and functions.  Insert it in your code and get repeat trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it's gone.
+* Benchmarking decorators are available for your methods and functions.  Insert a decorator above your function or method and get 10 trials of between 10 and 1 million repetitions of the code with comparison to a built-in test function. Comment it out and it's gone.
 
 .. code-block:: python
 
@@ -185,6 +185,10 @@ Benchmarking
     @timer_trials_benchmark
     def your_function(arg1, arg2):
         # your code
+
+Profiling
+^^^^^^^^^^
+* The ``profiler.py`` script is added to every project in the path ``PROJECT/lib/profiler.py``. Insert your test code in the designated testing block and then run ``naked profile`` from any directory in your project.  cProfile and pstats profiling is implemented with default report settings (which you can modify in the ``profiler.py`` file if you'd like).
 
 Flexible and No Commitment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
