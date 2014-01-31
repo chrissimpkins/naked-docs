@@ -90,9 +90,9 @@ State Data
 
     working_directory = state.cwd
     if state.py2:
-        print("In the directory " + cwd + " and using the Python 2 interpreter")
+        print("In the directory " + working_directory + " and using the Python 2 interpreter")
     else:
-        print("In the directory " + cwd + " and using the Python 3 interpreter")
+        print("In the directory " + working_directory + " and using the Python 3 interpreter")
 
 
 Networking
