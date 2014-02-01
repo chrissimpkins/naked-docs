@@ -100,7 +100,13 @@
 <li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#project-description">Project Description</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -192,6 +198,13 @@
 <h3>sdist<a class="headerlink" href="#sdist" title="Permalink to this headline">¶</a></h3>
 <p>The <tt class="docutils literal"><span class="pre">sdist</span></tt> secondary command prepares a source distribution for your current release and pushes it to PyPI.  This is performed by running the command <tt class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span> <span class="pre">upload</span></tt> and is run from the command line with:</p>
 <div class="highlight-bash"><div class="highlight"><pre>naked dist sdist
+</pre></div>
+</div>
+</div>
+<div class="section" id="swheel">
+<h3>swheel<a class="headerlink" href="#swheel" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">swheel</span></tt> secondary command prepares a source distribution and a wheel distribution for your current release and pushes it to PyPI.  This is performed by running the command <tt class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">sdist</span> <span class="pre">bdist_wheel</span> <span class="pre">upload</span></tt> and is run from the command line with:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked dist swheel
 </pre></div>
 </div>
 </div>

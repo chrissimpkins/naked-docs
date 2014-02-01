@@ -101,4 +101,49 @@ Here is an example of the string from the ``naked`` executable (`full version of
 	--- Use 'naked help' for detailed help ---
 	"""
 
+How to Set Your Version Text
+-----------------------------
+The version text is a concatenated string that is made from the ``major_version``, ``minor_version``, and ``patch_version`` strings in the ``PROJECT/lib/PROJECT/settings.py`` file.  These should be set as Python strings by placing quotes around the numerals.
+
+The ``settings.py`` version variables should look like the following:
+
+.. code-block:: python
+
+	#------------------------------------------------------------------------------
+	# Version Number
+	#------------------------------------------------------------------------------
+	major_version = "0"
+	minor_version = "1"
+	patch_version = "0"
+
+By default, the version text for an application named 'testapp' is displayed like this:
+
+.. code-block:: bash
+
+	$ testapp --version
+	  testapp 0.1.0
+
+As you increment your version numbers with new releases, the new version will be displayed when a user requests it.
+
+.. note::
+
+  	The version number settings in the settings.py file are imported into your setup.py file on new installs and releases to PyPI with the ``naked dist`` commands.  Make sure that they are correct for your release if you intend to use these features.
+
+You can modify the displayed string format in this block of your app.py file:
+
+.. code-block:: python
+
+	    elif c.version():
+	        from PROJECT.settings import app_name, major_version, minor_version, patch_version
+	        # ** modify the string below to change the version text that is displayed to the user **
+	        version_display_string = app_name + ' ' + major_version + '.' + minor_version + '.' + patch_version
+	        print(version_display_string)
+	        sys.exit(0)
+
+For example, to remove the display of a patch version altogether, change the ``version_display_string`` assignment to:
+
+.. code-block:: python
+
+	version_display_string = app_name + ' ' + major_version + '.' + minor_version
+
 .. _full version of file: https://github.com/chrissimpkins/naked/blob/master/lib/Naked/settings.py

@@ -104,6 +104,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-help-text">How to Set Your Help Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-version-text">How to Set Your Version Text</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -214,6 +215,42 @@
 <span class="s">Usage: naked &lt;primary command&gt; [secondary command] [option(s)] [argument(s)]</span>
 <span class="s">--- Use &#39;naked help&#39; for detailed help ---</span>
 <span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-set-your-version-text">
+<h2>How to Set Your Version Text<a class="headerlink" href="#how-to-set-your-version-text" title="Permalink to this headline">¶</a></h2>
+<p>The version text is a concatenated string that is made from the <tt class="docutils literal"><span class="pre">major_version</span></tt>, <tt class="docutils literal"><span class="pre">minor_version</span></tt>, and <tt class="docutils literal"><span class="pre">patch_version</span></tt> strings in the <tt class="docutils literal"><span class="pre">PROJECT/lib/PROJECT/settings.py</span></tt> file.  These should be set as Python strings by placing quotes around the numerals.</p>
+<p>The <tt class="docutils literal"><span class="pre">settings.py</span></tt> version variables should look like the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#------------------------------------------------------------------------------</span>
+<span class="c"># Version Number</span>
+<span class="c">#------------------------------------------------------------------------------</span>
+<span class="n">major_version</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span>
+<span class="n">minor_version</span> <span class="o">=</span> <span class="s">&quot;1&quot;</span>
+<span class="n">patch_version</span> <span class="o">=</span> <span class="s">&quot;0&quot;</span>
+</pre></div>
+</div>
+<p>By default, the version text for an application named &#8216;testapp&#8217; is displayed like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>testapp --version
+  testapp 0.1.0
+</pre></div>
+</div>
+<p>As you increment your version numbers with new releases, the new version will be displayed when a user requests it.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The version number settings in the settings.py file are imported into your setup.py file on new installs and releases to PyPI with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt> commands.  Make sure that they are correct for your release if you intend to use these features.</p>
+</div>
+<p>You can modify the displayed string format in this block of your app.py file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">version</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">PROJECT.settings</span> <span class="kn">import</span> <span class="n">app_name</span><span class="p">,</span> <span class="n">major_version</span><span class="p">,</span> <span class="n">minor_version</span><span class="p">,</span> <span class="n">patch_version</span>
+    <span class="c"># ** modify the string below to change the version text that is displayed to the user **</span>
+    <span class="n">version_display_string</span> <span class="o">=</span> <span class="n">app_name</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">major_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">minor_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">patch_version</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">version_display_string</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example, to remove the display of a patch version altogether, change the <tt class="docutils literal"><span class="pre">version_display_string</span></tt> assignment to:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">version_display_string</span> <span class="o">=</span> <span class="n">app_name</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">major_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">minor_version</span>
 </pre></div>
 </div>
 </div>
