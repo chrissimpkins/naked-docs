@@ -76,6 +76,14 @@ The ``sdist`` secondary command prepares a source distribution for your current 
 
 	naked dist sdist
 
+swheel
+^^^^^^^^
+The ``swheel`` secondary command prepares a source distribution and a wheel distribution for your current release and pushes it to PyPI.  This is performed by running the command ``python setup.py sdist bdist_wheel upload`` and is run from the command line with:
+
+.. code-block:: bash
+
+	naked dist swheel
+
 wheel
 ^^^^^^
 The ``wheel`` secondary command prepares a wheel distribution for your current release and pushes it to PyPI.  This is performed by running the command ``python setup.py bdist_wheel upload`` and is run from the command line with:

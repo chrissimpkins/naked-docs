@@ -100,7 +100,12 @@
 <li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#project-description">Project Description</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Help, Usage, and Version Commands</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -136,7 +141,82 @@
           
   <div class="section" id="help-usage-and-version-commands">
 <h1>Help, Usage, and Version Commands<a class="headerlink" href="#help-usage-and-version-commands" title="Permalink to this headline">¶</a></h1>
-<p>Documentation is coming soon...stay tuned.</p>
+<div class="section" id="implementation-of-commands-in-a-naked-project">
+<h2>Implementation of Commands in a Naked Project<a class="headerlink" href="#implementation-of-commands-in-a-naked-project" title="Permalink to this headline">¶</a></h2>
+<p>When you create a new Naked project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command, the command line parsing logic for help, usage, and version information requests is implemented for you.  This allows users to request this information from your application with any of the following:</p>
+<div class="section" id="help">
+<h3>Help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; -h
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; --help
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="o">&lt;</span><span class="n">executable</span><span class="o">&gt;</span> <span class="n">help</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; --usage
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; usage
+</pre></div>
+</div>
+</div>
+<div class="section" id="version">
+<h3>Version<a class="headerlink" href="#version" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; -v
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; --version
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>&lt;executable&gt; version
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-set-your-help-text">
+<h2>How to Set Your Help Text<a class="headerlink" href="#how-to-set-your-help-text" title="Permalink to this headline">¶</a></h2>
+<p>The help text is assigned to the <tt class="docutils literal"><span class="pre">help</span></tt> variable in the <tt class="docutils literal"><span class="pre">PROJECT/lib/PROJECT/settings.py</span></tt> file.  Modify this string and save the file. It will be published to the standard output stream for users when they request application help with the above syntax.</p>
+<p>Here is an example that includes the initial part of the <tt class="docutils literal"><span class="pre">naked</span></tt> executable help text (<a class="reference external" href="https://github.com/chrissimpkins/naked/blob/master/lib/Naked/settings.py">full version of file</a>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">help</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">---------------------------------------------------</span>
+<span class="s"> Naked</span>
+<span class="s"> A Python command line application framework</span>
+<span class="s"> Copyright 2014 Christopher Simpkins</span>
+<span class="s"> MIT license</span>
+<span class="s">---------------------------------------------------</span>
+
+<span class="s">ABOUT</span>
+
+<span class="s">The Naked framework includes the &quot;naked&quot; executable and the Python toolshed library.  The naked executable is a command line tool for application development, testing, profiling, and deployment.  The toolshed library contains numerous useful tools for application development that can be used through standard Python module imports.  These features are detailed in the documentation (link below).</span>
+
+<span class="s">USAGE</span>
+
+<span class="s">The naked executable syntax is:</span>
+
+<span class="s">  naked &lt;primary command&gt; [secondary command] [option(s)] [argument(s)]</span>
+
+<span class="s"># more...</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Note the triple quote format that allows you to write multi-line strings in Python.</p>
+</div>
+<div class="section" id="how-to-set-your-usage-text">
+<h2>How to Set Your Usage Text<a class="headerlink" href="#how-to-set-your-usage-text" title="Permalink to this headline">¶</a></h2>
+<p>The usage text is assigned to the <tt class="docutils literal"><span class="pre">usage</span></tt> variable in the <tt class="docutils literal"><span class="pre">PROJECT/lib/PROJECT/settings.py</span></tt> file.  Modify this string and save the file.  It will be published to the standard output stream for users when they request application usage help with the above syntax.</p>
+<p>Here is an example of the string from the <tt class="docutils literal"><span class="pre">naked</span></tt> executable (<a class="reference external" href="https://github.com/chrissimpkins/naked/blob/master/lib/Naked/settings.py">full version of file</a>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">usage</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">Usage: naked &lt;primary command&gt; [secondary command] [option(s)] [argument(s)]</span>
+<span class="s">--- Use &#39;naked help&#39; for detailed help ---</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
