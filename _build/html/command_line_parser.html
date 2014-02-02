@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Parser &mdash; Naked 0.1.17 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.17',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.17 documentation" href="index.html"/>
+        <link rel="next" title="The Toolshed Library" href="toolshed_overview.html"/>
+        <link rel="prev" title="Help, Usage, and Version Commands" href="help_usage_version.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#project-description">Project Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Command Line Parser</a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="command-line-parser">
+<h1>Command Line Parser<a class="headerlink" href="#command-line-parser" title="Permalink to this headline">¶</a></h1>
+<p>The Naked framework provides a command line parser that is intended to make the transition from a user command string to a Python object seamless, and to make that Command object as easy to use as possible.</p>
+<div class="section" id="how-it-works">
+<h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>The command string is parsed into a series of positional and command line syntax specific arguments that are easily accessible through Command object attribute lookups or instance methods.  If that statement was as clear as mud, here is an example that walks you through access to the commands, options, and their arguments.</p>
+<p>Say you are developing a command suite application that expects a user to control the application with a command syntax like the following:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;executable&gt; &lt;primary command&gt; [secondary command] [short option(s)] [long option(s)] [argument to option]
+</pre></div>
+</div>
+<p>Let&#8217;s take a look at how you retrieve the information from the user input.</p>
+</div>
+<div class="section" id="how-to-import-the-command-line-parser">
+<h2>How to Import the Command Line Parser<a class="headerlink" href="#how-to-import-the-command-line-parser" title="Permalink to this headline">¶</a></h2>
+<p>The parser is available in the <tt class="docutils literal"><span class="pre">Naked.commandline</span></tt> module and can be imported into your <tt class="docutils literal"><span class="pre">app.py</span></tt> file (app.py file information in <a class="reference internal" href="naked_project_structure.html"><em>Naked Project Structure</em></a>) with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">Naked.commandline</span>
+</pre></div>
+</div>
+<p>If you created your project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command, this import is added to the generated <tt class="docutils literal"><span class="pre">app.py</span></tt> file.</p>
+</div>
+<div class="section" id="how-to-instantiate-a-command-object">
+<h2>How to Instantiate a Command Object<a class="headerlink" href="#how-to-instantiate-a-command-object" title="Permalink to this headline">¶</a></h2>
+<p>Create an instance of the command line parser with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">c</span> <span class="o">=</span> <span class="n">Naked</span><span class="o">.</span><span class="n">commandline</span><span class="o">.</span><span class="n">Command</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+</pre></div>
+</div>
+<p>The class is instantiated with two arguments.  The name of your executable and the remainder of the command line string.  The Python sys module takes care of both of these arguments for you.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Import the Python sys module in your <tt class="docutils literal"><span class="pre">app.py</span></tt> file in order to pass the entire command line string to the Naked Command constructor (as shown above)</p>
+</div>
+</div>
+<div class="section" id="the-primary-and-secondary-commands">
+<h2>The Primary and Secondary Commands<a class="headerlink" href="#the-primary-and-secondary-commands" title="Permalink to this headline">¶</a></h2>
+<p>The Naked command line parser creates a new attribute for the first argument to the executable that is named <tt class="docutils literal"><span class="pre">cmd</span></tt> (for the primary command).  It also creates an attribute that is named <tt class="docutils literal"><span class="pre">cmd2</span></tt> (for the secondary or sub-command).  Assuming that you call your Command object instance, &#8216;c&#8217;, as I demonstrated above, these commands are accessible with the following attribute lookups:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">primary_command</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span>
+<span class="n">secondary_command</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd2</span>
+</pre></div>
+</div>
+<p>And you can test for the presence of a specific command in the same fashion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&quot;command1&quot;</span><span class="p">:</span>
+        <span class="c"># do something</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&quot;command2&quot;</span><span class="p">:</span>
+        <span class="c"># do something else</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&quot;command3&quot;</span><span class="p">:</span>
+        <span class="c"># do yet another thing</span>
+</pre></div>
+</div>
+<p>The secondary command can be inserted into the application logic for each primary command like so:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&quot;command1&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd2</span> <span class="o">==</span> <span class="s">&quot;sub_command1&quot;</span><span class="p">:</span>
+                <span class="c"># do command1 branch 1</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd2</span> <span class="o">==</span> <span class="s">&quot;sub_command2&quot;</span><span class="p">:</span>
+                <span class="c"># do command1 branch 2</span>
+        <span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd2</span> <span class="o">==</span> <span class="s">&quot;sub_command3&quot;</span><span class="p">:</span>
+                <span class="c"># do command1 branch 3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>For the purposes of this discussion, I am going to call an option that looks like this <tt class="docutils literal"><span class="pre">-s</span></tt> a short option, one that looks like this <tt class="docutils literal"><span class="pre">--long</span></tt> a long option, and one that has the following appearance <tt class="docutils literal"><span class="pre">--flag=argument</span></tt> a flag.</p>
+<p>The Naked parser identifies options by the presence of the first &#8216;-&#8216; symbol in the string.  You can test for the presence of these option forms with a Command object method.</p>
+<p>For exclusive options:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-s&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--something&#39;</span><span class="p">):</span>
+        <span class="c"># the user indicated this option, handle it</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-e&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--else&#39;</span><span class="p">):</span>
+        <span class="c"># the user indicated this option, handle it</span>
+</pre></div>
+</div>
+<p>For non-exclusive, independent options:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-s&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--something&#39;</span><span class="p">):</span>
+        <span class="c"># the user indicated this option, handle it</span>
+<span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-e&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--else&#39;</span><span class="p">):</span>
+        <span class="c"># the user indicated this option, handle it</span>
+</pre></div>
+</div>
+<p>For non-exclusive, dependent options:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-s&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--something&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-e&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--else&#39;</span><span class="p">):</span>
+                <span class="c"># the user indicated both options, handle them</span>
+</pre></div>
+</div>
+<p>The presence of a flag (as you&#8217;ll recall, an option that looks like this <tt class="docutils literal"><span class="pre">--flag=argument</span></tt>) is tested for with the <tt class="docutils literal"><span class="pre">flag()</span></tt> method:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">flag</span><span class="p">(</span><span class="s">&#39;--flag&#39;</span><span class="p">):</span>
+        <span class="n">argument</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">flag_arg</span><span class="p">(</span><span class="s">&#39;--flag&#39;</span><span class="p">)</span> <span class="c"># more information below on arguments!</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<p>Arguments to the options are retrieved with the <tt class="docutils literal"><span class="pre">arg()</span></tt> method for short and long options, and with the <tt class="docutils literal"><span class="pre">flag_arg()</span></tt> method for flags.  Here are examples:</p>
+<p>## TODO : examples</p>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="toolshed_overview.html" class="btn btn-neutral float-right" title="The Toolshed Library"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="help_usage_version.html" class="btn btn-neutral" title="Help, Usage, and Version Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
