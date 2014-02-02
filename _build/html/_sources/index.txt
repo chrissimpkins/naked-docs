@@ -207,6 +207,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   resources
    installation
    upgrade
    definitions
