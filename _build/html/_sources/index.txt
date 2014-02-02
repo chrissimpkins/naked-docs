@@ -215,6 +215,7 @@ Contents
    executable
    naked_project_structure
    help_usage_version
+   toolshed_overview
    change_log
    licenses
 
