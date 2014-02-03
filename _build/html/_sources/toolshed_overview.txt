@@ -22,7 +22,7 @@ Casts Module
 
 **C Module Import**: ``Naked.toolshed.c.casts``
 
-The casts module includes functions that cast built-in Python types to Naked type extensions.
+The casts module includes functions that cast built-in Python types to Naked type extensions.  This allows you to use the same type casting syntax that Python uses for the built-in types (e.g. the Python str() is xstr() for the Naked XString() type).
 
 Documentation: coming soon...
 
@@ -58,7 +58,7 @@ Network Module
 
 **C Module Import**: ``Naked.toolshed.c.network``
 
-The network module includes the HTTP class for simple GET and POST requests for text or binary data.
+The network module includes the HTTP class for simple GET and POST requests with text or binary data.
 
 Documentation: coming soon...
 
