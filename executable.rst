@@ -253,7 +253,7 @@ Make Command Help
 
 The Profile Command
 ---------------------
-The profile command runs cProfile and pstats on the code that you enter in test code block of your PROJECT/lib/profiler.py file.
+The profile command runs cProfile and pstats on the code that you enter in the test code block of your PROJECT/lib/profiler.py file.
 
 Usage
 ^^^^^^^
