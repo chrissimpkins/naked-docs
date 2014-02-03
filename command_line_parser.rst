@@ -337,6 +337,7 @@ You can confirm that there is at least one argument (including options) passed t
 		# handle invalid syntax (e.g. print usage)
 		sys.exit(1) # exit application with non-zero exit status
 
+This test confirms that the argument list length is > 0 (i.e. obj.argc > 0) and returns a boolean value.
 
 Validation of a Primary Command
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -350,6 +351,8 @@ You can also confirm that there is a primary command that is passed to the execu
 	if not command_suite_validates():
 		# handle invalid syntax (e.g. print usage)
 		sys.exit(1) # exit application with non-zero exit status
+
+A primary command is defined as any non-option string (i.e. a string that does not begin with a '-' character).  The method returns a boolean value for this test.
 
 
 

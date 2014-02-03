@@ -438,7 +438,7 @@ c.argc = 5
 
 Argument List Items
 -------------------
-c.argobj = [&#39;save&#39;, &#39;somestring&#39;, &#39;--unicode&#39;, &#39;-s&#39;, &#39;--name=file.txt&#39;]
+c.argobj = [&#39;save&#39;, &#39;something&#39;, &#39;--unicode&#39;, &#39;-s&#39;, &#39;--name=file.txt&#39;]
 
 Arguments by Zero Indexed Start Position
 ----------------------------------------
@@ -501,6 +501,7 @@ c.flag_arg(&quot;--name&quot;) = file.txt
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># exit application with non-zero exit status</span>
 </pre></div>
 </div>
+<p>This test confirms that the argument list length is &gt; 0 (i.e. obj.argc &gt; 0) and returns a boolean value.</p>
 </div>
 <div class="section" id="validation-of-a-primary-command">
 <h3>Validation of a Primary Command<a class="headerlink" href="#validation-of-a-primary-command" title="Permalink to this headline">¶</a></h3>
@@ -513,6 +514,7 @@ c.flag_arg(&quot;--name&quot;) = file.txt
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># exit application with non-zero exit status</span>
 </pre></div>
 </div>
+<p>A primary command is defined as any non-option string (i.e. a string that does not begin with a &#8216;-&#8216; character).  The method returns a boolean value for this test.</p>
 </div>
 </div>
 </div>
