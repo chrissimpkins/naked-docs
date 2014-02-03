@@ -3,7 +3,7 @@ Naked Resources
 
 The Source Code
 ----------------
-The source is available on `GitHub`_ and the `PyPI`_.
+The source is available on `GitHub`_ and `PyPI`_.
 
 
 The Developer Log
@@ -13,7 +13,7 @@ The `devlog`_ is the site for current project news and updates.
 
 Issue Reports
 --------------
-Find a bug? Let's squash it. Please report it on the `GitHub issue tracker`_.
+Find a bug? Let's fix it. Please report it on the `GitHub issue tracker`_.
 
 
 .. _GitHub: http://github.com/chrissimpkins/naked

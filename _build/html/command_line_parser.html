@@ -44,7 +44,7 @@
 
   
     <link rel="top" title="Naked 0.1.17 documentation" href="index.html"/>
-        <link rel="next" title="The Toolshed Library" href="toolshed_overview.html"/>
+        <link rel="next" title="The Toolshed Library Overview" href="toolshed_overview.html"/>
         <link rel="prev" title="Help, Usage, and Version Commands" href="help_usage_version.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -126,7 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#syntax-validation">Syntax Validation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
@@ -136,6 +136,7 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -321,14 +322,23 @@
 </div>
 <div class="section" id="other-available-command-attributes">
 <h2>Other Available Command Attributes<a class="headerlink" href="#other-available-command-attributes" title="Permalink to this headline">¶</a></h2>
-<p>There is overlap in the naming of the Command object attributes in order to provide a flexible scheme that (hopefully) addresses most command line application needs.  For instance, if you are developing an application that does not require primary or secondary commands, and instead takes one or more options after the executable:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;executable&gt; [option1] [option2]
+<p>There is overlap in the naming of the Command object attributes in order to provide a flexible scheme that (hopefully) addresses most command line application needs.  For instance, if you are developing an application that does not require primary or secondary commands, and instead takes up to one option after the executable:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;executable&gt; [option]
 </pre></div>
 </div>
 <p>then you could use an approach like the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Example: &lt;executable&gt; --test</span>
 <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">arg1</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">arg0</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
+                <span class="c"># do something</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="c"># there are no options</span>
+</pre></div>
+</div>
+<p>or alternatively,</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Example: &lt;executable&gt; --test</span>
+<span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">first</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
                 <span class="c"># do something</span>
 <span class="k">else</span><span class="p">:</span>
         <span class="c"># there are no options</span>
@@ -512,7 +522,7 @@ c.flag_arg(&quot;--name&quot;) = file.txt
   
     <div class="rst-footer-buttons">
       
-        <a href="toolshed_overview.html" class="btn btn-neutral float-right" title="The Toolshed Library"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="toolshed_overview.html" class="btn btn-neutral float-right" title="The Toolshed Library Overview"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="help_usage_version.html" class="btn btn-neutral" title="Help, Usage, and Version Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>

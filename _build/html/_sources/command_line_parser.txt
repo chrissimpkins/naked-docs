@@ -193,9 +193,9 @@ For a flag:
 
 Other Available Command Attributes
 ------------------------------------
-There is overlap in the naming of the Command object attributes in order to provide a flexible scheme that (hopefully) addresses most command line application needs.  For instance, if you are developing an application that does not require primary or secondary commands, and instead takes one or more options after the executable::
+There is overlap in the naming of the Command object attributes in order to provide a flexible scheme that (hopefully) addresses most command line application needs.  For instance, if you are developing an application that does not require primary or secondary commands, and instead takes up to one option after the executable::
 
-	<executable> [option1] [option2]
+	<executable> [option]
 
 then you could use an approach like the following:
 
@@ -203,7 +203,18 @@ then you could use an approach like the following:
 
 	# Example: <executable> --test
 	if c.options:
-		if c.arg1 == '--test':
+		if c.arg0 == '--test':
+			# do something
+	else:
+		# there are no options
+
+or alternatively,
+
+.. code-block:: python
+
+	# Example: <executable> --test
+	if c.options:
+		if c.first == '--test':
 			# do something
 	else:
 		# there are no options
