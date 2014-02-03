@@ -1,7 +1,7 @@
 The Toolshed Library Overview
 ==============================
 
-The toolshed library includes standard Python modules and Cython generated C source files that can be compiled into binaries that Python will import with the typical syntax.  The C source code is compiled with the ``naked build`` command (`Build Command Documentation`_).
+The toolshed library includes standard Python modules and C source files that can be compiled into binaries which Python will import with the typical syntax.  The C source code is compiled with the ``naked build`` command (`Build Command Documentation`_).
 
 The library includes the following modules:
 
