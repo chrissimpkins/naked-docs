@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The Toolshed Library &mdash; Naked 0.1.17 documentation</title>
+  <title>The Toolshed Library Overview &mdash; Naked 0.1.17 documentation</title>
   
 
   
@@ -45,7 +45,7 @@
   
     <link rel="top" title="Naked 0.1.17 documentation" href="index.html"/>
         <link rel="next" title="Changelog" href="change_log.html"/>
-        <link rel="prev" title="Help, Usage, and Version Commands" href="help_usage_version.html"/> 
+        <link rel="prev" title="Command Line Parser" href="command_line_parser.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -93,6 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
@@ -113,7 +114,31 @@
 <li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">The Toolshed Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">The Toolshed Library Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#benchmarking-module">Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#casts-module">Casts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-module">File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ink-module">Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#network-module">Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-module">Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shell-module">Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#state-module">State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#types-module">Types Module</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -141,15 +166,85 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href="">The Toolshed Library</a></li>
+  <li><a href="">The Toolshed Library Overview</a></li>
   
 </ul>
 <hr/>
 
           
-  <div class="section" id="the-toolshed-library">
-<h1>The Toolshed Library<a class="headerlink" href="#the-toolshed-library" title="Permalink to this headline">¶</a></h1>
-<p>Overview of the Naked toolshed library (and detailed library documentation)...coming soon!</p>
+  <div class="section" id="the-toolshed-library-overview">
+<h1>The Toolshed Library Overview<a class="headerlink" href="#the-toolshed-library-overview" title="Permalink to this headline">¶</a></h1>
+<p>The toolshed library includes the following modules:</p>
+<div class="section" id="benchmarking-module">
+<h2>Benchmarking Module<a class="headerlink" href="#benchmarking-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.benchmarking</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.benchmarking</span></tt></p>
+<p>The benchmarking module includes decorators for timed testing of methods and functions over a series of 10 trials x 10 - 1 million repetitions. This includes a decorator that runs a standardized built-in Python method in sequence with your function or method for comparison.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="casts-module">
+<h2>Casts Module<a class="headerlink" href="#casts-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.casts</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.casts</span></tt></p>
+<p>The casts module includes functions that cast built-in Python types to Naked type extensions.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="file-module">
+<h2>File Module<a class="headerlink" href="#file-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.file</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.file</span></tt></p>
+<p>The file module includes FileWriter and FileReader classes that perform I/O, including simple UTF-8 encoded reads and writes.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="ink-module">
+<h2>Ink Module<a class="headerlink" href="#ink-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.ink</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.ink</span></tt></p>
+<p>The ink module includes text template and renderer classes to perform flexible text templating with the replacement tag syntax of your choice.  A Python dictionary is used to map replacement strings to the replacement tags.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="network-module">
+<h2>Network Module<a class="headerlink" href="#network-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.network</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.network</span></tt></p>
+<p>The network module includes the HTTP class for simple GET and POST requests for text or binary data.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="python-module">
+<h2>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.python</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.python</span></tt></p>
+<p>The python module includes Python interpreter version testing functions.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="shell-module">
+<h2>Shell Module<a class="headerlink" href="#shell-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.shell</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.shell</span></tt></p>
+<p>The shell module includes external system, Ruby, &amp; Node.js subprocess execution methods and environent variable testing methods.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="state-module">
+<h2>State Module<a class="headerlink" href="#state-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.state</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.cstate</span></tt></p>
+<p>The state (and cstate C module - note the change in the naming convention for this module) include the StateObject, a state object that automatically generates operating system, user and working directory, Python interpreter, time, &amp; date information on instantiation.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="system-module">
+<h2>System Module<a class="headerlink" href="#system-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.system</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.system</span></tt></p>
+<p>The system module includes functions for file and directory paths, file and directory existence testing, file extension testing, file listings, file filters, file metadata, and decorators that automatically prepend filepaths to filename arguments in methods and functions. It also includes functions for simple printing to the standard output and standard error streams with exit code handling.</p>
+<p>Documentation: coming soon...</p>
+</div>
+<div class="section" id="types-module">
+<h2>Types Module<a class="headerlink" href="#types-module" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.types</span></tt></p>
+<p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.types</span></tt></p>
+<p>The types module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extension types permit assignment of attributes to both mutable and immutable types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  The extension classes also include numerous new methods for these commonly used types.</p>
+<p>Documentation: coming soon...</p>
+</div>
 </div>
 
 
@@ -160,7 +255,7 @@
         <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="help_usage_version.html" class="btn btn-neutral" title="Help, Usage, and Version Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="command_line_parser.html" class="btn btn-neutral" title="Command Line Parser"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
