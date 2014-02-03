@@ -271,7 +271,7 @@ and the output looks like this::
 
 	Argument List Items
 	-------------------
-	c.argobj = ['save', 'somestring', '--unicode', '-s', '--name=file.txt']
+	c.argobj = ['save', 'something', '--unicode', '-s', '--name=file.txt']
 
 	Arguments by Zero Indexed Start Position
 	----------------------------------------
