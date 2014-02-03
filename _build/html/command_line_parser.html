@@ -119,7 +119,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#arguments">Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#syntax-validation">Syntax Validation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library</a></li>
@@ -158,7 +161,7 @@
           
   <div class="section" id="command-line-parser">
 <h1>Command Line Parser<a class="headerlink" href="#command-line-parser" title="Permalink to this headline">¶</a></h1>
-<p>The Naked framework provides a command line parser that is intended to make the transition from a user command string to a Python object seamless, and to make that Command object as easy to use as possible.</p>
+<p>The Naked framework provides a command line parser that is intended to make the transition from a user command string to a Python object seamless and to make the generated Command object easy to use in your application logic.</p>
 <div class="section" id="how-it-works">
 <h2>How it Works<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
 <p>The command string is parsed into a series of positional and command line syntax specific arguments that are easily accessible through Command object attribute lookups or instance methods.  If that statement was as clear as mud, here is an example that walks you through access to the commands, options, and their arguments.</p>
@@ -245,11 +248,250 @@
         <span class="n">argument</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">flag_arg</span><span class="p">(</span><span class="s">&#39;--flag&#39;</span><span class="p">)</span> <span class="c"># more information below on arguments!</span>
 </pre></div>
 </div>
+<div class="section" id="test-for-the-existence-of-short-and-long-options">
+<h3>Test for the Existence of Short and Long Options<a class="headerlink" href="#test-for-the-existence-of-short-and-long-options" title="Permalink to this headline">¶</a></h3>
+<p>To determine whether there were one or more options in the command that the user submitted, use either of the following tests that return a boolean:</p>
+<p><strong>Method Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option_exists</span><span class="p">():</span>
+        <span class="c"># yes, there is at least one short option, long option, or flag in command</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># there are no options</span>
+</pre></div>
 </div>
-<div class="section" id="arguments">
-<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
-<p>Arguments to the options are retrieved with the <tt class="docutils literal"><span class="pre">arg()</span></tt> method for short and long options, and with the <tt class="docutils literal"><span class="pre">flag_arg()</span></tt> method for flags.  Here are examples:</p>
-<p>## TODO : examples</p>
+<p><strong>Attribute Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
+        <span class="c"># yes, there is at least one short option, long option, or flag in command</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="c"># there are no options</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test-for-the-existence-of-flags">
+<h3>Test for the Existence of Flags<a class="headerlink" href="#test-for-the-existence-of-flags" title="Permalink to this headline">¶</a></h3>
+<p>Flags are a subset of options.  The above option tests will always return True if this test is True.</p>
+<p><strong>Method Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">flags_exists</span><span class="p">():</span>
+        <span class="c"># yes, at least one flag was present in the command</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="c"># no flags were present in the command</span>
+</pre></div>
+</div>
+<p><strong>Attribute Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">flags</span><span class="p">:</span>
+        <span class="c"># yes, at least one flag was present in the command</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="c"># no flags were present in the command</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="arguments-to-options">
+<h2>Arguments to Options<a class="headerlink" href="#arguments-to-options" title="Permalink to this headline">¶</a></h2>
+<p>Arguments to the options are retrieved with the <tt class="docutils literal"><span class="pre">arg()</span></tt> method for short and long options, and with the <tt class="docutils literal"><span class="pre">flag_arg()</span></tt> method for flags.  These methods return a string that contains the n+1 positional argument relative to the option name that you enter as the method argument, or the string that immediately follows the &#8216;=&#8217; character for a flag. Here are examples:</p>
+<p>For a short option:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># user enters &#39;-l python&#39; in the command</span>
+<span class="n">arg_value</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&#39;-l&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">arg_value</span><span class="p">)</span>  <span class="c"># prints &#39;python&#39;</span>
+</pre></div>
+</div>
+<p>For a long option:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># user enters &#39;--language python&#39; in the command:</span>
+<span class="n">arg_value</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&#39;--language&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">arg_value</span><span class="p">)</span>  <span class="c">#prints &#39;python&#39;</span>
+</pre></div>
+</div>
+<p>For a flag:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># user enters &#39;--language=python&#39; in the command:</span>
+<span class="n">arg_value</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">flag_arg</span><span class="p">(</span><span class="s">&#39;--language&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">arg_value</span><span class="p">)</span>  <span class="c">#prints python</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="other-available-command-attributes">
+<h2>Other Available Command Attributes<a class="headerlink" href="#other-available-command-attributes" title="Permalink to this headline">¶</a></h2>
+<p>There is overlap in the naming of the Command object attributes in order to provide a flexible scheme that (hopefully) addresses most command line application needs.  For instance, if you are developing an application that does not require primary or secondary commands, and instead takes one or more options after the executable:</p>
+<div class="highlight-python"><div class="highlight"><pre>&lt;executable&gt; [option1] [option2]
+</pre></div>
+</div>
+<p>then you could use an approach like the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Example: &lt;executable&gt; --test</span>
+<span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">arg1</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
+                <span class="c"># do something</span>
+<span class="k">else</span><span class="p">:</span>
+        <span class="c"># there are no options</span>
+</pre></div>
+</div>
+<p>Here is the list of all available Command object attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Attribute</strong></td>
+<td><strong>Definition</strong></td>
+</tr>
+<tr class="row-even"><td>obj.app</td>
+<td>executable path</td>
+</tr>
+<tr class="row-odd"><td>obj.argv</td>
+<td>list of command arguments (excluding the executable)</td>
+</tr>
+<tr class="row-even"><td>obj.argc</td>
+<td>number of command line arguments (excluding the executable)</td>
+</tr>
+<tr class="row-odd"><td>obj.arg0</td>
+<td>the first positional argument (excluding the executable)</td>
+</tr>
+<tr class="row-even"><td>obj.arg1</td>
+<td>the second positional argument (excluding the executable)</td>
+</tr>
+<tr class="row-odd"><td>obj.arg2</td>
+<td>the third positional argument (excluding the executable)</td>
+</tr>
+<tr class="row-even"><td>obj.arg3</td>
+<td>the fourth positional argument (excluding the executable)</td>
+</tr>
+<tr class="row-odd"><td>obj.arg4</td>
+<td>the fifth positional argument (excluding the executable)</td>
+</tr>
+<tr class="row-even"><td>obj.first</td>
+<td>the first positional argument</td>
+</tr>
+<tr class="row-odd"><td>obj.second</td>
+<td>the second positional argument</td>
+</tr>
+<tr class="row-even"><td>obj.third</td>
+<td>the third positional argument</td>
+</tr>
+<tr class="row-odd"><td>obj.fourth</td>
+<td>the fourth positional argument</td>
+</tr>
+<tr class="row-even"><td>obj.fifth</td>
+<td>the fifth positional argument</td>
+</tr>
+<tr class="row-odd"><td>obj.arglp</td>
+<td>the last positional argument</td>
+</tr>
+<tr class="row-even"><td>obj.last</td>
+<td>the last positional argument</td>
+</tr>
+<tr class="row-odd"><td>obj.arg_to_exec</td>
+<td>the first argument to the executable = obj.arg0</td>
+</tr>
+<tr class="row-even"><td>obj.arg_to_cmd</td>
+<td>the first argument to a primary command = obj.arg1</td>
+</tr>
+<tr class="row-odd"><td>obj.cmd</td>
+<td>the primary command = first positional argument</td>
+</tr>
+<tr class="row-even"><td>obj.cmd2</td>
+<td>the secondary command = second positional argument</td>
+</tr>
+<tr class="row-odd"><td>obj.options</td>
+<td>boolean for presence of one or more options</td>
+</tr>
+<tr class="row-even"><td>obj.flags</td>
+<td>boolean for presence of one or more flags</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="the-naked-executable-args-command">
+<h2>The naked Executable Args Command<a class="headerlink" href="#the-naked-executable-args-command" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">naked</span></tt> executable <tt class="docutils literal"><span class="pre">args</span></tt> command will help you design your command syntax logic.  Just pass a complete command example as an argument and the <tt class="docutils literal"><span class="pre">args</span></tt> command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.</p>
+<p>Here is an example of how it is used:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked args <span class="s1">&#39;testapp save somestring --unicode -s --name=file.txt&#39;</span>
+</pre></div>
+</div>
+<p>and the output looks like this:</p>
+<div class="highlight-python"><div class="highlight"><pre>Application
+-----------
+c.app = testapp
+
+Argument List Length
+--------------------
+c.argc = 5
+
+Argument List Items
+-------------------
+c.argobj = [&#39;save&#39;, &#39;somestring&#39;, &#39;--unicode&#39;, &#39;-s&#39;, &#39;--name=file.txt&#39;]
+
+Arguments by Zero Indexed Start Position
+----------------------------------------
+c.arg0 = save
+c.arg1 = somestring
+c.arg2 = --unicode
+c.arg3 = -s
+c.arg4 = --name=file.txt
+
+Arguments by Named Position
+---------------------------
+c.first = save
+c.second = somestring
+c.third = --unicode
+c.fourth = -s
+c.fifth = --name=file.txt
+
+Last Positional Argument
+------------------------
+c.arglp = --name=file.txt
+c.last = --name=file.txt
+
+Primary &amp; Secondary Commands
+----------------------------
+c.cmd = save
+c.cmd2 = somestring
+
+Option Exists Tests
+------------------
+c.option_exists() = True
+c.options = True
+
+Option Argument Assignment
+--------------------------
+c.arg(&quot;--unicode&quot;) = -s
+c.arg(&quot;-s&quot;) = --name=file.txt
+
+Flag Exists Tests
+----------------
+c.flag_exists() = True
+c.flags = True
+
+Flag Argument Assignment
+------------------------
+c.flag_arg(&quot;--name&quot;) = file.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="syntax-validation">
+<h2>Syntax Validation<a class="headerlink" href="#syntax-validation" title="Permalink to this headline">¶</a></h2>
+<p>Two types of command syntax validation are available.</p>
+<div class="section" id="validation-of-at-least-one-argument">
+<h3>Validation of at Least One Argument<a class="headerlink" href="#validation-of-at-least-one-argument" title="Permalink to this headline">¶</a></h3>
+<p>You can confirm that there is at least one argument (including options) passed to the executable with the following:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">Naked.commandline</span> <span class="kn">import</span> <span class="n">app_validates_args</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">app_validates_args</span><span class="p">():</span>
+        <span class="c"># handle invalid syntax (e.g. print usage)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># exit application with non-zero exit status</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="validation-of-a-primary-command">
+<h3>Validation of a Primary Command<a class="headerlink" href="#validation-of-a-primary-command" title="Permalink to this headline">¶</a></h3>
+<p>You can also confirm that there is a primary command that is passed to the executable for command suite style applications.  Use a test like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">Naked.commandline</span> <span class="kn">import</span> <span class="n">command_suite_validates</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">command_suite_validates</span><span class="p">():</span>
+        <span class="c"># handle invalid syntax (e.g. print usage)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># exit application with non-zero exit status</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
