@@ -53,7 +53,7 @@ a:hover{
 }
 
 /* Change image and font-size based upon resized screens */
-@media screen and (max-width:1060px) and (min-width:650px){
+@media screen and (max-width:1024px) and (min-width:768px){
 	body {
 		background-image:url('../img/nf-logo-450.png') !important;
 	}
@@ -65,7 +65,7 @@ a:hover{
 	}
 }
 
-@media screen and (max-width:649px) and (min-width: 481px) {
+@media screen and (max-width:767px) and (min-width: 481px) {
 	body {
 		background-image:url('../img/nf-logo-250.png') !important;
 	}
@@ -74,6 +74,8 @@ a:hover{
 	}
 	.main {
 		font-size:16px !important;
+		padding-top: 15px;
+		padding-bottom:12px;
 	}
 }
 
