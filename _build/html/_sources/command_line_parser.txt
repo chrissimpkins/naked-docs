@@ -203,7 +203,7 @@ then you could use an approach like the following:
 
 	# Example: <executable> --test
 	if c.options:
-		if c.arg0 == '--test':
+	    if c.arg0 == '--test':
 			# do something
 	else:
 		# there are no options
@@ -257,7 +257,7 @@ Here is an example of how it is used:
 
 .. code-block:: bash
 
-  naked args 'testapp save somestring --unicode -s --name=file.txt'
+  naked args 'testapp save something --unicode -s --name=file.txt'
 
 and the output looks like this::
 
@@ -276,7 +276,7 @@ and the output looks like this::
 	Arguments by Zero Indexed Start Position
 	----------------------------------------
 	c.arg0 = save
-	c.arg1 = somestring
+	c.arg1 = something
 	c.arg2 = --unicode
 	c.arg3 = -s
 	c.arg4 = --name=file.txt
@@ -284,7 +284,7 @@ and the output looks like this::
 	Arguments by Named Position
 	---------------------------
 	c.first = save
-	c.second = somestring
+	c.second = something
 	c.third = --unicode
 	c.fourth = -s
 	c.fifth = --name=file.txt
@@ -297,7 +297,7 @@ and the output looks like this::
 	Primary & Secondary Commands
 	----------------------------
 	c.cmd = save
-	c.cmd2 = somestring
+	c.cmd2 = something
 
 	Option Exists Tests
 	------------------

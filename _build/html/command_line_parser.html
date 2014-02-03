@@ -329,7 +329,7 @@
 <p>then you could use an approach like the following:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c"># Example: &lt;executable&gt; --test</span>
 <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">arg0</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">arg0</span> <span class="o">==</span> <span class="s">&#39;--test&#39;</span><span class="p">:</span>
                 <span class="c"># do something</span>
 <span class="k">else</span><span class="p">:</span>
         <span class="c"># there are no options</span>
@@ -424,7 +424,7 @@
 <h2>The naked Executable Args Command<a class="headerlink" href="#the-naked-executable-args-command" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="docutils literal"><span class="pre">naked</span></tt> executable <tt class="docutils literal"><span class="pre">args</span></tt> command will help you design your command syntax logic with the Naked parser.  Just pass a complete command example as an argument and the <tt class="docutils literal"><span class="pre">args</span></tt> command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.</p>
 <p>Here is an example of how it is used:</p>
-<div class="highlight-bash"><div class="highlight"><pre>naked args <span class="s1">&#39;testapp save somestring --unicode -s --name=file.txt&#39;</span>
+<div class="highlight-bash"><div class="highlight"><pre>naked args <span class="s1">&#39;testapp save something --unicode -s --name=file.txt&#39;</span>
 </pre></div>
 </div>
 <p>and the output looks like this:</p>
@@ -443,7 +443,7 @@ c.argobj = [&#39;save&#39;, &#39;somestring&#39;, &#39;--unicode&#39;, &#39;-s&#
 Arguments by Zero Indexed Start Position
 ----------------------------------------
 c.arg0 = save
-c.arg1 = somestring
+c.arg1 = something
 c.arg2 = --unicode
 c.arg3 = -s
 c.arg4 = --name=file.txt
@@ -451,7 +451,7 @@ c.arg4 = --name=file.txt
 Arguments by Named Position
 ---------------------------
 c.first = save
-c.second = somestring
+c.second = something
 c.third = --unicode
 c.fourth = -s
 c.fifth = --name=file.txt
@@ -464,7 +464,7 @@ c.last = --name=file.txt
 Primary &amp; Secondary Commands
 ----------------------------
 c.cmd = save
-c.cmd2 = somestring
+c.cmd2 = something
 
 Option Exists Tests
 ------------------
