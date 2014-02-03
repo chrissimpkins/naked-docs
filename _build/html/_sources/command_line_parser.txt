@@ -24,7 +24,7 @@ The parser is available in the ``Naked.commandline`` module and can be imported 
 	import sys
 	import Naked.commandline
 
-If you created your project with the ``naked make`` command, this import is added to the generated ``app.py`` file.
+If you created your project with the ``naked make`` command, this import is added to the generated ``app.py`` file for you.
 
 
 How to Instantiate a Command Object
@@ -44,7 +44,7 @@ The class is instantiated with two arguments.  The name of your executable and t
 The Primary and Secondary Commands
 -------------------------------------
 
-The Naked command line parser creates a new attribute for the first argument to the executable that is named ``cmd`` (for the primary command).  It also creates an attribute that is named ``cmd2`` (for the secondary or sub-command).  Assuming that you call your Command object instance, 'c', as I demonstrated above, these commands are accessible with the following attribute lookups:
+The parser creates a new attribute from the first positional argument to the executable that is named ``cmd`` (for the primary command) and an attribute for the second positional argument that is named ``cmd2`` (for the secondary or sub-command).  Assuming that you call your Command object instance, 'c', as I demonstrated above, these commands are accessible with the following attribute lookups:
 
 .. code-block:: python
 
@@ -79,7 +79,7 @@ Options
 
 For the purposes of this discussion, I am going to call an option that looks like this ``-s`` a short option, one that looks like this ``--long`` a long option, and one that has the following appearance ``--flag=argument`` a flag.
 
-The Naked parser identifies options by the presence of the first '-' symbol in the string.  You can test for the presence of these option forms with a Command object method.
+The parser identifies options by the presence of the first '-' symbol in the string.  You can test for the presence of these option forms with a Command object method.
 
 For exclusive options:
 
@@ -124,16 +124,16 @@ To determine whether there were one or more options in the command that the user
 .. code-block:: python
 
 	if c.option_exists():
-		# yes, there is at least one short option, long option, or flag in command
+		# there is at least one short option, long option, or flag in command
 	else:
-	    # there are no options
+		# there are no options
 
 **Attribute Approach**
 
 .. code-block:: python
 
 	if c.options:
-		# yes, there is at least one short option, long option, or flag in command
+		# there is at least one short option, long option, or flag in command
 	else:
 		# there are no options
 
@@ -147,7 +147,7 @@ Flags are a subset of options.  The above option tests will always return True i
 .. code-block:: python
 
 	if c.flags_exists():
-		# yes, at least one flag was present in the command
+		# at least one flag was present in the command
 	else:
 		# no flags were present in the command
 
@@ -156,7 +156,7 @@ Flags are a subset of options.  The above option tests will always return True i
 .. code-block:: python
 
 	if c.flags:
-		# yes, at least one flag was present in the command
+		# at least one flag was present in the command
 	else:
 		# no flags were present in the command
 
@@ -240,7 +240,7 @@ obj.flags           boolean for presence of one or more flags
 
 The naked Executable Args Command
 ----------------------------------
-The ``naked`` executable ``args`` command will help you design your command syntax logic.  Just pass a complete command example as an argument and the ``args`` command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.
+The ``naked`` executable ``args`` command will help you design your command syntax logic with the Naked parser.  Just pass a complete command example as an argument and the ``args`` command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.
 
 Here is an example of how it is used:
 

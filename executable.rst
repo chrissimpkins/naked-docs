@@ -5,12 +5,36 @@ The naked executable is a command line tool for application development, testing
 
 The primary commands include:
 
+* :ref:`args-command-label`    - View parsed command strings and truth tests
 * :ref:`build-command-label`   - Compile Naked C library code
 * :ref:`dist-command-label`    - Project deployment
 * :ref:`locate-command-label`  - Locate important project files
 * :ref:`make-command-label`    - Generate a new project
 * :ref:`profile-command-label` - Project profiling
 * :ref:`test-command-label`    - Project unit testing
+
+.. _args-command-label:
+
+The Args Command
+-----------------
+The ``args`` command will help you design your command syntax logic with the Naked parser.  Pass a complete command example as an argument to the command and it will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.
+
+Args Command Usage
+^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	naked args 'testapp save somestring --unicode -s --name=file.txt'
+
+You can see an example of the output in the `Command Line Parser`_ documentation.
+
+Args Command Help
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+	naked args help
+
 
 .. _build-command-label:
 
@@ -322,4 +346,5 @@ Help is available for the command with:
 .. _nose: https://nose.readthedocs.org/en/latest/
 .. _pytest: http://pytest.org/latest/
 .. _tox: http://tox.readthedocs.org/en/latest/
+.. _Command Line Parser: command_line_parser.html#the-naked-executable-args-command
 

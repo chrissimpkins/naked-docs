@@ -70,7 +70,7 @@
         
         
             <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Resources for Naked</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
@@ -93,6 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-build-command">The Build Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-dist-command">The Dist Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-locate-command">The Locate Command</a></li>
@@ -113,6 +114,19 @@
 <li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -151,6 +165,7 @@
 <p>The naked executable is a command line tool for application development, testing, profiling, and deployment. It is distributed with the Naked framework install.</p>
 <p>The primary commands include:</p>
 <ul class="simple">
+<li><a class="reference internal" href="#args-command-label"><em>The Args Command</em></a>    - View parsed command strings and truth tests</li>
 <li><a class="reference internal" href="#build-command-label"><em>The Build Command</em></a>   - Compile Naked C library code</li>
 <li><a class="reference internal" href="#dist-command-label"><em>The Dist Command</em></a>    - Project deployment</li>
 <li><a class="reference internal" href="#locate-command-label"><em>The Locate Command</em></a>  - Locate important project files</li>
@@ -158,6 +173,23 @@
 <li><a class="reference internal" href="#profile-command-label"><em>The Profile Command</em></a> - Project profiling</li>
 <li><a class="reference internal" href="#test-command-label"><em>The Test Command</em></a>    - Project unit testing</li>
 </ul>
+<div class="section" id="the-args-command">
+<span id="args-command-label"></span><h2>The Args Command<a class="headerlink" href="#the-args-command" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">args</span></tt> command will help you design your command syntax logic with the Naked parser.  Pass a complete command example as an argument to the command and it will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.</p>
+<div class="section" id="args-command-usage">
+<h3>Args Command Usage<a class="headerlink" href="#args-command-usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>naked args <span class="s1">&#39;testapp save somestring --unicode -s --name=file.txt&#39;</span>
+</pre></div>
+</div>
+<p>You can see an example of the output in the <a class="reference external" href="command_line_parser.html#the-naked-executable-args-command">Command Line Parser</a> documentation.</p>
+</div>
+<div class="section" id="args-command-help">
+<h3>Args Command Help<a class="headerlink" href="#args-command-help" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">naked</span> <span class="n">args</span> <span class="n">help</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="the-build-command">
 <span id="build-command-label"></span><h2>The Build Command<a class="headerlink" href="#the-build-command" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">

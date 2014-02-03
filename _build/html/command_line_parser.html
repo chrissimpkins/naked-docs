@@ -93,6 +93,7 @@
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
@@ -178,7 +179,7 @@
 <span class="kn">import</span> <span class="nn">Naked.commandline</span>
 </pre></div>
 </div>
-<p>If you created your project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command, this import is added to the generated <tt class="docutils literal"><span class="pre">app.py</span></tt> file.</p>
+<p>If you created your project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command, this import is added to the generated <tt class="docutils literal"><span class="pre">app.py</span></tt> file for you.</p>
 </div>
 <div class="section" id="how-to-instantiate-a-command-object">
 <h2>How to Instantiate a Command Object<a class="headerlink" href="#how-to-instantiate-a-command-object" title="Permalink to this headline">¶</a></h2>
@@ -194,7 +195,7 @@
 </div>
 <div class="section" id="the-primary-and-secondary-commands">
 <h2>The Primary and Secondary Commands<a class="headerlink" href="#the-primary-and-secondary-commands" title="Permalink to this headline">¶</a></h2>
-<p>The Naked command line parser creates a new attribute for the first argument to the executable that is named <tt class="docutils literal"><span class="pre">cmd</span></tt> (for the primary command).  It also creates an attribute that is named <tt class="docutils literal"><span class="pre">cmd2</span></tt> (for the secondary or sub-command).  Assuming that you call your Command object instance, &#8216;c&#8217;, as I demonstrated above, these commands are accessible with the following attribute lookups:</p>
+<p>The parser creates a new attribute from the first positional argument to the executable that is named <tt class="docutils literal"><span class="pre">cmd</span></tt> (for the primary command) and an attribute for the second positional argument that is named <tt class="docutils literal"><span class="pre">cmd2</span></tt> (for the secondary or sub-command).  Assuming that you call your Command object instance, &#8216;c&#8217;, as I demonstrated above, these commands are accessible with the following attribute lookups:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">primary_command</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span>
 <span class="n">secondary_command</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd2</span>
 </pre></div>
@@ -222,7 +223,7 @@
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <p>For the purposes of this discussion, I am going to call an option that looks like this <tt class="docutils literal"><span class="pre">-s</span></tt> a short option, one that looks like this <tt class="docutils literal"><span class="pre">--long</span></tt> a long option, and one that has the following appearance <tt class="docutils literal"><span class="pre">--flag=argument</span></tt> a flag.</p>
-<p>The Naked parser identifies options by the presence of the first &#8216;-&#8216; symbol in the string.  You can test for the presence of these option forms with a Command object method.</p>
+<p>The parser identifies options by the presence of the first &#8216;-&#8216; symbol in the string.  You can test for the presence of these option forms with a Command object method.</p>
 <p>For exclusive options:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;-s&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--something&#39;</span><span class="p">):</span>
         <span class="c"># the user indicated this option, handle it</span>
@@ -253,14 +254,14 @@
 <p>To determine whether there were one or more options in the command that the user submitted, use either of the following tests that return a boolean:</p>
 <p><strong>Method Approach</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option_exists</span><span class="p">():</span>
-        <span class="c"># yes, there is at least one short option, long option, or flag in command</span>
+        <span class="c"># there is at least one short option, long option, or flag in command</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="c"># there are no options</span>
+        <span class="c"># there are no options</span>
 </pre></div>
 </div>
 <p><strong>Attribute Approach</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">options</span><span class="p">:</span>
-        <span class="c"># yes, there is at least one short option, long option, or flag in command</span>
+        <span class="c"># there is at least one short option, long option, or flag in command</span>
 <span class="k">else</span><span class="p">:</span>
         <span class="c"># there are no options</span>
 </pre></div>
@@ -271,14 +272,14 @@
 <p>Flags are a subset of options.  The above option tests will always return True if this test is True.</p>
 <p><strong>Method Approach</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">flags_exists</span><span class="p">():</span>
-        <span class="c"># yes, at least one flag was present in the command</span>
+        <span class="c"># at least one flag was present in the command</span>
 <span class="k">else</span><span class="p">:</span>
         <span class="c"># no flags were present in the command</span>
 </pre></div>
 </div>
 <p><strong>Attribute Approach</strong></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">flags</span><span class="p">:</span>
-        <span class="c"># yes, at least one flag was present in the command</span>
+        <span class="c"># at least one flag was present in the command</span>
 <span class="k">else</span><span class="p">:</span>
         <span class="c"># no flags were present in the command</span>
 </pre></div>
@@ -400,7 +401,7 @@
 </div>
 <div class="section" id="the-naked-executable-args-command">
 <h2>The naked Executable Args Command<a class="headerlink" href="#the-naked-executable-args-command" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="docutils literal"><span class="pre">naked</span></tt> executable <tt class="docutils literal"><span class="pre">args</span></tt> command will help you design your command syntax logic.  Just pass a complete command example as an argument and the <tt class="docutils literal"><span class="pre">args</span></tt> command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.</p>
+<p>The <tt class="docutils literal"><span class="pre">naked</span></tt> executable <tt class="docutils literal"><span class="pre">args</span></tt> command will help you design your command syntax logic with the Naked parser.  Just pass a complete command example as an argument and the <tt class="docutils literal"><span class="pre">args</span></tt> command will display every parsed attribute, the truth testing for options and flags, and the result of argument assignments to options and flags.</p>
 <p>Here is an example of how it is used:</p>
 <div class="highlight-bash"><div class="highlight"><pre>naked args <span class="s1">&#39;testapp save somestring --unicode -s --name=file.txt&#39;</span>
 </pre></div>
