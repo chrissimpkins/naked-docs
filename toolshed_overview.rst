@@ -1,7 +1,9 @@
 The Toolshed Library Overview
 ==============================
 
-The toolshed library includes the following modules:
+The toolshed library includes standard Python modules and Cython generated C source files that can be compiled into binaries that Python will import with the typical syntax.  The C source code is compiled with the ``naked build`` command (`Build Command Documentation`_).
+
+The library includes the following modules:
 
 Benchmarking Module
 --------------------
@@ -121,3 +123,5 @@ Types Module
 The types module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extension types permit assignment of attributes to both mutable and immutable types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  The extension classes also include numerous new methods for these commonly used types.
 
 Documentation: coming soon...
+
+.. _Build Command Documentation: http://docs.naked-py.com/executable.html#build-command-label
