@@ -150,7 +150,7 @@ For example, to remove the display of a patch version altogether, change the ``v
 
 
 How to Remove the Help, Version, & Usage Commands
-------------------------------------------------
+---------------------------------------------------
 These commands are completely optional and are implemented as a convenience.  The parsing logic and standard output writes are removed by either commenting out or deleting the following blocks of code in your ``app.py`` file:
 
 .. code-block:: python
