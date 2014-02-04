@@ -104,7 +104,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#project-description">Project Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
@@ -401,6 +402,10 @@
 <div class="section" id="the-test-command">
 <span id="test-command-label"></span><h2>The Test Command<a class="headerlink" href="#the-test-command" title="Permalink to this headline">¶</a></h2>
 <p>The test command allows you to run unit tests with the built-in Python unittest module (<a class="reference external" href="http://docs.python.org/2/library/unittest.html">v2</a>, <a class="reference external" href="http://docs.python.org/3/library/unittest.html">v3</a>), <a class="reference external" href="https://nose.readthedocs.org/en/latest/">nose</a>, <a class="reference external" href="http://pytest.org/latest/">pytest</a>, or <a class="reference external" href="http://tox.readthedocs.org/en/latest/">tox</a>.  The commands can be run from any directory level in your project (when the tests are located in your PROJECT/tests directory).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that the testing application that you are attempting to use must be installed prior to using these commands. Naked does not confirm that they are present.  Please refer to the respective application documentation for install instructions.</p>
+</div>
 <div class="section" id="id1">
 <h3>Usage<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">naked</span> <span class="n">test</span> <span class="o">&lt;</span><span class="n">secondary</span> <span class="n">command</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">argument</span><span class="p">]</span>

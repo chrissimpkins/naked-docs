@@ -284,6 +284,10 @@ The Test Command
 -----------------
 The test command allows you to run unit tests with the built-in Python unittest module (`v2`_, `v3`_), `nose`_, `pytest`_, or `tox`_.  The commands can be run from any directory level in your project (when the tests are located in your PROJECT/tests directory).
 
+.. note::
+
+	Please note that the testing application that you are attempting to use must be installed prior to using these commands. Naked does not confirm that they are present.  Please refer to the respective application documentation for install instructions.
+
 Usage
 ^^^^^^
 .. code-block:: python
