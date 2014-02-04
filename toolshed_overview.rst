@@ -96,7 +96,7 @@ State Module
 
 **C Module Import**: ``Naked.toolshed.c.cstate``
 
-The state (and cstate C module - note the change in the naming convention for this module) include the StateObject, a state object that automatically generates operating system, user and working directory, Python interpreter, time, & date information on instantiation.
+The state (and cstate C module - note the change in the naming convention for this module) include the StateObject, an object that automatically generates operating system, user and working directory, Python interpreter, time, & date data on instantiation.
 
 Documentation: coming soon...
 
