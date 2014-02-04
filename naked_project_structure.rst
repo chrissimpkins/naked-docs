@@ -92,7 +92,7 @@ The app.py file is the main application script and the start of your script exec
 
 LICENSE File
 ^^^^^^^^^^^^^
-The LICENSE file is generated in the docs directory and the text of the license is automatically if you use ``naked make`` with one of the supported open source licenses.  More details are available in the `naked executable documentation`_.
+The LICENSE file is generated in the docs directory and the text of the license is automatically inserted if you use ``naked make`` with one of the supported open source licenses.  More details are available in the `naked executable documentation`_.
 
 MANIFEST.in File
 ^^^^^^^^^^^^^^^^^
