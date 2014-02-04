@@ -147,3 +147,30 @@ For example, to remove the display of a patch version altogether, change the ``v
 	version_display_string = app_name + ' ' + major_version + '.' + minor_version
 
 .. _full version of file: https://github.com/chrissimpkins/naked/blob/master/lib/Naked/settings.py
+
+
+How to Remove the Help, Version, & Usage Commands
+------------------------------------------------
+These commands are completely optional and are implemented as a convenience.  The parsing logic and standard output writes are removed by either commenting out or deleting the following blocks of code in your ``app.py`` file:
+
+.. code-block:: python
+
+    if c.help():
+        from {{app_name}}.settings import help as {{app_name}}_help
+        print({{app_name}}_help)
+        sys.exit(0)
+    elif c.usage():
+        from {{app_name}}.settings import usage as {{app_name}}_usage
+        print({{app_name}}_usage)
+        sys.exit(0)
+    elif c.version():
+        from {{app_name}}.settings import app_name, major_version, minor_version, patch_version
+        version_display_string = app_name + ' ' + major_version + '.' + minor_version + '.' + patch_version
+        print(version_display_string)
+        sys.exit(0)
+
+In your project, the ``{{app_name}}`` template strings are replaced with your application name.
+
+.. warning::
+
+	Since these code blocks are placed above your command logic, make sure that you change your first 'elif' to an 'if' statement if you have already started development below this level.

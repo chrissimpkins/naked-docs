@@ -104,7 +104,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#project-description">Project Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Help, Usage, and Version Commands</a><ul>
@@ -112,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-help-text">How to Set Your Help Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
@@ -126,7 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
@@ -136,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -283,6 +286,30 @@
 <p>For example, to remove the display of a patch version altogether, change the <tt class="docutils literal"><span class="pre">version_display_string</span></tt> assignment to:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">version_display_string</span> <span class="o">=</span> <span class="n">app_name</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">major_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">minor_version</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="how-to-remove-the-help-version-usage-commands">
+<h2>How to Remove the Help, Version, &amp; Usage Commands<a class="headerlink" href="#how-to-remove-the-help-version-usage-commands" title="Permalink to this headline">¶</a></h2>
+<p>These commands are completely optional and are implemented as a convenience.  The parsing logic and standard output writes are removed by either commenting out or deleting the following blocks of code in your <tt class="docutils literal"><span class="pre">app.py</span></tt> file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">help</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="p">{{</span><span class="n">app_name</span><span class="p">}}</span><span class="o">.</span><span class="n">settings</span> <span class="kn">import</span> <span class="nn">help</span> <span class="kn">as</span> <span class="p">{{</span><span class="n">app_name</span><span class="p">}}</span><span class="n">_help</span>
+    <span class="k">print</span><span class="p">({{</span><span class="n">app_name</span><span class="p">}}</span><span class="n">_help</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">usage</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="p">{{</span><span class="n">app_name</span><span class="p">}}</span><span class="o">.</span><span class="n">settings</span> <span class="kn">import</span> <span class="nn">usage</span> <span class="kn">as</span> <span class="p">{{</span><span class="n">app_name</span><span class="p">}}</span><span class="n">_usage</span>
+    <span class="k">print</span><span class="p">({{</span><span class="n">app_name</span><span class="p">}}</span><span class="n">_usage</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">version</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="p">{{</span><span class="n">app_name</span><span class="p">}}</span><span class="o">.</span><span class="n">settings</span> <span class="kn">import</span> <span class="nn">app_name</span><span class="o">,</span> <span class="nn">major_version</span><span class="o">,</span> <span class="nn">minor_version</span><span class="o">,</span> <span class="nn">patch_version</span>
+    <span class="n">version_display_string</span> <span class="o">=</span> <span class="n">app_name</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">major_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">minor_version</span> <span class="o">+</span> <span class="s">&#39;.&#39;</span> <span class="o">+</span> <span class="n">patch_version</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">version_display_string</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In your project, the <tt class="docutils literal"><span class="pre">{{app_name}}</span></tt> template strings are replaced with your application name.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Since these code blocks are placed above your command logic, make sure that you change your first &#8216;elif&#8217; to an &#8216;if&#8217; statement if you have already started development below this level.</p>
 </div>
 </div>
 </div>
