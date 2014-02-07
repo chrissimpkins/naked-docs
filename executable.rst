@@ -5,13 +5,14 @@ The naked executable is a command line tool for application development, testing
 
 The primary commands include:
 
-* :ref:`args-command-label`    - View parsed command strings and truth tests
-* :ref:`build-command-label`   - Compile Naked C library code
-* :ref:`dist-command-label`    - Project deployment
-* :ref:`locate-command-label`  - Locate important project files
-* :ref:`make-command-label`    - Generate a new project
-* :ref:`profile-command-label` - Project profiling
-* :ref:`test-command-label`    - Project unit testing
+* :ref:`args-command-label`     - View parsed command strings and truth tests
+* :ref:`build-command-label`    - Compile Naked C library code
+* :ref:`classify-command-label` - Search the PyPI application classifier list by keyword
+* :ref:`dist-command-label`     - Project deployment
+* :ref:`locate-command-label`   - Locate important project files
+* :ref:`make-command-label`     - Generate a new project
+* :ref:`profile-command-label`  - Project profiling
+* :ref:`test-command-label`     - Project unit testing
 
 .. _args-command-label:
 
@@ -63,6 +64,47 @@ Help is available with:
 
 	naked build help
 
+
+.. _classify-command-label:
+
+The Classify Command
+---------------------
+The classify command attempts to match a user submitted keyword to classifiers in the PyPI application classifier list.  These project classifiers categorize your project in the PyPI application listings and should be included in your ``setup.py`` file prior to distribution to PyPI.
+
+Classify Command Usage
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	naked classify [keyword query]
+
+The keyword query is optional.  If you do not enter a query term, you will receive the entire classifier list.  When you enter a query term, ``naked`` attempts to match items in the classifier list in a case-insensitive manner.
+
+Classify Command Example
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	$ naked classify HTTP
+	•naked• Pulling the classifier list from python.org...
+	•naked• Performing a case insensitive search for 'HTTP'
+
+	Topic :: Internet :: WWW/HTTP
+	Topic :: Internet :: WWW/HTTP :: Browsers
+	Topic :: Internet :: WWW/HTTP :: Dynamic Content
+	Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+	Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Message Boards
+	Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary
+	Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters
+	Topic :: Internet :: WWW/HTTP :: HTTP Servers
+	Topic :: Internet :: WWW/HTTP :: Indexing/Search
+	Topic :: Internet :: WWW/HTTP :: Session
+	Topic :: Internet :: WWW/HTTP :: Site Management
+	Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+	Topic :: Internet :: WWW/HTTP :: WSGI
+	Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+	Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+	Topic :: Internet :: WWW/HTTP :: WSGI :: Server
 
 .. _dist-command-label:
 

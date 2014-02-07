@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Naked Executable &mdash; Naked 0.1.17 documentation</title>
+  <title>Naked Executable &mdash; Naked 0.1.21 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.17',
+        VERSION:'0.1.21',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.17 documentation" href="index.html"/>
+    <link rel="top" title="Naked 0.1.21 documentation" href="index.html"/>
         <link rel="next" title="Naked Project Structure" href="naked_project_structure.html"/>
         <link rel="prev" title="Quickstart Guide" href="quickstart.html"/> 
 
@@ -95,6 +95,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="">Naked Executable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-classify-command">The Classify Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-dist-command">The Dist Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-locate-command">The Locate Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-make-command">The Make Command</a></li>
@@ -113,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
@@ -178,13 +180,14 @@
 <p>The naked executable is a command line tool for application development, testing, profiling, and deployment. It is distributed with the Naked framework install.</p>
 <p>The primary commands include:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#args-command-label"><em>The Args Command</em></a>    - View parsed command strings and truth tests</li>
-<li><a class="reference internal" href="#build-command-label"><em>The Build Command</em></a>   - Compile Naked C library code</li>
-<li><a class="reference internal" href="#dist-command-label"><em>The Dist Command</em></a>    - Project deployment</li>
-<li><a class="reference internal" href="#locate-command-label"><em>The Locate Command</em></a>  - Locate important project files</li>
-<li><a class="reference internal" href="#make-command-label"><em>The Make Command</em></a>    - Generate a new project</li>
-<li><a class="reference internal" href="#profile-command-label"><em>The Profile Command</em></a> - Project profiling</li>
-<li><a class="reference internal" href="#test-command-label"><em>The Test Command</em></a>    - Project unit testing</li>
+<li><a class="reference internal" href="#args-command-label"><em>The Args Command</em></a>     - View parsed command strings and truth tests</li>
+<li><a class="reference internal" href="#build-command-label"><em>The Build Command</em></a>    - Compile Naked C library code</li>
+<li><a class="reference internal" href="#classify-command-label"><em>The Classify Command</em></a> - Search the PyPI application classifier list by keyword</li>
+<li><a class="reference internal" href="#dist-command-label"><em>The Dist Command</em></a>     - Project deployment</li>
+<li><a class="reference internal" href="#locate-command-label"><em>The Locate Command</em></a>   - Locate important project files</li>
+<li><a class="reference internal" href="#make-command-label"><em>The Make Command</em></a>     - Generate a new project</li>
+<li><a class="reference internal" href="#profile-command-label"><em>The Profile Command</em></a>  - Project profiling</li>
+<li><a class="reference internal" href="#test-command-label"><em>The Test Command</em></a>     - Project unit testing</li>
 </ul>
 <div class="section" id="the-args-command">
 <span id="args-command-label"></span><h2>The Args Command<a class="headerlink" href="#the-args-command" title="Permalink to this headline">¶</a></h2>
@@ -221,6 +224,42 @@
 <h3>Build Command Help<a class="headerlink" href="#build-command-help" title="Permalink to this headline">¶</a></h3>
 <p>Help is available with:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">naked</span> <span class="n">build</span> <span class="n">help</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-classify-command">
+<span id="classify-command-label"></span><h2>The Classify Command<a class="headerlink" href="#the-classify-command" title="Permalink to this headline">¶</a></h2>
+<p>The classify command attempts to match a user submitted keyword to classifiers in the PyPI application classifier list.  These project classifiers categorize your project in the PyPI application listings and should be included in your <tt class="docutils literal"><span class="pre">setup.py</span></tt> file prior to distribution to PyPI.</p>
+<div class="section" id="classify-command-usage">
+<h3>Classify Command Usage<a class="headerlink" href="#classify-command-usage" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>naked classify <span class="o">[</span>keyword query<span class="o">]</span>
+</pre></div>
+</div>
+<p>The keyword query is optional.  If you do not enter a query term, you will receive the entire classifier list.  When you enter a query term, <tt class="docutils literal"><span class="pre">naked</span></tt> attempts to match items in the classifier list in a case-insensitive manner.</p>
+</div>
+<div class="section" id="classify-command-example">
+<h3>Classify Command Example<a class="headerlink" href="#classify-command-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>naked classify HTTP
+•naked• Pulling the classifier list from python.org...
+•naked• Performing a <span class="k">case </span>insensitive search <span class="k">for</span> <span class="s1">&#39;HTTP&#39;</span>
+
+Topic :: Internet :: WWW/HTTP
+Topic :: Internet :: WWW/HTTP :: Browsers
+Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Message Boards
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters
+Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Topic :: Internet :: WWW/HTTP :: Session
+Topic :: Internet :: WWW/HTTP :: Site Management
+Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+Topic :: Internet :: WWW/HTTP :: WSGI
+Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Topic :: Internet :: WWW/HTTP :: WSGI :: Server
 </pre></div>
 </div>
 </div>
