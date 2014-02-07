@@ -348,7 +348,7 @@ You can also confirm that there is a primary command that is passed to the execu
 	import sys
 	from Naked.commandline import command_suite_validates
 
-	if not command_suite_validates():
+	if not c.command_suite_validates():
 		# handle invalid syntax (e.g. print usage)
 		sys.exit(1) # exit application with non-zero exit status
 

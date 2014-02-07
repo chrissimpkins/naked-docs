@@ -512,7 +512,7 @@ c.flag_arg(&quot;--name&quot;) = file.txt
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">Naked.commandline</span> <span class="kn">import</span> <span class="n">command_suite_validates</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">command_suite_validates</span><span class="p">():</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">command_suite_validates</span><span class="p">():</span>
         <span class="c"># handle invalid syntax (e.g. print usage)</span>
         <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># exit application with non-zero exit status</span>
 </pre></div>
