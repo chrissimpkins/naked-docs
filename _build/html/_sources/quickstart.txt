@@ -419,7 +419,7 @@ If you use the Naked toolshed library in your projects (including the command li
 
 Verify Your Release Version Number
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Confirm that the version number in your ``spameggs/lib/spameggs/settings.py`` file is set to the correct release number.  This is imported into your setup.py file as the release version number and then pushed to PyPI where it becomes the current release version for your project.
+Confirm that the version number in your ``spameggs/lib/spameggs/settings.py`` file is set to the correct release.  This is imported into your setup.py file as the release version number and then pushed to PyPI where it becomes the current release version for your project.
 
 Complete Your README.rst File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
