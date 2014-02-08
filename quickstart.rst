@@ -94,7 +94,7 @@ Test Your Application Version Command
     $ spameggs version
     spameggs 0.1.0
 
-* The displayed text automatically changes when you increment your version number in the ``spameggs/lib/spameggs/settings.py`` file and the format of the displayed string can be modified to your liking.
+* The displayed text automatically changes when you increment your version number in the ``spameggs/lib/spameggs/settings.py`` file and the format of the displayed string can be modified to your liking.  You can learn more with the links below.
 
 Learn More
 ^^^^^^^^^^^
@@ -117,6 +117,10 @@ Create Your Application
 ``spameggs`` is going to perform the extremely important task of printing 'Spam and Eggs' to the standard output stream.  As with most academic exercises, this is going to be an extremely roundabout approach that is intended to be a demonstration of the capabilities of the framework rather than be the most efficient, or even correct (we are going to skip prints to std err and non-zero exit status returns for errors...), approach.
 
 * Open your ``spameggs/lib/spameggs/app.py`` file in an editor and take a look through it.  ``main()`` is where execution of your application script begins.  ``naked`` included a few imports (the Python sys module, the Naked command line parser module, and the Naked state module for the StateObject).  It created an instance of the Naked parser (named ``c``) and also included the methods that handle help, usage, and version requests.  We tested the version commands above and we'll look at the help and usage below.  The last thing that ``naked`` inserts in this part of the file is a validation statement that confirms that the user entered a primary command (``c.command_suite_validates()``).
+
+.. note::
+
+    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the command_suite_validates()`` method with the ``app_validates_args()`` method.  This latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. --flag=argument), are included in the user's command.
 
 * Let's add a command that has the following syntax:
 

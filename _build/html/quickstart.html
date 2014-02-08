@@ -285,7 +285,7 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <ul class="simple">
-<li>The displayed text automatically changes when you increment your version number in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file and the format of the displayed string can be modified to your liking.</li>
+<li>The displayed text automatically changes when you increment your version number in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file and the format of the displayed string can be modified to your liking.  You can learn more with the links below.</li>
 </ul>
 <div class="section" id="id1">
 <h3>Learn More<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -315,6 +315,12 @@ spameggs 0.1.0
 <p><tt class="docutils literal"><span class="pre">spameggs</span></tt> is going to perform the extremely important task of printing &#8216;Spam and Eggs&#8217; to the standard output stream.  As with most academic exercises, this is going to be an extremely roundabout approach that is intended to be a demonstration of the capabilities of the framework rather than be the most efficient, or even correct (we are going to skip prints to std err and non-zero exit status returns for errors...), approach.</p>
 <ul class="simple">
 <li>Open your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></tt> file in an editor and take a look through it.  <tt class="docutils literal"><span class="pre">main()</span></tt> is where execution of your application script begins.  <tt class="docutils literal"><span class="pre">naked</span></tt> included a few imports (the Python sys module, the Naked command line parser module, and the Naked state module for the StateObject).  It created an instance of the Naked parser (named <tt class="docutils literal"><span class="pre">c</span></tt>) and also included the methods that handle help, usage, and version requests.  We tested the version commands above and we&#8217;ll look at the help and usage below.  The last thing that <tt class="docutils literal"><span class="pre">naked</span></tt> inserts in this part of the file is a validation statement that confirms that the user entered a primary command (<tt class="docutils literal"><span class="pre">c.command_suite_validates()</span></tt>).</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you are not making a command suite application with syntax like this: <tt class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">&lt;primary</span> <span class="pre">command&gt;</span> <span class="pre">...</span></tt>, you can replace the command_suite_validates()`` method with the <tt class="docutils literal"><span class="pre">app_validates_args()</span></tt> method.  This latter confirms that at least one argument, including short options (e.g. <tt class="docutils literal"><span class="pre">-s</span></tt>), long options (e.g. <tt class="docutils literal"><span class="pre">--long</span></tt>), and flags (e.g. &#8211;flag=argument), are included in the user&#8217;s command.</p>
+</div>
+<ul class="simple">
 <li>Let&#8217;s add a command that has the following syntax:</li>
 </ul>
 <div class="highlight-bash"><div class="highlight"><pre>spameggs print <span class="o">[</span>--meatsubstitute<span class="o">]</span> &lt;arg&gt; <span class="o">[</span>--overeasy<span class="o">]</span> &lt;arg&gt;
