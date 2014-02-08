@@ -100,7 +100,7 @@ A distutils source distribution file include spec file (`MANIFEST documentation`
 
 profiler.py File
 ^^^^^^^^^^^^^^^^^
-The profiler.py file is a profiling runner script.  Insert the code that you would like to profile in the designated code block and run it with the Python interpreter ``python profiler.py``.  cProfile and pstats are implemented for you.
+The profiler.py file is a profiling runner script.  Insert the code that you would like to profile in the designated code block and run it with the command ``naked profile``.  cProfile and pstats are implemented for you.
 
 README.md File
 ^^^^^^^^^^^^^^^
