@@ -575,6 +575,10 @@ spameggs 0.1.0
 <div class="section" id="complete-your-setup-py-file">
 <h3>Complete Your setup.py File<a class="headerlink" href="#complete-your-setup-py-file" title="Permalink to this headline">¶</a></h3>
 <p>For an application that you really intend to release, you will need to fill in the remainder of the fields in your <tt class="docutils literal"><span class="pre">setup.py</span></tt> file before you perform the next steps.  Refer to the Python documentation for more information.</p>
+<p>If you use the Naked toolshed library in your projects (including the command line parser), Naked should be listed as a dependency in your setup.py file with a line like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;Naked&#39;</span><span class="p">],</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="register">
 <h3>Register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>

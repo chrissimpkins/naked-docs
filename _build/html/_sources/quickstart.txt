@@ -407,6 +407,12 @@ Complete Your setup.py File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 For an application that you really intend to release, you will need to fill in the remainder of the fields in your ``setup.py`` file before you perform the next steps.  Refer to the Python documentation for more information.
 
+If you use the Naked toolshed library in your projects (including the command line parser), Naked should be listed as a dependency in your setup.py file with a line like this:
+
+.. code-block:: python
+
+    install_requires=['Naked'],
+
 Register
 ^^^^^^^^^
 To register your application on PyPI enter the following:
