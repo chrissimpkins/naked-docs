@@ -9,7 +9,7 @@ Naked (source: `PyPI`_, `GitHub`_) is a MIT licensed command line application fr
 
 .. note::
 
-    The :doc:`quickstart` demonstrates how to proceed from an empty directory to the push of a PyPI release with the tools that are available in Naked.
+    The :doc:`quickstart` demonstrates how to go from an empty directory to a PyPI push of your first application release using tools provided by the Naked Framework.
 
 Here is a sample of the framework features:
 
