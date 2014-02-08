@@ -9,7 +9,7 @@ This guide will take you from an empty directory to a PyPI push of your first ap
 2. Implement the command line logic for your ``spameggs`` executable with the Naked parser
 3. Import part of the Naked toolshed library for use in the application
 4. Perform tox testing in multiple Python versions with the ``naked test`` command
-5. Perform profiling with cProfile and pstatus using the ``naked profile`` command
+5. Perform profiling with cProfile and pstats using the ``naked profile`` command
 6. Distribute your project to PyPI with the ``naked dist`` command.
 
 Links are provided to other parts of the documentation where you can learn much more about the stages in this development process.
