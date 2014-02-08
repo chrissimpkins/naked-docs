@@ -333,6 +333,8 @@ This test confirms that the template string is what we expect it to be and serve
 
 This will launch tox and run the tests in Python 2.7 and 3.3 according to your specifications in the tox.ini file.  Confirm that they both pass and then we'll move on.
 
+The ``test`` command also works with py.test and the built-in Python unittest test runner.  Click through the link below for more information.
+
 Learn More
 ^^^^^^^^^^^
 `The Naked Test Command <http://docs.naked-py.com/executable.html#the-test-command>`_
@@ -435,11 +437,31 @@ You can push versions of your application to PyPI with the ``naked dist`` comman
 
 See the ``dist`` command documentation link below for more information about the available release types.  When the command completes, your release will be live in the remote PyPI repository and ready to be installed by the masses.
 
+You can provide future users with install instructions using pip and non-pip approaches:
+
+Install Instructions for Users WITH ``pip``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+    pip install <executable>
+
+This command pulls your project source from the PyPI repository (by default) and automatically installs it on the user's system.
+
+
+Install Instructions for Users WITHOUT ``pip``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Instruct your users to download your source code from your remote repository, unpack the source archive, and navigate to the top level directory of the project (where ``setup.py`` is located). Then provide them with instructions to enter the following:
+
+.. code-block:: bash
+
+    python setup.py install
+
 Learn More
 ^^^^^^^^^^^
 * `The Dist Command <http://docs.naked-py.com/executable.html#the-dist-command>`_
 * `The Classify Command <http://docs.naked-py.com/executable.html#the-classify-command>`_
 
 
-There you have it.  You started with an empty directory and ended with a push of your release to PyPI. Now go create something great.
+There you have it.  You started with an empty directory and ended with a push of your first release to PyPI.  Now go create something great.
 

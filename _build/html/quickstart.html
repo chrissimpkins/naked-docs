@@ -509,6 +509,7 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <p>This will launch tox and run the tests in Python 2.7 and 3.3 according to your specifications in the tox.ini file.  Confirm that they both pass and then we&#8217;ll move on.</p>
+<p>The <tt class="docutils literal"><span class="pre">test</span></tt> command also works with py.test and the built-in Python unittest test runner.  Click through the link below for more information.</p>
 <div class="section" id="id9">
 <h3>Learn More<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://docs.naked-py.com/executable.html#the-test-command">The Naked Test Command</a></p>
@@ -599,6 +600,21 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <p>See the <tt class="docutils literal"><span class="pre">dist</span></tt> command documentation link below for more information about the available release types.  When the command completes, your release will be live in the remote PyPI repository and ready to be installed by the masses.</p>
+<p>You can provide future users with install instructions using pip and non-pip approaches:</p>
+</div>
+<div class="section" id="install-instructions-for-users-with-pip">
+<h3>Install Instructions for Users WITH <tt class="docutils literal"><span class="pre">pip</span></tt><a class="headerlink" href="#install-instructions-for-users-with-pip" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre>pip install &lt;executable&gt;
+</pre></div>
+</div>
+<p>This command pulls your project source from the PyPI repository (by default) and automatically installs it on the user&#8217;s system.</p>
+</div>
+<div class="section" id="install-instructions-for-users-without-pip">
+<h3>Install Instructions for Users WITHOUT <tt class="docutils literal"><span class="pre">pip</span></tt><a class="headerlink" href="#install-instructions-for-users-without-pip" title="Permalink to this headline">¶</a></h3>
+<p>Instruct your users to download your source code from your remote repository, unpack the source archive, and navigate to the top level directory of the project (where <tt class="docutils literal"><span class="pre">setup.py</span></tt> is located). Then provide them with instructions to enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py install
+</pre></div>
+</div>
 </div>
 <div class="section" id="id11">
 <h3>Learn More<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
@@ -606,7 +622,7 @@ spameggs 0.1.0
 <li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-dist-command">The Dist Command</a></li>
 <li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-classify-command">The Classify Command</a></li>
 </ul>
-<p>There you have it.  You started with an empty directory and ended with a push of your release to PyPI. Now go create something great.</p>
+<p>There you have it.  You started with an empty directory and ended with a push of your first release to PyPI.  Now go create something great.</p>
 </div>
 </div>
 </div>
