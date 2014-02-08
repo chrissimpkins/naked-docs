@@ -417,6 +417,16 @@ If you use the Naked toolshed library in your projects (including the command li
 
     install_requires=['Naked'],
 
+Verify Your Release Version Number
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Confirm that the version number in your ``spameggs/lib/spameggs/settings.py`` file is set to the correct release number.  This is imported into your setup.py file as the release version number and then pushed to PyPI where it becomes the current release version for your project.
+
+Complete Your README.rst File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The ``spameggs/docs/README.rst`` file is imported into your ``setup.py`` file as the long description for your project and then pushed to PyPI where it serves as the project description on your application page.  In this project that would be located at ``http://pypi.python.org/pypi/spameggs``.
+
+Fill in any details that you would like to display to potential users in this file.  You can use reStructuredText in the file and this will be converted to valid HTML by the PyPI servers.
+
 Register
 ^^^^^^^^^
 To register your application on PyPI enter the following:
