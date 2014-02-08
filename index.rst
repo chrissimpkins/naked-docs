@@ -7,7 +7,11 @@ A Python Command Line Application Framework
 
 Naked (source: `PyPI`_, `GitHub`_) is a MIT licensed command line application framework that provides a variety of features for Python application developers.
 
-Here is a sample:
+.. note::
+
+    The :doc:`quickstart` demonstrates how to proceed from an empty directory to the push of a PyPI release with the tools that are available in Naked.
+
+Here is a sample of the framework features:
 
 New Projects
 ^^^^^^^^^^^^^
