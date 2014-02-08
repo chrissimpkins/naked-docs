@@ -120,7 +120,7 @@ Create Your Application
 
 .. note::
 
-    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the ``command_suite_validates()`` method with the ``app_validates_args()`` method.  The latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. ``--flag=argument``), are included in the user's command.
+    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the ``command_suite_validates()`` method with the ``app_validates_args()`` method.  The latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. ``--flag=argument``), are included in the user's command. More information is available in the `Syntax Validation <http://docs.naked-py.com/command_line_parser.html#syntax-validation>`_ documentation.
 
 * Let's add a command that has the following syntax:
 
