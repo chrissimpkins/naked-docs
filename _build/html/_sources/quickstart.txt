@@ -120,7 +120,7 @@ Create Your Application
 
 .. note::
 
-    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the command_suite_validates()`` method with the ``app_validates_args()`` method.  This latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. --flag=argument), are included in the user's command.
+    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the ``command_suite_validates()`` method with the ``app_validates_args()`` method.  This latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. ``--flag=argument``), are included in the user's command.
 
 * Let's add a command that has the following syntax:
 
