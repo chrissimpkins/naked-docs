@@ -120,7 +120,7 @@ Create Your Application
 
 .. note::
 
-    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the ``command_suite_validates()`` method with the ``app_validates_args()`` method.  This latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. ``--flag=argument``), are included in the user's command.
+    If you are not making a command suite application with syntax like this: ``<executable> <primary command> ...``, you can replace the ``command_suite_validates()`` method with the ``app_validates_args()`` method.  The latter confirms that at least one argument, including short options (e.g. ``-s``), long options (e.g. ``--long``), and flags (e.g. ``--flag=argument``), are included in the user's command.
 
 * Let's add a command that has the following syntax:
 
@@ -283,7 +283,7 @@ Learn More
 
 
 Testing with ``naked test``
--------------------------
+-----------------------------
 Time to unit test.  Let's set up a tox.ini file to test this in multiple versions of Python with the nose unit test runner.  If you are following along, both of these applications need to be installed in order to run the tests.  You can install them with pip:
 
 .. code-block:: bash
