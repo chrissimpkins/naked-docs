@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Quickstart Guide &mdash; Naked 0.1.21 documentation</title>
+  <title>QuickStart Guide &mdash; Naked 0.1.21 documentation</title>
   
 
   
@@ -91,7 +91,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Quickstart Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bake-your-own-spam-and-eggs">Bake Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
@@ -169,15 +182,425 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href="">Quickstart Guide</a></li>
+  <li><a href="">QuickStart Guide</a></li>
   
 </ul>
 <hr/>
 
           
   <div class="section" id="quickstart-guide">
-<h1>Quickstart Guide<a class="headerlink" href="#quickstart-guide" title="Permalink to this headline">¶</a></h1>
-<p>The quickstart guide is coming soon...stay tuned.</p>
+<h1>QuickStart Guide<a class="headerlink" href="#quickstart-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bake-your-own-spam-and-eggs">
+<h2>Bake Your Own Spam and Eggs<a class="headerlink" href="#bake-your-own-spam-and-eggs" title="Permalink to this headline">¶</a></h2>
+<p>This guide will take you from an empty directory to a PyPI push of your first application release using features available in the Naked framework.  You will learn how to:</p>
+<ol class="arabic simple">
+<li>Create a new <tt class="docutils literal"><span class="pre">spameggs</span></tt> project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command</li>
+<li>Implement the command line logic for your <tt class="docutils literal"><span class="pre">spameggs</span></tt> executable with the Naked parser</li>
+<li>Import part of the Naked toolshed library for use in the application</li>
+<li>Perform tox testing in multiple Python versions with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt> command</li>
+<li>Perform profiling with cProfile and pstatus using the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt> command</li>
+<li>Distribute your project to PyPI with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt> command.</li>
+</ol>
+<p>Links are provided to other parts of the documentation where you can learn much more about the stages in this development process.</p>
+</div>
+<div class="section" id="make-a-new-project-with-naked-make">
+<h2>Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt><a class="headerlink" href="#make-a-new-project-with-naked-make" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Create a new directory and save a <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> file in the directory that includes the following data:</li>
+</ul>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">spameggs</span>
+<span class="l-Scalar-Plain">developer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Guido</span>
+<span class="l-Scalar-Plain">license</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">MIT license</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Navigate to the directory in your terminal and run the command:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>naked make
+</pre></div>
+</div>
+<ul class="simple">
+<li>You will receive the following prompt:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>Detected a Naked project YAML setup file <span class="o">(</span>naked.yaml<span class="o">)</span>.
+
+Please confirm the information below:
+
+----------------------------------------------------------
+ spameggs
+ Copyright 2014 Guido
+ MIT license
+----------------------------------------------------------
+
+Is this correct? <span class="o">(</span>y/n<span class="o">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Respond to the prompt with &#8216;y&#8217;.</li>
+<li>naked displays the following information about your project structure:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>spameggs was successfully built.
+
+-----
+Main application script:  spameggs/lib/spameggs/app.py
+Settings file:  spameggs/lib/spameggs/settings.py
+Commands directory:  spameggs/lib/spameggs/commands
+setup.py file:  spameggs/setup.py
+-----
+
+Use <span class="s1">&#39;python setup.py develop&#39;</span> from the top level of your project and you can begin testing your application with the executable, spameggs
+</pre></div>
+</div>
+<ul class="simple">
+<li>Let&#8217;s follow the instructions in the last statement so that we can begin using the application from the command line. Enter the following in the top level directory that contains your setup.py file:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>python setup.py develop
+</pre></div>
+</div>
+<p>Your application framework is all set for development. <tt class="docutils literal"><span class="pre">spameggs</span></tt> should be registered on your PATH so that you can use it.</p>
+<div class="section" id="learn-more">
+<h3>Learn More<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html">The Naked Executable</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-make-command">The Naked Make Command</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#naked-yaml-settings-file-project-generation">The naked.yaml file</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#command-line-prompt-project-generation">How to create a project without a naked.yaml file</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-project-license">How Naked creates your LICENSE file</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="test-your-application-version-command">
+<h2>Test Your Application Version Command<a class="headerlink" href="#test-your-application-version-command" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Let&#8217;s make sure that it is working.  <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> creates your version command for you.  Give it a try:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>spameggs --version
+spameggs 0.1.0
+
+<span class="nv">$ </span>spameggs -v
+spameggs 0.1.0
+
+<span class="nv">$ </span>spameggs version
+spameggs 0.1.0
+</pre></div>
+</div>
+<ul class="simple">
+<li>The displayed text automatically changes when you increment your version number in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file and the format of the displayed string can be modified to your liking.</li>
+</ul>
+<div class="section" id="id1">
+<h3>Learn More<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html">The help, usage, and version commands</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-set-your-version-text">How to set your version text</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to remove the Naked implementation of the version command</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="inspect-your-project-files">
+<h2>Inspect Your Project Files<a class="headerlink" href="#inspect-your-project-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Have a look through your project directory to familiarize yourself with what <tt class="docutils literal"><span class="pre">naked</span></tt> created for you.</li>
+</ul>
+<div class="section" id="id2">
+<h3>Learn More<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/naked_project_structure.html#directory-structure">Diagram of the Naked Project Structure</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/naked_project_structure.html#directories">Directories that are created in a Naked Framework project</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/naked_project_structure.html#files">Files that are created in a Naked framework project</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-your-application">
+<h2>Create Your Application<a class="headerlink" href="#create-your-application" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">spameggs</span></tt> is going to perform the extremely important task of printing &#8216;Spam and Eggs&#8217; to the standard output stream.  As with most academic exercises, this is going to be an extremely roundabout approach that is intended to be a demonstration of the capabilities of the framework rather than be the most efficient, or even correct (we are going to skip prints to std err and non-zero exit status returns for errors...), approach.</p>
+<ul class="simple">
+<li>Open your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></tt> file in an editor and take a look through it.  <tt class="docutils literal"><span class="pre">main()</span></tt> is where execution of your application script begins.  <tt class="docutils literal"><span class="pre">naked</span></tt> included a few imports (the Python sys module, the Naked command line parser module, and the Naked state module for the StateObject).  It created an instance of the Naked parser (named <tt class="docutils literal"><span class="pre">c</span></tt>) and also included the methods that handle help, usage, and version requests.  We tested the version commands above and we&#8217;ll look at the help and usage below.  The last thing that <tt class="docutils literal"><span class="pre">naked</span></tt> inserts in this part of the file is a validation statement that confirms that the user entered a primary command (<tt class="docutils literal"><span class="pre">c.command_suite_validates()</span></tt>).</li>
+<li>Let&#8217;s add a command that has the following syntax:</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>spameggs print <span class="o">[</span>--meatsubstitute<span class="o">]</span> &lt;arg&gt; <span class="o">[</span>--overeasy<span class="o">]</span> &lt;arg&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li>To do this, create a new module called <tt class="docutils literal"><span class="pre">seprinter</span></tt> in the path <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/commands</span></tt> with the following code:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="c"># encoding: utf-8</span>
+<span class="c"># filename: seprinter.py</span>
+
+<span class="kn">from</span> <span class="nn">Naked.toolshed.ink</span> <span class="kn">import</span> <span class="n">Template</span><span class="p">,</span> <span class="n">Renderer</span>
+
+<span class="k">class</span> <span class="nc">SpamPrinter</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">the_meatsub</span><span class="p">,</span> <span class="n">the_egg</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meatsubstitute</span> <span class="o">=</span> <span class="n">the_meatsub</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">egg</span> <span class="o">=</span> <span class="n">the_egg</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">template_string</span> <span class="o">=</span> <span class="s">&quot;{{spamtag}} and {{eggtag}}&quot;</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">template_string</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">Renderer</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;spamtag&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">meatsubstitute</span><span class="p">,</span> <span class="s">&#39;eggtag&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">egg</span><span class="p">})</span>
+        <span class="n">spam_egg_string</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">spam_egg_string</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>An instance of the SpamPrinter class is created with <tt class="docutils literal"><span class="pre">the_meatsub</span></tt> and <tt class="docutils literal"><span class="pre">the_egg</span></tt> arguments and these are used to define instance properties that we subsequently use in the run() method.</p>
+<p>Note how we imported the Naked toolshed library code for the Ink templating system in the command module code.  A Template instance is created from the template_string property on our SpamPrinter and it is rendered by passing a dictionary argument with keys that correspond to the strings inside your Template replacement tags.  The dictionary values are used to replace the corresponding tags in the template.  The opening <tt class="docutils literal"><span class="pre">{{</span></tt> and closing <tt class="docutils literal"><span class="pre">}}</span></tt> tags are the Ink template defaults.</p>
+<p>Any component of the Naked toolshed library can be imported for use in your project with standard Python imports.  Use the path, <tt class="docutils literal"><span class="pre">Naked.toolshed.&lt;MODULE&gt;</span></tt>, or for the compiled C versions of the library <tt class="docutils literal"><span class="pre">Naked.toolshed.c.&lt;MODULE&gt;</span></tt> (<a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">requires the C source files to be compiled first!</a>).</p>
+<div class="section" id="id3">
+<h3>Learn More<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/toolshed_overview.html">The Naked toolshed library overview</a></li>
+<li>The toolshed library documentation is in progress.  Hold tight! It is coming soon...</li>
+</ul>
+</div>
+</div>
+<div class="section" id="handle-command-line-arguments-for-your-application">
+<h2>Handle Command Line Arguments for Your Application<a class="headerlink" href="#handle-command-line-arguments-for-your-application" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Now let&#8217;s implement the command line argument handling.  Open the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></tt> file in your editor and add the following to the PRIMARY COMMAND LOGIC code block:</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&#39;print&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--meatsubstitute&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--overeasy&#39;</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">spameggs.commands.seprinter</span> <span class="kn">import</span> <span class="n">SpamPrinter</span>
+        <span class="n">the_meat</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&#39;--meatsubstitute&#39;</span><span class="p">)</span>
+        <span class="n">the_eggs</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="s">&#39;--overeasy&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
+            <span class="n">printer</span> <span class="o">=</span> <span class="n">SpamPrinter</span><span class="p">(</span><span class="n">the_meat</span><span class="p">,</span> <span class="n">the_eggs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">printer</span> <span class="o">=</span> <span class="n">SpamPrinter</span><span class="p">(</span><span class="n">the_meat</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">the_eggs</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+        <span class="n">printer</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;It would be extremely helpful if you enter &#39;-- meatsubstitute Spam --overeasy Eggs&#39; for the example.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Notice that we used &#8216;elif&#8217; rather than if.  This logic is in sequence with the help, usage, and version tests that were included in your script above this level.  If you remove the Naked implementation of these commands and handle them yourself, make sure that you switch your first statement in the command tests to an &#8216;if&#8217; statement.</p>
+</div>
+<p>Note how the Naked parser handles user entered arguments on the command line.  The primary command becomes an attribute of the <tt class="docutils literal"><span class="pre">c</span></tt> Command object that was instantiated earlier in the script.  <tt class="docutils literal"><span class="pre">cmd</span></tt> is the first positional argument to the executable (i.e. the primary command). See the link in the Learn More section below to view all of the available argument attributes and to learn how to use <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">args</span></tt> to help plan your command logic tests with the Naked parser.</p>
+<p>We begin by testing that the user enterd the primary command &#8216;print&#8217; (i.e. <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">print</span> <span class="pre">...</span></tt>) .  If it was submitted, then we test for the presence of both of the options that are required to prepare our string.  The <tt class="docutils literal"><span class="pre">option()</span></tt> method returns a boolean for the question, &#8220;is the option present?&#8221;, for the argument that is passed to the method.  If these tests return True, the SpamPrinter object that we just developed is imported from the commands directory.  The arguments that the user includes for these options are retrieved with the <tt class="docutils literal"><span class="pre">arg()</span></tt> method of the Command object.  In this case, we assign them to local variables.</p>
+<p>Next, we meet another branch in the logic that demonstrates one of the features of the StateObject instance (named &#8216;state&#8217;) that was automatically generated by <tt class="docutils literal"><span class="pre">naked</span></tt> when the project was built. This object collects a number of user state attributes at instantiation, including the version of the Python interpreter that they are using which we test for here in the <tt class="docutils literal"><span class="pre">if</span> <span class="pre">state.py2:</span></tt> statement.  For Python 2 interpreters, we print the arguments to the <tt class="docutils literal"><span class="pre">meatsubstitute</span></tt> and <tt class="docutils literal"><span class="pre">overeasy</span></tt> options as is, and for Python 3 interpreters, we print them in all caps (with the <tt class="docutils literal"><span class="pre">string.upper()</span></tt> function).</p>
+<p>Lastly, our run() method is called which runs the template replacements and prints the string to the standard output stream.</p>
+<p>Let&#8217;s give it a shot.  Try the following from your command line:</p>
+<div class="highlight-bash"><div class="highlight"><pre>spameggs print --meatsubstitute Spam --overeasy Eggs
+</pre></div>
+</div>
+<p>If you are using Python 2.x, you should see <tt class="docutils literal"><span class="pre">Spam</span> <span class="pre">and</span> <span class="pre">Eggs</span></tt> in your terminal and if you are using Python 3.x, you should see <tt class="docutils literal"><span class="pre">SPAM</span> <span class="pre">and</span> <span class="pre">EGGS</span></tt>.</p>
+<p>The following areas of the documentation are helpful if you would like to delve into more detailed treatment of the parser.</p>
+<div class="section" id="id4">
+<h3>Learn More<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#how-it-works">How the Command Parser Works</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Parser</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#the-primary-and-secondary-commands">How to Handle Primary and Secondary Commands</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#options">How to Handle Options</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#arguments-to-options">How to Retrieve the Values for Arguments to Options</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#other-available-command-attributes">The List of All Command Object Attributes</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#the-naked-executable-args-command">Get Help with Your Command Parsing Logic Using the naked args Command</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-your-help-text">
+<h2>Create Your Help Text<a class="headerlink" href="#create-your-help-text" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have an application, let&#8217;s help our users out by providing some documentation when they request it with either <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">--help</span></tt>, <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">-h</span></tt>, or <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">help</span></tt>.  There is no need to add anything to the app.py file in order to handle these requests.  The <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> build takes care of that for you.</p>
+<p>Open your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file in an editor and locate the help variable.  Add your help text like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">help</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">--------------------------</span>
+<span class="s">spameggs</span>
+<span class="s">Copyright 2014 Guido</span>
+<span class="s">MIT license</span>
+<span class="s">--------------------------</span>
+
+<span class="s">ABOUT</span>
+<span class="s">  spameggs is a Python application that tells you about spam.  And it tells you about eggs.  Pipe it to whatever application might find that to be useful.</span>
+
+<span class="s">USAGE</span>
+<span class="s">  spameggs [print] [--meatsubstitute] &lt;arg&gt; [--overeasy] &lt;arg&gt;</span>
+
+<span class="s">OPTIONS</span>
+<span class="s">   --meatsubstitute      Takes a delectable meat substitute as an argument</span>
+<span class="s">   --overeasy            Takes an avian object as an argument</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>and then give it a try:</p>
+<div class="highlight-bash"><div class="highlight"><pre>spameggs --help
+</pre></div>
+</div>
+<div class="section" id="id5">
+<h3>Learn More<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html">The help, usage, and version commands</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help Command Created by naked make</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-your-usage-text">
+<h2>Create Your Usage Text<a class="headerlink" href="#create-your-usage-text" title="Permalink to this headline">¶</a></h2>
+<p>To set your usage text, locate the usage variable in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file that we just used above.  Let&#8217;s add the usage string that we just used in the help text:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">usage</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">Usage: spameggs [print] [--meatsubstitute] &lt;arg&gt; [--overeasy] &lt;arg&gt;</span>
+<span class="s">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Then confirm that it works with:</p>
+<div class="highlight-bash"><div class="highlight"><pre>spameggs --usage
+</pre></div>
+</div>
+<div class="section" id="id7">
+<h3>Learn More<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html">The help, usage, and version commands</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Usage Command Created by naked make</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="testing-with-naked-test">
+<h2>Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt><a class="headerlink" href="#testing-with-naked-test" title="Permalink to this headline">¶</a></h2>
+<p>Time to unit test.  Let&#8217;s set up a tox.ini file to test this in multiple versions of Python with the nose unit test runner.  If you are following along, both of these applications need to be installed in order to run the tests.  You can install them with pip:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install tox
+<span class="nv">$ </span>pip install nose
+</pre></div>
+</div>
+<p>In the top directory of your project (where your setup.py file is located), save the following in a file named <tt class="docutils literal"><span class="pre">tox.ini</span></tt>:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">[</span>tox<span class="o">]</span>
+<span class="nv">envlist</span> <span class="o">=</span> py27,py33
+<span class="o">[</span>testenv<span class="o">]</span>
+<span class="nv">deps</span><span class="o">=</span>nose
+<span class="nv">commands</span><span class="o">=</span>nosetests <span class="se">\</span>
+         <span class="s2">&quot;--where=tests&quot;</span>
+</pre></div>
+</div>
+<p>This instructs tox to run the unit tests in our <tt class="docutils literal"><span class="pre">tests</span></tt> directory using the <tt class="docutils literal"><span class="pre">nosetests</span></tt> executable with our installed Python 2.7.x and Python 3.3.x versions (<em>Note</em>: both versions need to be installed locally to run these tests).  Refer to the tox documentation for instructions on how to test with other Python versions (including pypy).</p>
+<p>Next, create a unit test file named <tt class="docutils literal"><span class="pre">test_spameggs.py</span></tt> in the tests directory:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="c"># coding=utf-8</span>
+<span class="c"># file: test_spameggs.py</span>
+
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.state</span> <span class="kn">import</span> <span class="n">StateObject</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.shell</span> <span class="kn">import</span> <span class="n">run</span>
+<span class="kn">from</span> <span class="nn">spameggs.commands.seprinter</span> <span class="kn">import</span> <span class="n">SpamPrinter</span>
+
+<span class="k">class</span> <span class="nc">SpamEggsTest</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_string</span> <span class="o">=</span> <span class="s">&quot;{{spamtag}} and {{eggtag}}&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">template_string</span> <span class="o">=</span> <span class="n">SpamPrinter</span><span class="p">(</span><span class="s">&#39;Spam&#39;</span><span class="p">,</span> <span class="s">&#39;Eggs&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">template_string</span>
+
+    <span class="k">def</span> <span class="nf">spam_eggs_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;A test of spam, and of eggs&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_string</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">template_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This test confirms that the template string is what we expect it to be and serves as a simple example.  From any directory in your project, run the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked <span class="nb">test </span>tox
+</pre></div>
+</div>
+<p>This will launch tox and run the tests in Python 2.7 and 3.3 according to your specifications in the tox.ini file.  Confirm that they both pass and then we&#8217;ll move on.</p>
+<div class="section" id="id9">
+<h3>Learn More<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.naked-py.com/executable.html#the-test-command">The Naked Test Command</a></p>
+</div>
+</div>
+<div class="section" id="profiling-with-naked-profile">
+<h2>Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt><a class="headerlink" href="#profiling-with-naked-profile" title="Permalink to this headline">¶</a></h2>
+<p>Open the <tt class="docutils literal"><span class="pre">spameggs/lib/profiler.py</span></tt> file in your editor.  The file is stubbed with all of the source that you need to profile with cProfile and pstats.  The setup and profiled code blocks are indicated in the file.  You can enter the code that you intend to profile in the block below the <tt class="docutils literal"><span class="pre">pr.enable()</span></tt> statement:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="c"># encoding: utf-8</span>
+
+<span class="kn">import</span> <span class="nn">cProfile</span><span class="o">,</span> <span class="nn">pstats</span><span class="o">,</span> <span class="nn">StringIO</span>
+
+<span class="k">def</span> <span class="nf">profile</span><span class="p">():</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="c"># Setup a profile</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="n">cProfile</span><span class="o">.</span><span class="n">Profile</span><span class="p">()</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="c"># Enter setup code below</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="kn">from</span> <span class="nn">spameggs.commands.seprinter</span> <span class="kn">import</span> <span class="n">SpamPrinter</span>
+
+
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="c"># Start profiler</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="n">pr</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
+
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="c"># BEGIN profiled code block</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="n">sp</span> <span class="o">=</span> <span class="n">SpamPrinter</span><span class="p">(</span><span class="s">&#39;Spam&#39;</span><span class="p">,</span> <span class="s">&#39;Eggs&#39;</span><span class="p">)</span>
+        <span class="n">sp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="c"># END profiled code block</span>
+    <span class="c">#------------------------------------------------------------------------------</span>
+    <span class="n">pr</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">StringIO</span><span class="o">.</span><span class="n">StringIO</span><span class="p">()</span>
+    <span class="n">sortby</span> <span class="o">=</span> <span class="s">&#39;cumulative&#39;</span>
+    <span class="n">ps</span> <span class="o">=</span> <span class="n">pstats</span><span class="o">.</span><span class="n">Stats</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">s</span><span class="p">)</span><span class="o">.</span><span class="n">sort_stats</span><span class="p">(</span><span class="n">sortby</span><span class="p">)</span>
+    <span class="n">ps</span><span class="o">.</span><span class="n">strip_dirs</span><span class="p">()</span><span class="o">.</span><span class="n">sort_stats</span><span class="p">(</span><span class="s">&quot;time&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">print_stats</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">profile</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Then use the following command from any directory in your project:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked profile
+</pre></div>
+</div>
+<p>Naked will run the profiler.py file script and your report will be displayed in the terminal.</p>
+<div class="section" id="id10">
+<h3>Learn More<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.naked-py.com/executable.html#the-profile-command">The Profiler Command</a></p>
+</div>
+</div>
+<div class="section" id="distribution-to-pypi-with-naked-dist">
+<h2>Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt><a class="headerlink" href="#distribution-to-pypi-with-naked-dist" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The following set of instructions are intended to demonstrate how you would distribute this application to PyPI.  If you run them, be aware that you will actually push spameggs to PyPI.  While this will instantly improve your reputation in the Python community, it is likely not what you intend to do.</p>
+</div>
+<div class="section" id="complete-your-setup-py-file">
+<h3>Complete Your setup.py File<a class="headerlink" href="#complete-your-setup-py-file" title="Permalink to this headline">¶</a></h3>
+<p>For an application that you really intend to release, you will need to fill in the remainder of the fields in your <tt class="docutils literal"><span class="pre">setup.py</span></tt> file before you perform the next steps.  Refer to the Python documentation for more information.</p>
+</div>
+<div class="section" id="register">
+<h3>Register<a class="headerlink" href="#register" title="Permalink to this headline">¶</a></h3>
+<p>To register your application on PyPI enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked dist register
+</pre></div>
+</div>
+<p>If you have not previously registered an account on PyPI, use the prompts to do so now.  Otherwise, enter your account details.  When this command completes, your application will be registered.</p>
+</div>
+<div class="section" id="push-to-pypi">
+<h3>Push to PyPI<a class="headerlink" href="#push-to-pypi" title="Permalink to this headline">¶</a></h3>
+<p>You can push versions of your application to PyPI with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt> command as well.  There are secondary commands for various distribution types.  Let&#8217;s push both a Python wheel and source distribution:</p>
+<div class="highlight-bash"><div class="highlight"><pre>naked dist swheel
+</pre></div>
+</div>
+<p>See the <tt class="docutils literal"><span class="pre">dist</span></tt> command documentation link below for more information about the available release types.  When the command completes, your release will be live in the remote PyPI repository and ready to be installed by the masses.</p>
+</div>
+<div class="section" id="id11">
+<h3>Learn More<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-dist-command">The Dist Command</a></li>
+<li><a class="reference external" href="http://docs.naked-py.com/executable.html#the-classify-command">The Classify Command</a></li>
+</ul>
+<p>There you have it.  You started with an empty directory and ended with a push of your release to PyPI. Now go create something great.</p>
+</div>
+</div>
 </div>
 
 
