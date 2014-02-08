@@ -313,8 +313,6 @@ Next, create a unit test file named ``test_spameggs.py`` in the tests directory:
     # file: test_spameggs.py
 
     import unittest
-    from Naked.toolshed.state import StateObject
-    from Naked.toolshed.shell import run
     from spameggs.commands.seprinter import SpamPrinter
 
     class SpamEggsTest(unittest.TestCase):
