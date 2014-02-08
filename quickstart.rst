@@ -1,7 +1,7 @@
 QuickStart Guide
 ==================
 
-Bake Your Own Spam and Eggs
+Make Your Own Spam and Eggs
 ----------------------------
 This guide will take you from an empty directory to a PyPI push of your first application release using features available in the Naked framework.  You will learn how to:
 
