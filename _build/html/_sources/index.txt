@@ -221,6 +221,7 @@ Contents
    help_usage_version
    command_line_parser
    toolshed_overview
+   toolshed_ink
    change_log
    licenses
 
