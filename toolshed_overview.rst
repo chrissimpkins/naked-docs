@@ -84,7 +84,7 @@ Shell Module
 
 **C Module Import**: ``Naked.toolshed.c.shell``
 
-The shell module includes external system, Ruby, & Node.js subprocess execution methods and environent variable testing methods.
+The shell module includes external system, Ruby, & Node.js subprocess execution methods and environment variable testing methods.
 
 Documentation: coming soon...
 
