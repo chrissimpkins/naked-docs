@@ -12,7 +12,7 @@ This guide will take you from an empty directory to a PyPI push of your first ap
 5. Perform profiling with cProfile and pstats using the ``naked profile`` command
 6. Distribute your project to PyPI with the ``naked dist`` command.
 
-Links are provided to other parts of the documentation where you can learn much more about the stages in this development process.
+Links are provided to other parts of the documentation where you can learn much more about how to incorporate the components of the Naked Framework into the stages of your development process.
 
 Make a New Project with ``naked make``
 ---------------------------------------
