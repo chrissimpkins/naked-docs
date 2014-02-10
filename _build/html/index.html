@@ -307,10 +307,12 @@
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&quot;http://www.google.com&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
 <span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&quot;http://httpbin.org/post&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">post</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">post_status_ok</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

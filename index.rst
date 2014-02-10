@@ -108,10 +108,12 @@ Networking
     from Naked.toolshed.network import HTTP
 
     http = HTTP("http://www.google.com")
-    print(http.get())
+    if http.get_status_ok():
+        print(http.res.text)
 
     http = HTTP("http://httpbin.org/post")
-    print(http.post())
+    if http.post_status_ok():
+        print(http.res.text)
 
 
 File I/O
