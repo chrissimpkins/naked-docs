@@ -50,7 +50,7 @@ Ink Module
 
 The ink module includes text template and renderer classes to perform flexible text templating with the replacement tag syntax of your choice.  A Python dictionary is used to map replacement strings to the replacement tags.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_ink`
 
 
 Network Module
@@ -60,9 +60,9 @@ Network Module
 
 **C Module Import**: ``Naked.toolshed.c.network``
 
-The network module includes the HTTP class for simple GET and POST requests with text or binary data.
+The network module includes the HTTP class for simple GET and POST requests with text or binary data.  It also supports simple text and binary file writes from GET or POST requests.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_network`
 
 
 Python Module

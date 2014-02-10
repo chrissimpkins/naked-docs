@@ -1,0 +1,578 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Toolshed: network &mdash; Naked 0.1.21 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.21',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.21 documentation" href="index.html"/>
+        <link rel="next" title="Changelog" href="change_log.html"/>
+        <link rel="prev" title="Toolshed: ink" href="toolshed_ink.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-network-module">Import Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-network-c-module">Import Network C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-response-object">The Response Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="module-Naked.toolshed.network">
+<span id="toolshed-network"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt><a class="headerlink" href="#module-Naked.toolshed.network" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-network-module">
+<h2>Import Network Module<a class="headerlink" href="#import-network-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.network</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-network-c-module">
+<h2>Import Network C Module<a class="headerlink" href="#import-network-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.network</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The network module contains a HTTP class that supports GET and POST requests. This module is built with the fantastic Python <a class="reference external" href="http://docs.python-requests.org/">requests library</a>.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Naked.toolshed.network.HTTP">
+<em class="property">class </em><tt class="descclassname">Naked.toolshed.network.</tt><tt class="descname">HTTP</tt><big>(</big><em>url</em><span class="optional">[</span>, <em>request_timeout=10</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP" title="Permalink to this definition">¶</a></dt>
+<dd><p>The HTTP class is instantiated with a URL string and has a default request timeout of 10 seconds.  The protocol (<tt class="docutils literal"><span class="pre">http://</span></tt> or <tt class="docutils literal"><span class="pre">https://</span></tt>) must be included in the URL string.  If the protocol is not included, a <tt class="docutils literal"><span class="pre">requests.exceptions.MissingSchema</span></tt> exception will be raised that can be caught and handled in your code.  Include a second argument to the constructor with the time in seconds in order to change this request timeout duration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>url</strong> (<em>str</em>) &#8211; the URL for the HTTP method request</li>
+<li><strong>request_timeout</strong> (<em>int</em>) &#8211; the duration of the request method timeout in seconds (default=10 seconds)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.get">
+<tt class="descname">get</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a GET request for text. This method returns the contents of the response as a string that is encoded with the <tt class="docutils literal"><span class="pre">HTTP.res.encoding</span></tt> encoding type.  The requests library attempts to determine this encoding according to the encoding header in the response.  Returns False on connection error (e.g. non-existent URL path).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.get_bin">
+<tt class="descname">get_bin</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.get_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a GET request for binary data. This method returns the contents of the response as a bytes string type. Returns False on connection error (e.g. non-existent URL path)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.get_bin_write_file">
+<tt class="descname">get_bin_write_file</tt><big>(</big><em>[filepath] [, suppress_output=False] [, overwrite_existing=False]</em><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.get_bin_write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a GET request for binary data and write to disk. Returns True on successful file write. Returns False on unsuccessful writes, including on connection errors (e.g. non-existent URL path)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>str</em>) &#8211; the output file path for the binary file write. If the filepath is not specified, the current working directory path is prepended to the filename in the URL.  This path is then used for the file write.</li>
+<li><strong>suppress_output</strong> (<em>boolean</em>) &#8211; suppress standard output stream status updates during download (default=False)</li>
+<li><strong>overwrite_existing</strong> (<em>boolean</em>) &#8211; overwrite an existing file at the same output filepath (default=False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.get_status_ok">
+<tt class="descname">get_status_ok</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.get_status_ok" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a GET request and return a boolean value for the statement, &#8220;the response status code is in the 200 range&#8221;. The returned text data can be retrieved from the <tt class="docutils literal"><span class="pre">HTTP.res.text</span></tt> attribute and returned binary data can be retrieved from <tt class="docutils literal"><span class="pre">HTTP.res.content</span></tt>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.get_txt_write_file">
+<tt class="descname">get_txt_write_file</tt><big>(</big><em>[filepath] [, suppress_output=False] [, overwrite_existing=False]</em><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.get_txt_write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a GET request for text and write a UTF-8 encoded text file to disk.  Returns True on successful file write.  Returns False on unsuccessful writes, including on connection errors (e.g. non-existent URL path)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>str</em>) &#8211; the output file path for the text file write. If the filepath is not specified, the current working directory path is prepended to the filename in the URL.  This path is then used for the file write.</li>
+<li><strong>suppress_output</strong> (<em>boolean</em>) &#8211; suppress standard output stream status updates during download (default=False)</li>
+<li><strong>overwrite_existing</strong> (<em>boolean</em>) &#8211; overwrite an existing file at the same output filepath (default=False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.post">
+<tt class="descname">post</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a POST request for text.  This method returns the contents of the response as a string that is encoded according to the <tt class="docutils literal"><span class="pre">HTTP.res.encoding</span></tt> response type.  The requests library attempts to determine this encoding according to the encoding header in the response.  Returns False on connection errors (e.g. non-existent URL path).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.post_bin">
+<tt class="descname">post_bin</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.post_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a POST request for binary data.  This method returns the contents of the response as a bytes string type. Returns False on connection errors (e.g. non-existent URL path)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.post_bin_write_file">
+<tt class="descname">post_bin_write_file</tt><big>(</big><em>[filepath] [, suppress_output=False] [, overwrite_existing=False]</em><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.post_bin_write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a POST request for binary data and write to disk. This method returns True on successful file write and returns False on unsuccesful write, including on connection errors (e.g. non-existent URL path)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>str</em>) &#8211; the output file path for the binary file write. If the filepath is not specified, the current working directory path is prepended to the filename in the URL.  This path is then used for the file write.</li>
+<li><strong>suppress_output</strong> (<em>boolean</em>) &#8211; suppress standard output stream status updates during download (default=False)</li>
+<li><strong>overwrite_existing</strong> (<em>boolean</em>) &#8211; overwrite an existing file at the same output filepath (default=False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.post_txt_write_file">
+<tt class="descname">post_txt_write_file</tt><big>(</big><em>[filepath] [, suppress_output=False] [, overwrite_existing=False]</em><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.post_txt_write_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a POST request for text data and write a UTF-8 encoded text file to disk.  This method returns True on successful file write and returns False on unsuccesful writes, including on connection errors (e.g. non-existent URL path)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filepath</strong> (<em>str</em>) &#8211; the output file path for the text file write. If the filepath is not specified, the current working directory path is prepended to the filename in the URL.  This path is then used for the file write.</li>
+<li><strong>suppress_output</strong> (<em>boolean</em>) &#8211; suppress standard output stream status updates during download (default=False)</li>
+<li><strong>overwrite_existing</strong> (<em>boolean</em>) &#8211; overwrite an existing file at the same output filepath (default=False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.post_status_ok">
+<tt class="descname">post_status_ok</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.post_status_ok" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a POST request and return a boolean value for the statement, &#8220;the response status code is in the 200 range&#8221;.  The returned text data can be retrieved from the <tt class="docutils literal"><span class="pre">HTTP.res.text</span></tt> attribute and returned binary data can be retrieved from <tt class="docutils literal"><span class="pre">HTTP.res.content</span></tt>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.network.HTTP.response">
+<tt class="descname">response</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.network.HTTP.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the response object following a HTTP GET or POST request.  This is the same object that defines the <tt class="docutils literal"><span class="pre">HTTP.res</span></tt> attribute following one of these request types.  See The Response Object section below for details about the response object attributes.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="the-response-object">
+<h2>The Response Object<a class="headerlink" href="#the-response-object" title="Permalink to this headline">¶</a></h2>
+<p>The response object <tt class="docutils literal"><span class="pre">HTTP.res</span></tt> is available after a successful GET or POST request for a response from a server.  The response object and its attributes are accessible either directly with dot syntax or as the return value from the <a class="reference internal" href="#Naked.toolshed.network.HTTP.response" title="Naked.toolshed.network.HTTP.response"><tt class="xref py py-meth docutils literal"><span class="pre">HTTP.response()</span></tt></a> method. The attributes of the response object include:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">content</span></tt> - bytes string of the returned data</li>
+<li><tt class="docutils literal"><span class="pre">encoding</span></tt> - string encoding applied to the returned text in the text attribute</li>
+<li><tt class="docutils literal"><span class="pre">headers</span></tt> - dictionary of the response headers</li>
+<li><tt class="docutils literal"><span class="pre">status_code</span></tt> - integer response status code</li>
+<li><tt class="docutils literal"><span class="pre">text</span></tt> - text string encoded with the encoding type defined in the encoding attribute</li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Instantiation of Default HTTP Object</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/200&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Instantation of HTTP Object with Adjustment of Request Timeout</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/200&#39;</span><span class="p">,</span> <span class="n">request_timeout</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>GET Request for Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://raw.github.com/chrissimpkins/naked/master/README.md&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">text</span>
+    <span class="c"># do something with the text</span>
+</pre></div>
+</div>
+<p><strong>GET Request for Text, Alternate Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://raw.github.com/chrissimpkins/naked/master/README.md&#39;</span><span class="p">)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">resp</span><span class="p">:</span>
+    <span class="c"># do something with the `resp` text</span>
+</pre></div>
+</div>
+<p><strong>GET Request for Binary Data</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://github.com/chrissimpkins/naked/tarball/master&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">content</span>
+    <span class="c"># do something with the data</span>
+</pre></div>
+</div>
+<p><strong>GET Request for Binary Data, Alternate Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://github.com/chrissimpkins/naked/tarball/master&#39;</span><span class="p">)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">get_bin</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">resp</span><span class="p">:</span>
+    <span class="c"># do something with the `resp` data</span>
+</pre></div>
+</div>
+<p><strong>POST Request for Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/post&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">post_status_ok</span><span class="p">():</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">text</span>
+    <span class="c"># do something with the text</span>
+</pre></div>
+</div>
+<p><strong>POST Request for Text, Alternate Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/post&#39;</span><span class="p">)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">post</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">resp</span><span class="p">:</span>
+    <span class="c"># do something with the `resp` text</span>
+</pre></div>
+</div>
+<p><strong>POST Request for Binary Data</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/post&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">post_status_ok</span><span class="p">():</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">content</span>
+    <span class="c"># do something with the data</span>
+</pre></div>
+</div>
+<p><strong>POST Request for Binary Data, Alternate Approach</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/post&#39;</span><span class="p">)</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">post_bin</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">resp</span><span class="p">:</span>
+    <span class="c"># do something with the `resp` data</span>
+</pre></div>
+</div>
+<p><strong>Write Text File from GET Request</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;naked_README.md&#39;</span><span class="p">)</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://raw.github.com/chrissimpkins/naked/master/README.md&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_txt_write_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="c"># file write was successful</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file write was not successful</span>
+</pre></div>
+</div>
+<p><strong>Write Binary File from GET Request</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;naked.tar.gz&#39;</span><span class="p">)</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://github.com/chrissimpkins/naked/tarball/master&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_bin_write_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="c"># file write was successful</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file write was not successful</span>
+</pre></div>
+</div>
+<p><strong>Write Text File from GET Request, Overwrite Existing File</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;naked_README.md&#39;</span><span class="p">)</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://raw.github.com/chrissimpkins/naked/master/README.md&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_txt_write_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">overwrite_existing</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="c"># file write was successful</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file write was not successful</span>
+</pre></div>
+</div>
+<p><strong>Write Binary File from GET Request, Overwrite Existing File</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;naked.tar.gz&#39;</span><span class="p">)</span>
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;https://github.com/chrissimpkins/naked/tarball/master&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_bin_write_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">overwrite_existing</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="c"># file write was successful</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file write was not successful</span>
+</pre></div>
+</div>
+<p><strong>Response Headers</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/200&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">headers</span>
+</pre></div>
+</div>
+<p><strong>Response Status Code, 200 Range</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/200&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+<p><strong>Response Status Code, Non-200 Range</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/404&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">status_code</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">fail_status</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">status_code</span>
+</pre></div>
+</div>
+<p><strong>Response Content-Type</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.network</span> <span class="kn">import</span> <span class="n">HTTP</span>
+
+<span class="n">http</span> <span class="o">=</span> <span class="n">HTTP</span><span class="p">(</span><span class="s">&#39;http://httpbin.org/status/200&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">http</span><span class="o">.</span><span class="n">get_status_ok</span><span class="p">():</span>
+    <span class="n">content_type</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">res</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">&#39;content-type&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_ink.html" class="btn btn-neutral" title="Toolshed: ink"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

@@ -222,6 +222,7 @@ Contents
    command_line_parser
    toolshed_overview
    toolshed_ink
+   toolshed_network
    change_log
    licenses
 

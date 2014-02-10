@@ -44,7 +44,7 @@
 
   
     <link rel="top" title="Naked 0.1.21 documentation" href="index.html"/>
-        <link rel="next" title="Changelog" href="change_log.html"/>
+        <link rel="next" title="Toolshed: ink" href="toolshed_ink.html"/>
         <link rel="prev" title="Command Line Parser" href="command_line_parser.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -91,7 +91,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
@@ -140,6 +153,23 @@
 <li class="toctree-l2"><a class="reference internal" href="#state-module">State Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#system-module">System Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#types-module">Types Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -205,14 +235,14 @@
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.ink</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.ink</span></tt></p>
 <p>The ink module includes text template and renderer classes to perform flexible text templating with the replacement tag syntax of your choice.  A Python dictionary is used to map replacement strings to the replacement tags.</p>
-<p>Documentation: coming soon...</p>
+<p>Documentation: <a class="reference internal" href="toolshed_ink.html"><em>Toolshed: ink</em></a></p>
 </div>
 <div class="section" id="network-module">
 <h2>Network Module<a class="headerlink" href="#network-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.network</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.network</span></tt></p>
-<p>The network module includes the HTTP class for simple GET and POST requests with text or binary data.</p>
-<p>Documentation: coming soon...</p>
+<p>The network module includes the HTTP class for simple GET and POST requests with text or binary data.  It also supports simple text and binary file writes from GET or POST requests.</p>
+<p>Documentation: <a class="reference internal" href="toolshed_network.html"><em>Toolshed: network</em></a></p>
 </div>
 <div class="section" id="python-module">
 <h2>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">¶</a></h2>
@@ -256,7 +286,7 @@
   
     <div class="rst-footer-buttons">
       
-        <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="toolshed_ink.html" class="btn btn-neutral float-right" title="Toolshed: ink"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="command_line_parser.html" class="btn btn-neutral" title="Command Line Parser"><span class="icon icon-circle-arrow-left"></span> Previous</a>
