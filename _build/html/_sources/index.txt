@@ -115,6 +115,8 @@ Networking
     if http.post_status_ok():
         print(http.res.text)
 
+Text and binary file writes from GET and POST requests are just as easy.
+
 
 File I/O
 ^^^^^^^^^
