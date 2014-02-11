@@ -1,5 +1,5 @@
 Toolshed: ``ink``
----------------------------------
+====================
 
 .. py:module:: Naked.toolshed.ink
 

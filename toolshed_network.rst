@@ -1,5 +1,5 @@
 Toolshed: ``network``
----------------------------------
+========================
 
 .. py:module:: Naked.toolshed.network
 

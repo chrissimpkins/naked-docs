@@ -1,0 +1,453 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Toolshed: state &mdash; Naked 0.1.22 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.22',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.22 documentation" href="index.html"/>
+        <link rel="next" title="Changelog" href="change_log.html"/>
+        <link rel="prev" title="Toolshed: network" href="toolshed_network.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-state-module">Import State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-state-c-module">Import State C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="module-Naked.toolshed.state">
+<span id="toolshed-state"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt><a class="headerlink" href="#module-Naked.toolshed.state" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-state-module">
+<h2>Import State Module<a class="headerlink" href="#import-state-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.state</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-state-c-module">
+<h2>Import State C Module<a class="headerlink" href="#import-state-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.cstate</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note the difference in the name of the C source module <tt class="docutils literal"><span class="pre">cstate</span></tt> relative to other toolshed module imports which follow the same naming scheme as the standard Python version.</p>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The state module has a single class, the <a class="reference internal" href="#Naked.toolshed.state.StateObject" title="Naked.toolshed.state.StateObject"><tt class="xref py py-class docutils literal"><span class="pre">StateObject</span></tt></a>.  This is an object that generates and maintains user state data that is current as of the time of the <a class="reference internal" href="#Naked.toolshed.state.StateObject" title="Naked.toolshed.state.StateObject"><tt class="xref py py-class docutils literal"><span class="pre">StateObject</span></tt></a> instantation.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Naked.toolshed.state.StateObject">
+<em class="property">class </em><tt class="descclassname">Naked.toolshed.state.</tt><tt class="descname">StateObject</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>The StateObject is instantiated without parameters.  Attributes can be accessed with standard Python dot syntax following instantiation (e.g. <tt class="docutils literal"><span class="pre">state.py2</span></tt>).</p>
+<p><strong>Attributes</strong>:</p>
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.cwd">
+<tt class="descname">cwd</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.cwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User current working directory (from Python <tt class="docutils literal"><span class="pre">os.getcwd()</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.day">
+<tt class="descname">day</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.day" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local day of the calendar month (from <tt class="docutils literal"><span class="pre">datetime.datetime.now().day</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.default_path">
+<tt class="descname">default_path</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.default_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) Default user PATH string (from Python <tt class="docutils literal"><span class="pre">os.defpath</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.file_encoding">
+<tt class="descname">file_encoding</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.file_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User system default file encoding (from Python <tt class="docutils literal"><span class="pre">sys.getfilesystemencoding()</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.hour">
+<tt class="descname">hour</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.hour" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local system hour of the day [24hr format] (from Python <tt class="docutils literal"><span class="pre">datetime.datetime.now().hour</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.min">
+<tt class="descname">min</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local system minute of the day (from Python <tt class="docutils literal"><span class="pre">datetime.datetime.now().minute</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.month">
+<tt class="descname">month</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.month" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local system month of the year (from Python <tt class="docutils literal"><span class="pre">datetime.datetime.now().month</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.os">
+<tt class="descname">os</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.os" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User operating system (from Python <tt class="docutils literal"><span class="pre">sys.platform</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.parent_dir">
+<tt class="descname">parent_dir</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.parent_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User parent directory relative to current working directory (from Python <tt class="docutils literal"><span class="pre">os.pardir</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.py2">
+<tt class="descname">py2</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.py2" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>boolean</em>) Truth test for Python 2 interpreter executing script on user system (test derived from Python <tt class="docutils literal"><span class="pre">sys.version_info</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.py3">
+<tt class="descname">py3</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.py3" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>boolean</em>) Truth test for Python 3 interpreter executing script on user system (test derived from Python <tt class="docutils literal"><span class="pre">sys.version_info</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.py_major">
+<tt class="descname">py_major</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.py_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) The Python major version - <strong>2</strong> .7.6 - (from Python <tt class="docutils literal"><span class="pre">sys.version_info</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.py_minor">
+<tt class="descname">py_minor</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.py_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) The Python minor version - 2. <strong>7</strong> .6 - (from Python <tt class="docutils literal"><span class="pre">sys.version_info</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.py_patch">
+<tt class="descname">py_patch</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.py_patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) The Python patch version - 2.7. <strong>6</strong> - (from Python <tt class="docutils literal"><span class="pre">sys.version_info</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.second">
+<tt class="descname">second</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.second" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local system seconds of the current minute (from Python <tt class="docutils literal"><span class="pre">datetime.datetime.now().second</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.string_encoding">
+<tt class="descname">string_encoding</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.string_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User system string encoding (from Python <tt class="docutils literal"><span class="pre">sys.getdefaultencoding()</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.user_path">
+<tt class="descname">user_path</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.user_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>string</em>) User&#8217;s USER directory path (from Python <tt class="docutils literal"><span class="pre">os.path.expanduser(&quot;~&quot;)</span></tt>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Naked.toolshed.state.StateObject.year">
+<tt class="descname">year</tt><a class="headerlink" href="#Naked.toolshed.state.StateObject.year" title="Permalink to this definition">¶</a></dt>
+<dd><p>(<em>int</em>) Local system year string (from Python <tt class="docutils literal"><span class="pre">datetime.datetime.now().year</span></tt>)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="add-your-own-attributes-to-the-stateobject">
+<h2>Add Your Own Attributes to the StateObject<a class="headerlink" href="#add-your-own-attributes-to-the-stateobject" title="Permalink to this headline">¶</a></h2>
+<p>If you need to maintain additional information, simply add a new attribute to the StateObject:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.state</span> <span class="kn">import</span> <span class="n">StateObject</span>
+
+<span class="n">state</span> <span class="o">=</span> <span class="n">StateObject</span><span class="p">()</span>
+<span class="n">state</span><span class="o">.</span><span class="n">user_name</span> <span class="o">=</span> <span class="s">&#39;Guido&#39;</span>         <span class="c"># assign a new attribute</span>
+<span class="n">state</span><span class="o">.</span><span class="n">fav_food</span> <span class="o">=</span> <span class="s">&#39;spam and eggs&#39;</span>  <span class="c"># assign a new attribute</span>
+
+<span class="c"># do other things</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">user_name</span><span class="p">)</span>   <span class="c"># prints &#39;Guido&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">state</span><span class="o">.</span><span class="n">fav_food</span><span class="p">)</span>    <span class="c"># prints &#39;spam and eggs&#39;</span>
+</pre></div>
+</div>
+<p>There are no restrictions against overwriting an existing attribute in the StateObject if you would like to re-define it.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>If you use <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> to generate your project, the <a class="reference internal" href="#Naked.toolshed.state.StateObject" title="Naked.toolshed.state.StateObject"><tt class="xref py py-class docutils literal"><span class="pre">StateObject</span></tt></a> is instantiated as an instance named <tt class="docutils literal"><span class="pre">state</span></tt> in your <tt class="docutils literal"><span class="pre">app.py</span></tt> file.  If you create the instance of the StateObject in a different file, or implement this yourself in the <tt class="docutils literal"><span class="pre">app.py</span></tt> file, replace <tt class="docutils literal"><span class="pre">state</span></tt> in the following examples with the name of your instance.  You can access the <a class="reference internal" href="#Naked.toolshed.state.StateObject" title="Naked.toolshed.state.StateObject"><tt class="xref py py-class docutils literal"><span class="pre">StateObject</span></tt></a> data with dot syntax.</p>
+<p><strong>Python 2 vs. 3 Test</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
+    <span class="c"># Python 2 code</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># Python 3 code</span>
+</pre></div>
+</div>
+<p><strong>Distinguish Python 2.6 from Python 2.7</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py2</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py_minor</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="c"># Python 2.6 code</span>
+    <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">py_minor</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="c"># Python 2.7 code</span>
+</pre></div>
+</div>
+<p><strong>Distinguish Python 3.2 from Python 3.3</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py3</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">state</span><span class="o">.</span><span class="n">py_minor</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="c"># Python 3.2 code</span>
+    <span class="k">elif</span> <span class="n">state</span><span class="o">.</span><span class="n">py_minor</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="c"># Python 3.3 code</span>
+</pre></div>
+</div>
+<p><strong>Current Working Directory Lookup</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">curr_dir</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">cwd</span>
+<span class="c"># the current working directory path is now in `curr_dir`</span>
+</pre></div>
+</div>
+<p><strong>User Operating System</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">opsys</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">os</span>
+<span class="c"># opsys contains the operating system name - see Python sys.platform documentation for key</span>
+</pre></div>
+</div>
+<p><strong>Print the Date</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">date_string</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">month</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">state</span><span class="o">.</span><span class="n">day</span> <span class="o">+</span> <span class="s">&#39; &#39;</span> <span class="o">+</span> <span class="n">state</span><span class="o">.</span><span class="n">year</span>
+<span class="k">print</span><span class="p">(</span><span class="n">date_string</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Print the Time</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">time_string</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="n">state</span><span class="o">.</span><span class="n">min</span> <span class="o">+</span> <span class="s">&#39;:&#39;</span> <span class="o">+</span> <span class="n">state</span><span class="o">.</span><span class="n">second</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_network.html" class="btn btn-neutral" title="Toolshed: network"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>
