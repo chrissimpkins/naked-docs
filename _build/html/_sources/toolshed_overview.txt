@@ -74,7 +74,7 @@ Python Module
 
 The python module includes Python interpreter version testing functions.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_python`
 
 
 Shell Module

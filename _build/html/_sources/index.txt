@@ -227,6 +227,7 @@ Contents
    toolshed_overview
    toolshed_ink
    toolshed_network
+   toolshed_python
    toolshed_state
    change_log
    licenses

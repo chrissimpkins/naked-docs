@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Naked 0.1.22 documentation</title>
+  <title>Toolshed: python &mdash; Naked 0.1.22 documentation</title>
   
 
   
@@ -31,7 +31,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
     
 
@@ -45,13 +44,8 @@
 
   
     <link rel="top" title="Naked 0.1.22 documentation" href="index.html"/>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+        <link rel="next" title="Toolshed: state" href="toolshed_state.html"/>
+        <link rel="prev" title="Toolshed: network" href="toolshed_network.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -65,7 +59,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="#" method="get">
+        <form class="wy-form" action="search.html" method="get">
   <input type="text" name="q" placeholder="Search docs" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
@@ -75,7 +69,7 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix">
         
         
-            <ul>
+            <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
@@ -178,12 +172,12 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-python-module">Import Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-python-c-module">Import Python C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
@@ -222,27 +216,135 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href=""></a></li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a></li>
   
 </ul>
 <hr/>
 
           
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="module-Naked.toolshed.python">
+<span id="toolshed-python"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt><a class="headerlink" href="#module-Naked.toolshed.python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-python-module">
+<h2>Import Python Module<a class="headerlink" href="#import-python-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.state</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-python-c-module">
+<h2>Import Python C Module<a class="headerlink" href="#import-python-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.python</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The python module provides functions for Python version testing.  It is used internally in the Naked Framework by the <a class="reference internal" href="toolshed_state.html#Naked.toolshed.state.StateObject" title="Naked.toolshed.state.StateObject"><tt class="xref py py-class docutils literal"><span class="pre">Naked.toolshed.state.StateObject</span></tt></a>.  The functions are public if you would like to use them directly.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.python.is_py2">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">is_py2</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.is_py2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truth test for execution of script with Python version 2 interpreter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
-  
-  <div id="search-results">
-  
-  </div>
+<dl class="function">
+<dt id="Naked.toolshed.python.is_py3">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">is_py3</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.is_py3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Truth test for execution of script with Python version 3 interpreter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">boolean</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.python.py_version">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">py_version</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.py_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full Python version tuple.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">tuple (major, minor, patch)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.python.py_major_version">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">py_major_version</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.py_major_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The major version of the Python interpreter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.python.py_minor_version">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">py_minor_version</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.py_minor_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minor version of the Python interpreter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.python.py_patch_version">
+<tt class="descclassname">Naked.toolshed.python.</tt><tt class="descname">py_patch_version</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.python.py_patch_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The patch version of the Python interpreter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
 
           <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="toolshed_state.html" class="btn btn-neutral float-right" title="Toolshed: state"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_network.html" class="btn btn-neutral" title="Toolshed: network"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
