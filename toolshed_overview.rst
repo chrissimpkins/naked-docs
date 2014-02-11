@@ -98,7 +98,7 @@ State Module
 
 The state (and cstate C module - note the change in the naming convention for this module) include the StateObject, an object that automatically generates operating system, user and working directory, Python interpreter, time, & date data on instantiation.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_state`
 
 
 System Module
