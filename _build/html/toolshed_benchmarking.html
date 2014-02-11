@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; Naked 0.1.22 documentation</title>
+  <title>Toolshed: benchmarking &mdash; Naked 0.1.22 documentation</title>
   
 
   
@@ -31,7 +31,6 @@
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/searchtools.js"></script>
 
     
 
@@ -45,13 +44,8 @@
 
   
     <link rel="top" title="Naked 0.1.22 documentation" href="index.html"/>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+        <link rel="next" title="Toolshed: ink" href="toolshed_ink.html"/>
+        <link rel="prev" title="The Toolshed Library Overview" href="toolshed_overview.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -65,7 +59,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-nav-search">
         <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="#" method="get">
+        <form class="wy-form" action="search.html" method="get">
   <input type="text" name="q" placeholder="Search docs" />
   <input type="hidden" name="check_keywords" value="yes" />
   <input type="hidden" name="area" value="default" />
@@ -75,7 +69,7 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix">
         
         
-            <ul>
+            <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
@@ -161,13 +155,13 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-benchmarking-module">Import Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decorators">Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
@@ -231,27 +225,181 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href=""></a></li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a></li>
   
 </ul>
 <hr/>
 
           
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="module-Naked.toolshed.benchmarking">
+<span id="toolshed-benchmarking"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt><a class="headerlink" href="#module-Naked.toolshed.benchmarking" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-benchmarking-module">
+<h2>Import Benchmarking Module<a class="headerlink" href="#import-benchmarking-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.benchmarking</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-benchmarking-c-module">
+<h2>Import Benchmarking C Module<a class="headerlink" href="#import-benchmarking-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.benchmarking</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The benchmarking module provides decorators for timed method and function testing.  The <tt class="docutils literal"><span class="pre">timer</span></tt> decorators perform timed runs of a method or function over a specified number of repetitions.  The <tt class="docutils literal"><span class="pre">timer_trials_benchmark</span></tt> decorators perform multiple timed trials of a method or function (over a specified number of repetitions per trial) and run an arbitrary timed Python method as a benchmark in sequence with the function or method tests.</p>
+<p>The Python method that is used as a benchmark is an append of 10 integers to a Python list:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">repetitions</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is run over the same number of repetitions that the test method or function is run.  Garbage collection is discontinued during all tests performed in this module.</p>
+<p>The total duration of the timed run is displayed in the <tt class="docutils literal"><span class="pre">timer</span></tt> report.</p>
+<p>The duration for each of the 10 trials, the mean duration across the 10 trials (with standard deviation if NumPy is installed), the duration per function or method run, the duration of the benchmark Python method, and a ratio of the duration of the test method or function to the benchmark Python method are displayed in the <tt class="docutils literal"><span class="pre">timer_trials_benchmark</span></tt> report.</p>
+<p>The default <a class="reference internal" href="#Naked.toolshed.benchmarking.timer" title="Naked.toolshed.benchmarking.timer"><tt class="xref py py-func docutils literal"><span class="pre">timer()</span></tt></a> and <a class="reference internal" href="#Naked.toolshed.benchmarking.timer_trials_benchmark" title="Naked.toolshed.benchmarking.timer_trials_benchmark"><tt class="xref py py-func docutils literal"><span class="pre">timer_trials_benchmark()</span></tt></a> decorators perform 100,000 repetitions of the test method or function.  Other decorators are available for between 10 and 1 million repetitions.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<p>None</p>
+</div>
+<div class="section" id="decorators">
+<h2>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>100,000 repetitions of the decorated function or method</p>
+</dd></dl>
 
-  
-  <div id="search-results">
-  
-  </div>
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_10">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_10</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_10" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 repetitions of the decorated function or method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_100">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_100</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_100" title="Permalink to this definition">¶</a></dt>
+<dd><p>100 repetitions of the decorated function or method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_1k">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_1k</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_1k" title="Permalink to this definition">¶</a></dt>
+<dd><p>1,000 repetitions of the decorated function or method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_10k">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_10k</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_10k" title="Permalink to this definition">¶</a></dt>
+<dd><p>10,000 repetitions of the decorated function or method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_1m">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_1m</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_1m" title="Permalink to this definition">¶</a></dt>
+<dd><p>1 million repetitions of the decorated function or method</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 100,000 repetitions of the decorated function or method; 100,000 repetitions of the standard Python function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark_10">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark_10</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark_10" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 10 repetitions of the decorated function or method; 10 repetitions of the standard Python function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark_100">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark_100</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark_100" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 100 repetitions of the decorated function or method; 100 repetitions of the standard Python function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark_1k">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark_1k</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark_1k" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 1,000 repetitions of the decorated function or method; 1,000 repetitions of the standard Python function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark_10k">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark_10k</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark_10k" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 10,000 repetitions of the decorated function or method; 10,000 repetitions of the standard Python function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.benchmarking.timer_trials_benchmark_1m">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.benchmarking.</tt><tt class="descname">timer_trials_benchmark_1m</tt><a class="headerlink" href="#Naked.toolshed.benchmarking.timer_trials_benchmark_1m" title="Permalink to this definition">¶</a></dt>
+<dd><p>10 trials x 1 million repetitions of the decorated function or method; 1 million repetitions of the standard Python function</p>
+</dd></dl>
+
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Timer Tests</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.benchmarking</span> <span class="kn">import</span> <span class="n">timer</span>
+
+<span class="nd">@timer</span>
+<span class="k">def</span> <span class="nf">test_func</span><span class="p">():</span>
+    <span class="n">test_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">test_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Starting 100000 repetitions of test_func<span class="o">()</span>...
+100000 repetitions of test_func : 1.12108016014 sec
+</pre></div>
+</div>
+<p><strong>Benchmark Timer Tests</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.benchmarking</span> <span class="kn">import</span> <span class="n">timer_trials_benchmark</span>
+
+<span class="nd">@timer_trials_benchmark</span>
+<span class="k">def</span> <span class="nf">test_func</span><span class="p">():</span>
+    <span class="n">test_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+        <span class="n">test_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Starting timed trials of test_func<span class="o">()</span>..........
+Trial 1:    1.12006998062
+Trial 2:    1.09371995926
+Trial 3:    1.09064292908
+Trial 4:    1.09283995628
+Trial 5:    1.09147787094
+Trial 6:    1.1042740345
+Trial 7:    1.10318899155
+Trial 8:    1.10284495354
+Trial 9:    1.10802388191
+Trial 10:   1.10440087318
+--------------------------------------------------
+Mean <span class="k">for </span>100000 repetitions: 1.10114834309 sec
+Standard Deviation: 0.00872229881241
+Mean per repetition: 1.10114834309e-05 sec
+Mean <span class="k">for </span>100000 of benchmark <span class="k">function</span>:0.131036162376 sec
+Ratio: 8.4033927972
+</pre></div>
+</div>
+</div>
+</div>
+
 
           <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="toolshed_ink.html" class="btn btn-neutral float-right" title="Toolshed: ink"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_overview.html" class="btn btn-neutral" title="The Toolshed Library Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

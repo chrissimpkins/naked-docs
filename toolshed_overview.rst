@@ -12,9 +12,9 @@ Benchmarking Module
 
 **C Module Import**: ``Naked.toolshed.c.benchmarking``
 
-The benchmarking module includes decorators for timed testing of methods and functions over a series of 10 trials x 10 - 1 million repetitions. This includes a decorator that runs a standardized built-in Python method in sequence with your function or method for comparison.
+The benchmarking module includes decorators for timed testing of methods and functions over 10 - 1 million repetitions. This includes a decorator that runs a benchmark built-in Python method in sequence with your function or method for comparison.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_benchmarking`
 
 
 Casts Module

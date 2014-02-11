@@ -225,6 +225,7 @@ Contents
    help_usage_version
    command_line_parser
    toolshed_overview
+   toolshed_benchmarking
    toolshed_ink
    toolshed_network
    toolshed_python
