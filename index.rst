@@ -61,6 +61,8 @@ Command Line Parser
     elif c.option('-l'):
         # do something else
 
+See the :doc:`command_line_parser` documentation for details.
+
 State Data
 ^^^^^^^^^^^^^
 
@@ -84,6 +86,8 @@ State Data
     elif c.eggs:
         print("yum"*2)
 
+See the :doc:`command_line_parser` documentation for details.
+
 * **The StateObject** : a compendium of automatically generated user state information. It includes data such as the Python interpreter version, operating system, user directory path, current working directory, date, time, and more.
 
 .. code-block:: python
@@ -98,6 +102,7 @@ State Data
     else:
         print("In the directory " + working_directory + " and using the Python 3 interpreter")
 
+See the :doc:`toolshed_state` documentation for details.
 
 Networking
 ^^^^^^^^^^^
@@ -115,7 +120,7 @@ Networking
     if http.post_status_ok():
         print(http.res.text)
 
-Text and binary file writes from GET and POST requests are just as easy.
+Text and binary file writes from GET and POST requests are just as easy. See the :doc:`toolshed_network` documentation for details.
 
 
 File I/O
@@ -133,33 +138,50 @@ File I/O
     w.write_utf8(u_txt)
 
 
-Execution of System Applications and Scripts
+Execution of System Executables and Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Simple System Subprocess Execution** : with non-zero exit code status handling & std err stream writes
+* **Simple System Command Execution** :
 
 .. code-block:: python
 
-    from Naked.toolshed.shell import run
+    from Naked.toolshed.shell import execute
 
-    print(run('curl http://www.naked-py.com'))
+    execute('curl http://www.naked-py.com')
 
-* **Simple Ruby Script Execution** : with non-zero exit code status handling & std err stream writes
-
-.. code-block:: python
-
-    from Naked.toolshed.shell import run_rb
-
-    print(run_rb('ruby/testscript.rb'))
-
-* **Simple Node.js Script Execution** : with non-zero exit code status handling & std err stream writes
+* **Simple Ruby Script Execution** :
 
 .. code-block:: python
 
-    from Naked.toolshed.shell import run_js
+    from Naked.toolshed.shell import execute_rb
 
-    print(run_js('node/testscript.js'))
+    execute_rb('ruby/testscript.rb')
 
+* **Simple Node.js Script Execution** :
+
+.. code-block:: python
+
+    from Naked.toolshed.shell import execute_js
+
+    execute_js('node/testscript.js')
+
+See the :doc:`toolshed_shell` documentation for more information, including documentation of how you can check the exit status code & handle the standard output and error streams with your own code using :py:func:`Naked.toolshed.shell.muterun`.
+
+Explore Environment Variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **Access Each String in the User PATH**
+
+.. code-block:: python
+
+  from Naked.toolshed.shell import Environment
+
+  env = Environment()
+  if (env.is_var('PATH')):
+        for i in env.get_split_var_list('PATH'):
+            print(i)
+
+See the :doc:`toolshed_shell` documentation for details.
 
 Function, Method, Class Extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -174,13 +196,27 @@ Function, Method, Class Extensions
     * **XQueue** extends the Python deque
     * **XPriorityQueue** adds a new type
 
-* **Faster, compiled C versions of the library modules** with an *optional* post-install compile for those who need the speed.
+* **Faster, compiled C versions of the library modules** with an *optional* post-install compile for those who need a jetpack.
 
+See the :doc:`toolshed_overview` documentation for an overview and links to the respective parts of the toolshed library documentation.
 
 Text Templates
 ^^^^^^^^^^^^^^^
 
 * **The Ink Templating System** - a lightweight, flexible text templating system that allows you to define the replacement tag syntax in your template documents. Available in the ``Naked.toolshed.ink`` library module.
+
+.. code-block:: python
+
+    from Naked.toolshed.ink import Template, Renderer
+
+    template_string = "I like {{food}} and {{drink}}"
+    template = Template(template_string)
+    template_key = {'food': 'fries', 'drink': 'beer'}
+    renderer = Renderer(template, template_key)
+    rendered_text = renderer.render()
+    print(rendered_text)         # prints "I like fries and beer"
+
+See the :doc:`toolshed_ink` documentation for details.
 
 Benchmarking
 ^^^^^^^^^^^^^^
@@ -194,13 +230,19 @@ Benchmarking
     def your_function(arg1, arg2):
         # your code
 
+See the :doc:`toolshed_benchmarking` documentation for details.
+
 Profiling
 ^^^^^^^^^^
 * The ``profiler.py`` script is added to every project in the path ``PROJECT/lib/profiler.py``. Insert your test code in the designated testing block and then run ``naked profile`` from any directory in your project.  cProfile and pstats profiling is implemented with default report settings (which you can modify in the ``profiler.py`` file if you'd like).
 
+An example is provided in the :doc:`quickstart`.
+
 Testing
 ^^^^^^^^
-* Testing with the tox, nose, py.test, and the built-in Python unittest test runners is automated with the ``naked test`` command.  Use the included tests project directory for your unit test files and run the command from any level of your project.
+* Testing with the tox, nose, py.test, and the built-in Python unittest test runners can be run from any directory in your project with the ``naked test`` command.  Use the included tests project directory for your unit test files.
+
+An example is provided in the :doc:`quickstart`.
 
 Flexible and No Commitment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -229,6 +271,7 @@ Contents
    toolshed_ink
    toolshed_network
    toolshed_python
+   toolshed_shell
    toolshed_state
    change_log
    licenses

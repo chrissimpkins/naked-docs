@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Naked 0.1.22 documentation</title>
+  <title>Index &mdash; Naked 0.1.24 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.22',
+        VERSION:'0.1.24',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -44,7 +44,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.22 documentation" href="index.html"/> 
+    <link rel="top" title="Naked 0.1.24 documentation" href="index.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -188,6 +188,18 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
@@ -236,6 +248,7 @@
 <div class="genindex-jumpbox">
  <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
@@ -277,6 +290,34 @@
   </dl></td>
 </tr></table>
 
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment">Environment (class in Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute">execute() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute_js">execute_js() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute_rb">execute_rb() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.exitcode">exitcode (Naked.toolshed.shell.NakedObject attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
 <h2 id="F">F</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
@@ -302,6 +343,10 @@
   <dt><a href="toolshed_network.html#Naked.toolshed.network.HTTP.get_bin_write_file">get_bin_write_file() (Naked.toolshed.network.HTTP method)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.get_split_var_list">get_split_var_list() (Naked.toolshed.shell.Environment method)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
@@ -310,6 +355,10 @@
 
       
   <dt><a href="toolshed_network.html#Naked.toolshed.network.HTTP.get_txt_write_file">get_txt_write_file() (Naked.toolshed.network.HTTP method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.get_var">get_var() (Naked.toolshed.shell.Environment method)</a>
   </dt>
 
   </dl></td>
@@ -338,10 +387,14 @@
   <dt><a href="toolshed_python.html#Naked.toolshed.python.is_py2">is_py2() (in module Naked.toolshed.python)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_python.html#Naked.toolshed.python.is_py3">is_py3() (in module Naked.toolshed.python)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_python.html#Naked.toolshed.python.is_py3">is_py3() (in module Naked.toolshed.python)</a>
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.is_var">is_var() (Naked.toolshed.shell.Environment method)</a>
   </dt>
 
   </dl></td>
@@ -354,10 +407,22 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.min">min (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.month">month (Naked.toolshed.state.StateObject attribute)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.muterun">muterun() (in module Naked.toolshed.shell)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.month">month (Naked.toolshed.state.StateObject attribute)</a>
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.muterun_js">muterun_js() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.muterun_rb">muterun_rb() (in module Naked.toolshed.shell)</a>
   </dt>
 
   </dl></td>
@@ -382,6 +447,10 @@
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_python.html#module-Naked.toolshed.python">Naked.toolshed.python (module)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#module-Naked.toolshed.shell">Naked.toolshed.shell (module)</a>
   </dt>
 
       
@@ -480,10 +549,22 @@
   <dt><a href="toolshed_ink.html#Naked.toolshed.ink.Renderer">Renderer (class in Naked.toolshed.ink)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_network.html#Naked.toolshed.network.HTTP.response">response() (Naked.toolshed.network.HTTP method)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_network.html#Naked.toolshed.network.HTTP.response">response() (Naked.toolshed.network.HTTP method)</a>
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.run">run() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.run_js">run_js() (in module Naked.toolshed.shell)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.run_rb">run_rb() (in module Naked.toolshed.shell)</a>
   </dt>
 
   </dl></td>
@@ -500,8 +581,16 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject">StateObject (class in Naked.toolshed.state)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stderr">stderr (Naked.toolshed.shell.NakedObject attribute)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stdout">stdout (Naked.toolshed.shell.NakedObject attribute)</a>
+  </dt>
+
       
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.string_encoding">string_encoding (Naked.toolshed.state.StateObject attribute)</a>
   </dt>

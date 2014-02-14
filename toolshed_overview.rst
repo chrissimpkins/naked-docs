@@ -86,7 +86,7 @@ Shell Module
 
 The shell module includes external system, Ruby, & Node.js subprocess execution methods and environment variable testing methods.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_shell`
 
 
 State Module
