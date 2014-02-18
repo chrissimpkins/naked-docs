@@ -1,0 +1,678 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Toolshed: file &mdash; Naked 0.1.25 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.25',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.25 documentation" href="index.html"/>
+        <link rel="next" title="Toolshed: ink" href="toolshed_ink.html"/>
+        <link rel="prev" title="Toolshed: benchmarking" href="toolshed_benchmarking.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-file-module">Import File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-file-c-module">Import File C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="module-Naked.toolshed.file">
+<span id="toolshed-file"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt><a class="headerlink" href="#module-Naked.toolshed.file" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-file-module">
+<h2>Import File Module<a class="headerlink" href="#import-file-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.file</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-file-c-module">
+<h2>Import File C Module<a class="headerlink" href="#import-file-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.file</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">file</span></tt> module includes the <a class="reference internal" href="#Naked.toolshed.file.FileReader" title="Naked.toolshed.file.FileReader"><tt class="xref py py-class docutils literal"><span class="pre">FileReader</span></tt></a> and <a class="reference internal" href="#Naked.toolshed.file.FileWriter" title="Naked.toolshed.file.FileWriter"><tt class="xref py py-class docutils literal"><span class="pre">FileWriter</span></tt></a> classes.  These classes include a number of file I/O methods.</p>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Naked.toolshed.file.FileReader">
+<em class="property">class </em><tt class="descclassname">Naked.toolshed.file.</tt><tt class="descname">FileReader</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <tt class="docutils literal"><span class="pre">FileReader</span></tt> class is used for local file reads.  By default, the methods that deal with text return NFKD normalized UTF-8 encoded strings.  In Python 2, these are of the type <tt class="docutils literal"><span class="pre">unicode</span></tt>, and in Python 3 they are of the type <tt class="docutils literal"><span class="pre">string</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; The path to the file.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.read">
+<tt class="descname">read</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a text file with NFKD normalized UTF-8 string encoding.  Returns a unicode string in Python 2 and a string in Python 3.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Python 3 <tt class="docutils literal"><span class="pre">string</span></tt>, Python 2 <tt class="docutils literal"><span class="pre">unicode</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.read_as">
+<tt class="descname">read_as</tt><big>(</big><em>encoding</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.read_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a text file with a specified text encoding type.  Use a Python codecs encoding type as the method argument (<tt class="docutils literal"><span class="pre">encoding</span></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>encoding</strong> (<em>string</em>) &#8211; the Python codecs encoding type for the file text</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">encoding specific Python string type</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Raises RuntimeError:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">if <tt class="docutils literal"><span class="pre">encoding</span></tt> is not specified</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.read_bin">
+<tt class="descname">read_bin</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.read_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a binary file and returns a bytes string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bytes string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.read_gzip">
+<tt class="descname">read_gzip</tt><big>(</big><span class="optional">[</span><em>encoding</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.read_gzip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a gzip compressed file and returns a bytes string. The <tt class="docutils literal"><span class="pre">encoding</span></tt> parameter is optional.  Include the parameter if the compressed file is Unicode text file and the method will attempt to decompress and read the file as a NFKD normalized UTF-8 encoded <tt class="docutils literal"><span class="pre">bytes</span></tt> string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>encoding</strong> (<em>string</em>) &#8211; accepts an optional &#8216;utf-8&#8217; string parameter if the compressed file is a UTF-8 encoded text file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bytes string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.readlines">
+<tt class="descname">readlines</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.readlines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a text file by line with NFKD normalized UTF-8 encoding and returns a Python list containing each line of the file mapped to a list item.  In Python 2, the lines are of the type unicode and in Python 3 the lines are of the type string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Python list with each line in the file mapped to a list item.  List items are <tt class="docutils literal"><span class="pre">unicode</span></tt> in Python 2 and <tt class="docutils literal"><span class="pre">string</span></tt> in Python 3</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileReader.readlines_as">
+<tt class="descname">readlines_as</tt><big>(</big><em>encoding</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileReader.readlines_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a text file by line with a specified text encoding type.  Returns a Python list containing each line of the file mapped to a list item.  Use a Python codecs encoding type as the method argument (<tt class="docutils literal"><span class="pre">encoding</span></tt>).  The list item types are dependent upon the encoding type that is passed as the parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>encoding</strong> (<em>string</em>) &#8211; the Python codecs encoding type for the file text</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">encoding specific Python string type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Naked.toolshed.file.FileWriter">
+<em class="property">class </em><tt class="descclassname">Naked.toolshed.file.</tt><tt class="descname">FileWriter</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <tt class="docutils literal"><span class="pre">FileWriter</span></tt> class is used for local file writes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; The path to the file.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.append">
+<tt class="descname">append</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append text to an existing text file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.  The existence of the file at <tt class="docutils literal"><span class="pre">file_path</span></tt> is confirmed before the write.  If it does not exist, an <tt class="docutils literal"><span class="pre">IOError</span></tt> is raised.  If the <tt class="docutils literal"><span class="pre">text</span></tt> string includes Unicode characters, the <tt class="docutils literal"><span class="pre">append</span></tt> method attempts to encode this as NFKD normalized UTF-8 text prior to the append.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em>) &#8211; The text to be appended to the existing file string.  Unicode encoded strings are acceptable.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises IOError:</th><td class="field-body">if the file located at the <tt class="docutils literal"><span class="pre">file_path</span></tt> parameter does not exist.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.gzip">
+<tt class="descname">gzip</tt><big>(</big><em>data</em><span class="optional">[</span>, <em>compression_level=6</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.gzip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform gzip compression of <tt class="docutils literal"><span class="pre">data</span></tt> with the zlib library and write to a file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.  The default compression level is 6 (integer range 0 - 9) in order to balance compression level and speed.   In most use cases, this approaches maximal compression with a significant reduction in the duration of time necessary to compress the data for the file write compared with the maximal compression setting.  Add a <tt class="docutils literal"><span class="pre">compression_level</span></tt> parameter to change this setting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>data</strong> (<em>string|bytes</em>) &#8211; the string or bytes string to compress and write to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</li>
+<li><strong>compression_level</strong> (<em>integer</em>) &#8211; the integer value for the compression level.  Range is 0=none to 9=maximal.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If the <tt class="docutils literal"><span class="pre">file_path</span></tt> string does not include it, <tt class="docutils literal"><span class="pre">.gz</span></tt> is added as the file extension to the <tt class="docutils literal"><span class="pre">file_path</span></tt> string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.safe_write">
+<tt class="descname">safe_write</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.safe_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <tt class="docutils literal"><span class="pre">text</span></tt> to a text file at <tt class="docutils literal"><span class="pre">file_path</span></tt> if <tt class="docutils literal"><span class="pre">file_path</span></tt> does not already exist.  This method will not overwrite an existing file at the <tt class="docutils literal"><span class="pre">file_path</span></tt>.  Use the <a class="reference internal" href="#Naked.toolshed.file.FileWriter.write" title="Naked.toolshed.file.FileWriter.write"><tt class="xref py py-meth docutils literal"><span class="pre">write()</span></tt></a> method to permit overwrites.  This method uses the system default encoding.  If the <tt class="docutils literal"><span class="pre">text</span></tt> string includes Unicode text, the method will attempt to write with NFKD normalized UTF-8 encoding.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em>) &#8211; The text to be written to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">boolean for file write.  <tt class="docutils literal"><span class="pre">True</span></tt> = new file write occurred; <tt class="docutils literal"><span class="pre">False</span></tt> = file exists and file write did not occur</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.safe_write_bin">
+<tt class="descname">safe_write_bin</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.safe_write_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <tt class="docutils literal"><span class="pre">data</span></tt> to a binary file at <tt class="docutils literal"><span class="pre">file_path</span></tt> if <tt class="docutils literal"><span class="pre">file_path</span></tt> does not already exist.  This method will not overwrite an existing file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.  Use the <a class="reference internal" href="#Naked.toolshed.file.FileWriter.write_bin" title="Naked.toolshed.file.FileWriter.write_bin"><tt class="xref py py-meth docutils literal"><span class="pre">write_bin()</span></tt></a> method to permit overwrites.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) &#8211; The data to be written to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">boolean for file write. <tt class="docutils literal"><span class="pre">True</span></tt> = new file write occurred; <tt class="docutils literal"><span class="pre">False</span></tt> = file exists and file write did not occur</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.write">
+<tt class="descname">write</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <tt class="docutils literal"><span class="pre">text</span></tt> to a text file with the system default encoding. The <tt class="docutils literal"><span class="pre">write</span></tt> method will attempt to write with NFKD normalized UTF-8 encoding if the <tt class="docutils literal"><span class="pre">text</span></tt> string includes Unicode text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em>) &#8211; The text to be written to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.write_as">
+<tt class="descname">write_as</tt><big>(</big><em>text</em>, <em>encoding</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.write_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <tt class="docutils literal"><span class="pre">text</span></tt> to a text file with the specified <tt class="docutils literal"><span class="pre">encoding</span></tt> type.  Use a Python codecs encoding type as the second parameter to the method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> (<em>string</em>) &#8211; the text that is to be written to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</li>
+<li><strong>encoding</strong> (<em>string</em>) &#8211; the Python codecs string encoding type</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises RuntimeError:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body"><p class="first last">if <tt class="docutils literal"><span class="pre">encoding</span></tt> is not specified</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="Naked.toolshed.file.FileWriter.write_bin">
+<tt class="descname">write_bin</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#Naked.toolshed.file.FileWriter.write_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write <tt class="docutils literal"><span class="pre">data</span></tt> to a binary file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) &#8211; The data to be written to the file at <tt class="docutils literal"><span class="pre">file_path</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create an Instance of a FileReader</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;textdir/file.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create an Instance of a FileWriter</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/file.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Read with ASCII Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;textdir/file.txt&#39;</span><span class="p">)</span>
+<span class="n">the_text</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>File Write with ASCII Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/file.txt&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s">&quot;A test string&quot;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Read with UTF-8 Encoded Unicode Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;textdir/unicode.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><tt class="docutils literal"><span class="pre">u_txt</span></tt> is type <tt class="docutils literal"><span class="pre">unicode</span></tt> in Python 2 and type <tt class="docutils literal"><span class="pre">string</span></tt> in Python 3.</p>
+<p><strong>File Write with UTF-8 Encoded Unicode Text, Python 2</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/unicode.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="s">u&#39;Here are some Tibetan characters ༄ དྷ&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Write with UTF-8 Encoded Unicode Text, Python 3</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/unicode.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="s">&#39;Here are some Tibetan characters ༄ དྷ&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Append with ASCII Text</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/existingfile.txt&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s">&#39;And here is some more text for my file.&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Append with UTF-8 Encoded Unicode Text, Python 2</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/existingfile.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="s">u&#39;Here are some Tibetan characters ༄ དྷ&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>File Append with UTF-8 Encoded Unicode Text, Python 3</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/existingfile.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="s">&#39;Here are some Tibetan characters ༄ དྷ&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Safe Write Text to a New File (Prevents File Overwrites)</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;textdir/file.txt&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s">&#39;And here is some more text for my file.&#39;</span>
+<span class="k">if</span> <span class="n">fw</span><span class="o">.</span><span class="n">safe_write</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c"># file write occurred</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file exists and write did not occur</span>
+</pre></div>
+</div>
+<p><strong>File Read with Binary Data</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;bindir/test.so&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read_bin</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>File Write with Binary Data</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span><span class="p">,</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;bindir/test.so&#39;</span><span class="p">)</span>
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;otherbindir/test2.so&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read_bin</span><span class="p">()</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write_bin</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Safe Write Binary Data to a New File (Prevents File Overwrites)</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span><span class="p">,</span> <span class="n">FileReader</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;bindir/test.so&#39;</span><span class="p">)</span>
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;otherbindir/test2.so&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read_bin</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">fw</span><span class="o">.</span><span class="n">write_bin</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c"># file write occurred</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># file exists and write did not occur</span>
+</pre></div>
+</div>
+<p><strong>gzip Compression and File Write</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileWriter</span>
+
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;bindir/index.html.gz&#39;</span><span class="p">)</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s">&#39;&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;body&gt;Hi there, this is a test&lt;/body&gt;&lt;/html&gt;&#39;</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">gzip</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Read gzip Compressed Data from File</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span>
+
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;bindir/index.html.gz&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read_gzip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="toolshed_ink.html" class="btn btn-neutral float-right" title="Toolshed: ink"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_benchmarking.html" class="btn btn-neutral" title="Toolshed: benchmarking"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

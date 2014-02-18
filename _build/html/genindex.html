@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Naked 0.1.24 documentation</title>
+  <title>Index &mdash; Naked 0.1.25 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.24',
+        VERSION:'0.1.25',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -44,7 +44,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.24 documentation" href="index.html"/> 
+    <link rel="top" title="Naked 0.1.25 documentation" href="index.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -163,6 +163,14 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
@@ -246,7 +254,8 @@
 <h1 id="index">Index</h1>
 
 <div class="genindex-jumpbox">
- <a href="#C"><strong>C</strong></a>
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
@@ -261,9 +270,20 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#W"><strong>W</strong></a>
  | <a href="#Y"><strong>Y</strong></a>
  
 </div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.append">append() (Naked.toolshed.file.FileWriter method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
@@ -325,6 +345,16 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.file_encoding">file_encoding (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader">FileReader (class in Naked.toolshed.file)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter">FileWriter (class in Naked.toolshed.file)</a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -359,6 +389,10 @@
 
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.get_var">get_var() (Naked.toolshed.shell.Environment method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.gzip">gzip() (Naked.toolshed.file.FileWriter method)</a>
   </dt>
 
   </dl></td>
@@ -433,6 +467,10 @@
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_benchmarking.html#module-Naked.toolshed.benchmarking">Naked.toolshed.benchmarking (module)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#module-Naked.toolshed.file">Naked.toolshed.file (module)</a>
   </dt>
 
       
@@ -542,6 +580,32 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.read">read() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.read_as">read_as() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.read_bin">read_bin() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.read_gzip">read_gzip() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.readlines">readlines() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.readlines_as">readlines_as() (Naked.toolshed.file.FileReader method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
   <dt><a href="toolshed_ink.html#Naked.toolshed.ink.Renderer.render">render() (Naked.toolshed.ink.Renderer method)</a>
   </dt>
 
@@ -553,8 +617,6 @@
   <dt><a href="toolshed_network.html#Naked.toolshed.network.HTTP.response">response() (Naked.toolshed.network.HTTP method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.run">run() (in module Naked.toolshed.shell)</a>
   </dt>
@@ -574,6 +636,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.safe_write">safe_write() (Naked.toolshed.file.FileWriter method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.safe_write_bin">safe_write_bin() (Naked.toolshed.file.FileWriter method)</a>
+  </dt>
+
+      
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.second">second (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
@@ -581,12 +651,12 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject">StateObject (class in Naked.toolshed.state)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stderr">stderr (Naked.toolshed.shell.NakedObject attribute)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stdout">stdout (Naked.toolshed.shell.NakedObject attribute)</a>
   </dt>
@@ -663,6 +733,26 @@
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.user_path">user_path (Naked.toolshed.state.StateObject attribute)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.write">write() (Naked.toolshed.file.FileWriter method)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.write_as">write_as() (Naked.toolshed.file.FileWriter method)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter.write_bin">write_bin() (Naked.toolshed.file.FileWriter method)</a>
   </dt>
 
   </dl></td>

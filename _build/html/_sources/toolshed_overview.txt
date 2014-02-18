@@ -38,7 +38,7 @@ File Module
 
 The file module includes FileWriter and FileReader classes that perform I/O, including simple UTF-8 encoded reads and writes.
 
-Documentation: coming soon...
+Documentation: :doc:`toolshed_file`
 
 
 Ink Module

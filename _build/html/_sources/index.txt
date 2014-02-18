@@ -125,18 +125,19 @@ Text and binary file writes from GET and POST requests are just as easy. See the
 
 File I/O
 ^^^^^^^^^
-* Unicode (UTF-8) reads and writes:
+* Supports Unicode (UTF-8) reads and writes by default:
 
 .. code-block:: python
 
     from Naked.toolshed.file import FileReader, FileWriter
 
-    r = FileReader('myfile.txt')
-    u_txt = r.read_utf8()
+    fr = FileReader('myfile.txt')
+    u_txt = fr.read()
 
-    w = FileWriter('newfile.txt')
-    w.write_utf8(u_txt)
+    fw = FileWriter('newfile.txt')
+    fw.write(u_txt)
 
+There are a number of I/O methods in the ``FileReader`` and ``FileWriter`` classes.  See the :doc:`toolshed_file` documentation for details.
 
 Execution of System Executables and Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -268,6 +269,7 @@ Contents
    command_line_parser
    toolshed_overview
    toolshed_benchmarking
+   toolshed_file
    toolshed_ink
    toolshed_network
    toolshed_python

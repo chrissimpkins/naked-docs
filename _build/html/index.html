@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Naked &mdash; Naked 0.1.24 documentation</title>
+  <title>Naked &mdash; Naked 0.1.25 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.24',
+        VERSION:'0.1.25',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.24 documentation" href="#"/>
+    <link rel="top" title="Naked 0.1.25 documentation" href="#"/>
         <link rel="next" title="Naked Resources" href="resources.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -161,6 +161,14 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
@@ -361,17 +369,18 @@
 <div class="section" id="file-i-o">
 <h3>File I/O<a class="headerlink" href="#file-i-o" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Unicode (UTF-8) reads and writes:</li>
+<li>Supports Unicode (UTF-8) reads and writes by default:</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.file</span> <span class="kn">import</span> <span class="n">FileReader</span><span class="p">,</span> <span class="n">FileWriter</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;myfile.txt&#39;</span><span class="p">)</span>
-<span class="n">u_txt</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">read_utf8</span><span class="p">()</span>
+<span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;myfile.txt&#39;</span><span class="p">)</span>
+<span class="n">u_txt</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="n">w</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;newfile.txt&#39;</span><span class="p">)</span>
-<span class="n">w</span><span class="o">.</span><span class="n">write_utf8</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
+<span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;newfile.txt&#39;</span><span class="p">)</span>
+<span class="n">fw</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">u_txt</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>There are a number of I/O methods in the <tt class="docutils literal"><span class="pre">FileReader</span></tt> and <tt class="docutils literal"><span class="pre">FileWriter</span></tt> classes.  See the <a class="reference internal" href="toolshed_file.html"><em>Toolshed: file</em></a> documentation for details.</p>
 </div>
 <div class="section" id="execution-of-system-executables-and-scripts">
 <h3>Execution of System Executables and Scripts<a class="headerlink" href="#execution-of-system-executables-and-scripts" title="Permalink to this headline">¶</a></h3>
@@ -586,6 +595,14 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
