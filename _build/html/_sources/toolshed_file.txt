@@ -27,7 +27,7 @@ Classes
 
 .. py:class:: FileReader(file_path)
 
-    The ``FileReader`` class is used for local file reads.  By default, the methods that deal with text return NFKD normalized UTF-8 encoded strings.  In Python 2, these are of the type ``unicode``, and in Python 3 they are of the type ``string``.
+    The ``FileReader`` class is used for local file reads.  By default, the methods that deal with text return NFKD normalized UTF-8 encoded strings.  In Python 2, these are of the type ``unicode``, and in Python 3 they are of the type ``string``.  It is not necessary to close the file streams after you use these methods.
 
     :param string file_path: The path to the file.
 
@@ -74,7 +74,7 @@ Classes
 
 .. py:class:: FileWriter(file_path)
 
-    The ``FileWriter`` class is used for local file writes.
+    The ``FileWriter`` class is used for local file writes.  It is not necessary to close the file streams after you use these methods.
 
     :param string file_path: The path to the file.
 
