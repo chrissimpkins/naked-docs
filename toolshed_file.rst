@@ -271,7 +271,7 @@ Examples
     fw = FileWriter('bindir/test.so')
     fr = FileReader('otherbindir/test2.so')
     data = fr.read_bin()
-    if fw.write_bin(data):
+    if fw.safe_write_bin(data):
         # file write occurred
     else:
         # file exists and write did not occur

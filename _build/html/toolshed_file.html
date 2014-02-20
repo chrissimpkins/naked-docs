@@ -644,7 +644,7 @@
 <span class="n">fw</span> <span class="o">=</span> <span class="n">FileWriter</span><span class="p">(</span><span class="s">&#39;bindir/test.so&#39;</span><span class="p">)</span>
 <span class="n">fr</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&#39;otherbindir/test2.so&#39;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">fr</span><span class="o">.</span><span class="n">read_bin</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">fw</span><span class="o">.</span><span class="n">write_bin</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="k">if</span> <span class="n">fw</span><span class="o">.</span><span class="n">safe_write_bin</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="c"># file write occurred</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="c"># file exists and write did not occur</span>
