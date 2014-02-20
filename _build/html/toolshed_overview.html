@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>The Toolshed Library Overview &mdash; Naked 0.1.25 documentation</title>
+  <title>The Toolshed Library Overview &mdash; Naked 0.1.26 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.25',
+        VERSION:'0.1.26',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.25 documentation" href="index.html"/>
+    <link rel="top" title="Naked 0.1.26 documentation" href="index.html"/>
         <link rel="next" title="Toolshed: benchmarking" href="toolshed_benchmarking.html"/>
         <link rel="prev" title="Command Line Parser" href="command_line_parser.html"/> 
 
@@ -218,6 +218,29 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-module">Import System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-c-module">Import System C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-functions">File and Directory Path Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorators">File Path Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-functions">File Metadata Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-functions">File Listings Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-function">Directory Write Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#symbolic-link-functions">Symbolic Link Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-functions">Data Stream Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-functions">Application Exit Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-examples">File and Directory Path Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorator-examples">File Path Decorator Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-examples">File Metadata Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-examples">File Listings Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-examples">Directory Write Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-examples">Data Stream Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -259,70 +282,70 @@
 <h2>Benchmarking Module<a class="headerlink" href="#benchmarking-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.benchmarking</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.benchmarking</span></tt></p>
-<p>The benchmarking module includes decorators for timed testing of methods and functions over 10 - 1 million repetitions. This includes a decorator that runs a benchmark built-in Python method in sequence with your function or method for comparison.</p>
+<p>The <tt class="docutils literal"><span class="pre">benchmarking</span></tt> module includes decorators for timed testing of methods and functions over 10 - 1 million repetitions. This includes a decorator that runs a benchmark built-in Python method in sequence with your function or method for comparison.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_benchmarking.html"><em>Toolshed: benchmarking</em></a></p>
 </div>
 <div class="section" id="casts-module">
 <h2>Casts Module<a class="headerlink" href="#casts-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.casts</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.casts</span></tt></p>
-<p>The casts module includes functions that cast built-in Python types to Naked type extensions.  This allows you to use the same type casting syntax that Python uses for the built-in types (e.g. the Python str() is xstr() for the Naked XString() type).</p>
+<p>The <tt class="docutils literal"><span class="pre">casts</span></tt> module includes functions that cast built-in Python types to Naked type extensions.  This allows you to use the same type casting syntax that Python uses for the built-in types (e.g. the Python str() is xstr() for the Naked XString() type).</p>
 <p>Documentation: coming soon...</p>
 </div>
 <div class="section" id="file-module">
 <h2>File Module<a class="headerlink" href="#file-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.file</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.file</span></tt></p>
-<p>The file module includes FileWriter and FileReader classes that perform I/O, including simple UTF-8 encoded reads and writes.</p>
+<p>The <tt class="docutils literal"><span class="pre">file</span></tt> module includes FileWriter and FileReader classes that perform I/O, including simple UTF-8 encoded reads and writes.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_file.html"><em>Toolshed: file</em></a></p>
 </div>
 <div class="section" id="ink-module">
 <h2>Ink Module<a class="headerlink" href="#ink-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.ink</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.ink</span></tt></p>
-<p>The ink module includes text template and renderer classes to perform flexible text templating with the replacement tag syntax of your choice.  A Python dictionary is used to map replacement strings to the replacement tags.</p>
+<p>The <tt class="docutils literal"><span class="pre">ink</span></tt> module includes text template and renderer classes to perform flexible text templating with the replacement tag syntax of your choice.  A Python dictionary is used to map replacement strings to the replacement tags.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_ink.html"><em>Toolshed: ink</em></a></p>
 </div>
 <div class="section" id="network-module">
 <h2>Network Module<a class="headerlink" href="#network-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.network</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.network</span></tt></p>
-<p>The network module includes the HTTP class for simple GET and POST requests with text or binary data.  It also supports simple text and binary file writes from GET or POST requests.</p>
+<p>The <tt class="docutils literal"><span class="pre">network</span></tt> module includes the HTTP class for simple GET and POST requests with text or binary data.  It also supports simple text and binary file writes from GET or POST requests.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_network.html"><em>Toolshed: network</em></a></p>
 </div>
 <div class="section" id="python-module">
 <h2>Python Module<a class="headerlink" href="#python-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.python</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.python</span></tt></p>
-<p>The python module includes Python interpreter version testing functions.</p>
+<p>The <tt class="docutils literal"><span class="pre">python</span></tt> module includes Python interpreter version testing functions.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_python.html"><em>Toolshed: python</em></a></p>
 </div>
 <div class="section" id="shell-module">
 <h2>Shell Module<a class="headerlink" href="#shell-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.shell</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.shell</span></tt></p>
-<p>The shell module includes external system, Ruby, &amp; Node.js subprocess execution methods and environment variable testing methods.</p>
+<p>The <tt class="docutils literal"><span class="pre">shell</span></tt> module includes external system, Ruby, &amp; Node.js subprocess execution methods and environment variable testing methods.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_shell.html"><em>Toolshed: shell</em></a></p>
 </div>
 <div class="section" id="state-module">
 <h2>State Module<a class="headerlink" href="#state-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.state</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.cstate</span></tt></p>
-<p>The state (and cstate C module - note the change in the naming convention for this module) include the StateObject, an object that automatically generates operating system, user and working directory, Python interpreter, time, &amp; date data on instantiation.</p>
+<p>The <tt class="docutils literal"><span class="pre">state</span></tt> (and <tt class="docutils literal"><span class="pre">cstate</span></tt> C module - note the change in the naming convention for this module) include the StateObject, an object that automatically generates operating system, user and working directory, Python interpreter, time, &amp; date data on instantiation.</p>
 <p>Documentation: <a class="reference internal" href="toolshed_state.html"><em>Toolshed: state</em></a></p>
 </div>
 <div class="section" id="system-module">
 <h2>System Module<a class="headerlink" href="#system-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.system</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.system</span></tt></p>
-<p>The system module includes functions for file and directory paths, file and directory existence testing, file extension testing, file listings, file filters, file metadata, and decorators that automatically prepend filepaths to filename arguments in methods and functions. It also includes functions for simple printing to the standard output and standard error streams with exit code handling.</p>
-<p>Documentation: coming soon...</p>
+<p>The <tt class="docutils literal"><span class="pre">system</span></tt> module includes functions for file and directory paths, file and directory testing, file extension testing, file listings, file filters, file metadata, and decorators that insert file paths into function and method parameters. It also includes functions for simple printing to the standard output and standard error streams with exit code handling.</p>
+<p>Documentation: <a class="reference internal" href="toolshed_system.html"><em>Toolshed: system</em></a></p>
 </div>
 <div class="section" id="types-module">
 <h2>Types Module<a class="headerlink" href="#types-module" title="Permalink to this headline">¶</a></h2>
 <p><strong>Standard Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.types</span></tt></p>
 <p><strong>C Module Import</strong>: <tt class="docutils literal"><span class="pre">Naked.toolshed.c.types</span></tt></p>
-<p>The types module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extensions permit assignment of attributes to both mutable and immutable Python types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  New methods for use with these common Python types are also available.</p>
+<p>The <tt class="docutils literal"><span class="pre">types</span></tt> module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extensions permit assignment of attributes to both mutable and immutable Python types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  New methods for use with these common Python types are also available.</p>
 <p>Documentation: coming soon...</p>
 </div>
 </div>

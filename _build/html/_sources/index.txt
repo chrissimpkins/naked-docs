@@ -139,10 +139,24 @@ File I/O
 
 There are a number of I/O methods in the ``FileReader`` and ``FileWriter`` classes.  See the :doc:`toolshed_file` documentation for details.
 
+Filtered File Listings
+^^^^^^^^^^^^^^^^^^^^^^^^
+* Support for wildcard file filters
+
+.. code-block:: python
+
+    from Naked.toolshed.system import list_filter_files_cwd
+
+    file_list = list_filter_files_cwd('*.py')
+    for x in file_list:
+      print(x) # prints each python file (.py extension) in the current working directory
+
+See the :doc:`toolshed_system` documentation for details about the available functions and decorators in the ``system`` module.
+
 Execution of System Executables and Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* **Simple System Command Execution** :
+* **System Command Execution** :
 
 .. code-block:: python
 
@@ -150,7 +164,7 @@ Execution of System Executables and Scripts
 
     execute('curl http://www.naked-py.com')
 
-* **Simple Ruby Script Execution** :
+* **Ruby Script Execution** :
 
 .. code-block:: python
 
@@ -158,7 +172,7 @@ Execution of System Executables and Scripts
 
     execute_rb('ruby/testscript.rb')
 
-* **Simple Node.js Script Execution** :
+* **Node.js Script Execution** :
 
 .. code-block:: python
 
@@ -166,7 +180,7 @@ Execution of System Executables and Scripts
 
     execute_js('node/testscript.js')
 
-See the :doc:`toolshed_shell` documentation for more information, including documentation of how you can check the exit status code & handle the standard output and error streams with your own code using :py:func:`Naked.toolshed.shell.muterun`.
+See the :doc:`toolshed_shell` documentation for more information, including documentation of exit status code checks & standard output and error stream handling from the Python side using :py:func:`Naked.toolshed.shell.muterun`.
 
 Explore Environment Variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -237,13 +251,13 @@ Profiling
 ^^^^^^^^^^
 * The ``profiler.py`` script is added to every project in the path ``PROJECT/lib/profiler.py``. Insert your test code in the designated testing block and then run ``naked profile`` from any directory in your project.  cProfile and pstats profiling is implemented with default report settings (which you can modify in the ``profiler.py`` file if you'd like).
 
-An example is provided in the :doc:`quickstart`.
+Details are available in the `naked executable profile documentation`_. An example is provided in the :doc:`quickstart`.
 
 Testing
 ^^^^^^^^
 * Testing with the tox, nose, py.test, and the built-in Python unittest test runners can be run from any directory in your project with the ``naked test`` command.  Use the included tests project directory for your unit test files.
 
-An example is provided in the :doc:`quickstart`.
+Details are available in the `naked executable test documentation`_. An example is provided in the :doc:`quickstart`.
 
 Flexible and No Commitment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -275,6 +289,7 @@ Contents
    toolshed_python
    toolshed_shell
    toolshed_state
+   toolshed_system
    change_log
    licenses
 
@@ -283,4 +298,6 @@ Contents
 .. _PyPI: https://pypi.python.org/pypi?name=Naked&:action=display
 .. _GitHub: https://github.com/chrissimpkins/naked
 .. _naked executable: executable.html
+.. _naked executable test documentation: executable.html#test-command-label
+.. _naked executable profile documentation: executable.html#profile-command-label
 

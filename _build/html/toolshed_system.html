@@ -1,0 +1,1108 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Toolshed: system &mdash; Naked 0.1.26 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:'./',
+        VERSION:'0.1.26',
+        COLLAPSE_INDEX:false,
+        FILE_SUFFIX:'.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+    <link rel="top" title="Naked 0.1.26 documentation" href="index.html"/>
+        <link rel="next" title="Changelog" href="change_log.html"/>
+        <link rel="prev" title="Toolshed: state" href="toolshed_state.html"/> 
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> Naked</a>
+        <form class="wy-form" action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search docs" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-system-module">Import System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-system-c-module">Import System C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-and-directory-path-functions">File and Directory Path Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-path-decorators">File Path Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-metadata-functions">File Metadata Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-listings-functions">File Listings Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directory-write-function">Directory Write Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#symbolic-link-functions">Symbolic Link Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-stream-functions">Data Stream Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-exit-functions">Application Exit Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-and-directory-path-examples">File and Directory Path Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-path-decorator-examples">File Path Decorator Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-metadata-examples">File Metadata Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-listings-examples">File Listings Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directory-write-examples">Directory Write Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-stream-examples">Data Stream Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-exit-examples">Application Exit Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top">
+        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
+        <a href="/">Naked</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <ul class="wy-breadcrumbs">
+  <li><a href="index.html">Docs</a> &raquo;</li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a></li>
+  
+</ul>
+<hr/>
+
+          
+  <div class="section" id="module-Naked.toolshed.system">
+<span id="toolshed-system"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt><a class="headerlink" href="#module-Naked.toolshed.system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-system-module">
+<h2>Import System Module<a class="headerlink" href="#import-system-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.system</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-system-c-module">
+<h2>Import System C Module<a class="headerlink" href="#import-system-c-module" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">Naked.toolshed.c.system</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">system</span></tt> module includes functions for file and directory paths, file and directory testing, file extension testing, file listings, file filters, file metadata, and decorators that insert file paths into function and method parameters. It also includes functions for simple printing to the standard output and standard error streams with exit code handling.</p>
+<p>File I/O methods are available in the <tt class="docutils literal"><span class="pre">Naked.toolshed.file</span></tt> and <tt class="docutils literal"><span class="pre">Naked.toolshed.c.file</span></tt> modules.  Additional information is available in the <a class="reference internal" href="toolshed_file.html"><em>Toolshed: file</em></a> documentation.</p>
+</div>
+<div class="section" id="file-and-directory-path-functions">
+<h2>File and Directory Path Functions<a class="headerlink" href="#file-and-directory-path-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.cwd">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">cwd</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.system.cwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current working directory path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(string) current working directory path</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.directory">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">directory</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the directory path to the file in <tt class="docutils literal"><span class="pre">file_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the absolute or relative file path to a file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) the directory path that contains the file in <tt class="docutils literal"><span class="pre">file_path</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.file_extension">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">file_extension</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.file_extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the file extension from a file path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the absolute or relative file path to a file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) the file extension, including the period character</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.filename">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">filename</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the base filename from an absolute <tt class="docutils literal"><span class="pre">file_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the absolute or relative file path to a file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) base file name including the file extension</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.fullpath">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">fullpath</tt><big>(</big><em>file_name</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.fullpath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the absolute path to a file that is in the current working directory, including the basename of the file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_name</strong> (<em>string</em>) &#8211; the name of a file in the current working directory</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) the absolute path to a file that is in the current working directory</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.make_path">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">make_path</tt><big>(</big><em>*path_strings</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.make_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the OS independent file path from path component parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>*path_strings</strong> (<em>string</em>) &#8211; <p>tuple of path component strings</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">make_path</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;user&#39;</span><span class="p">,</span> <span class="s">&#39;guido&#39;</span><span class="p">,</span> <span class="s">&#39;python&#39;</span><span class="p">,</span> <span class="s">&#39;file.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(string) the OS independent path from the path component parameters in <tt class="docutils literal"><span class="pre">*path_strings</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#file-directory-path-examples"><em>File and Directory Path Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="file-path-decorators">
+<h2>File Path Decorators<a class="headerlink" href="#file-path-decorators" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.currentdir_to_basefile">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">currentdir_to_basefile</tt><a class="headerlink" href="#Naked.toolshed.system.currentdir_to_basefile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenates the absolute working directory path (<em>string</em>) to the basename of a file in the first parameter of the decorated function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.currentdir_firstparam">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">currentdir_firstparam</tt><a class="headerlink" href="#Naked.toolshed.system.currentdir_firstparam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the current working directory path (<em>string</em>) as the first parameter of the decorated function</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.currentdir_lastparam">
+<tt class="descclassname">&#64;</tt><tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">currentdir_lastparam</tt><a class="headerlink" href="#Naked.toolshed.system.currentdir_lastparam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the current working directory (<em>string</em>) as the last parameter of the decorated function</p>
+</dd></dl>
+
+<p><a class="reference internal" href="#file-path-decorator-examples"><em>File Path Decorator Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="file-and-directory-testing-functions">
+<h2>File and Directory Testing Functions<a class="headerlink" href="#file-and-directory-testing-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.dir_exists">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">dir_exists</tt><big>(</big><em>dir_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.dir_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the existence of a directory at the path <tt class="docutils literal"><span class="pre">dir_path</span></tt>.  This function confirms that the path is a directory and not a symbolic link or file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dir_path</strong> (<em>string</em>) &#8211; the path to be tested for the presence of a directory</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = directory exists at <tt class="docutils literal"><span class="pre">dir_path</span></tt>; <tt class="docutils literal"><span class="pre">False</span></tt> = directory does not exist at <tt class="docutils literal"><span class="pre">dir_path</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.file_exists">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">file_exists</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.file_exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the existence of a file at the path <tt class="docutils literal"><span class="pre">file_path</span></tt>.  This function confirms that the path is a file and not a symbolic link or directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the path to be tested for the presence of a file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = file exists at <tt class="docutils literal"><span class="pre">file_path</span></tt>; <tt class="docutils literal"><span class="pre">False</span></tt> = file does not exist at <tt class="docutils literal"><span class="pre">file_path</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.is_file">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">is_file</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.is_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether a path resolves to an existing file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the path to be tested for a file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = the <tt class="docutils literal"><span class="pre">file_path</span></tt> path is a file; <tt class="docutils literal"><span class="pre">False</span></tt> = the <tt class="docutils literal"><span class="pre">file_path</span></tt> path is not a file</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.is_dir">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">is_dir</tt><big>(</big><em>dir_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.is_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether a path resolves to an existing directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dir_path</strong> (<em>string</em>) &#8211; the path to be tested for a directory</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = the <tt class="docutils literal"><span class="pre">dir_path</span></tt> path is a directory; <tt class="docutils literal"><span class="pre">False</span></tt> = the <tt class="docutils literal"><span class="pre">dir_path</span></tt> path is not a directory</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#file-directory-testing-examples"><em>File and Directory Testing Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="file-metadata-functions">
+<h2>File Metadata Functions<a class="headerlink" href="#file-metadata-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.file_size">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">file_size</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.file_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the file at <tt class="docutils literal"><span class="pre">file_path</span></tt> in bytes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the path to the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(integer) the size of the file in bytes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.file_mod_time">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">file_mod_time</tt><big>(</big><em>file_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.file_mod_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the date and time of the last file modification</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_path</strong> (<em>string</em>) &#8211; the path to the file</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) The date and time of the last file modification with the format <tt class="docutils literal"><span class="pre">'Wed</span> <span class="pre">Jan</span> <span class="pre">29</span> <span class="pre">23:49:04</span> <span class="pre">2014'</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#file-metadata-examples"><em>File Metadata Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="file-listings-functions">
+<h2>File Listings Functions<a class="headerlink" href="#file-listings-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.list_all_files">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">list_all_files</tt><big>(</big><em>dir_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.list_all_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all files in the path <tt class="docutils literal"><span class="pre">dir_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dir_path</strong> (<em>string</em>) &#8211; the directory path containing the files of interest</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) Python list with each file path in <tt class="docutils literal"><span class="pre">dir_path</span></tt> mapped to a list item</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.list_all_files_cwd">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">list_all_files_cwd</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.system.list_all_files_cwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all files in the current working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(list) Python list with each file path in the current working directory mapped to a list item</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.list_filter_files">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">list_filter_files</tt><big>(</big><em>extension_filter</em>, <em>dir_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.list_filter_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all files in the path <tt class="docutils literal"><span class="pre">dir_path</span></tt> that match the file extension filter <tt class="docutils literal"><span class="pre">extension_filter</span></tt>.  Takes a file extension with or without the associated period character (e.g. <tt class="docutils literal"><span class="pre">.py</span></tt> or <tt class="docutils literal"><span class="pre">py</span></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>extension_filter</strong> (<em>string</em>) &#8211; the file extension filter to be used for file selection</li>
+<li><strong>dir_path</strong> (<em>string</em>) &#8211; the directory path containing the files of interest</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(list) Python list with each matching file path in <tt class="docutils literal"><span class="pre">dir_path</span></tt> mapped to a list item</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.list_filter_files_cwd">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">list_filter_files_cwd</tt><big>(</big><em>extension_filter</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.list_filter_files_cwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all files in the current working directory that match the file extension filter <tt class="docutils literal"><span class="pre">extension_filter</span></tt>.  Takes a file extension with or without the associated period character (e.g. <tt class="docutils literal"><span class="pre">.py</span></tt> or <tt class="docutils literal"><span class="pre">py</span></tt>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>extension_filter</strong> (<em>string</em>) &#8211; the file extension filter to be used for file selection</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) Python list with each matching file path in current working directory mapped to a list item</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.list_match_pattern">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">list_match_pattern</tt><big>(</big><em>match_pattern</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.list_match_pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all files that match a wildcard <tt class="docutils literal"><span class="pre">match_pattern</span></tt> parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>match_pattern</strong> (<em>string</em>) &#8211; the wildcard match pattern (e.g. <tt class="docutils literal"><span class="pre">'/test/*.py'</span></tt>)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(list) Python list with each matching file path mapped to a list item</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#file-listings-examples"><em>File Listings Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="directory-write-function">
+<h2>Directory Write Function<a class="headerlink" href="#directory-write-function" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.make_dirs">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">make_dirs</tt><big>(</big><em>directory_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.make_dirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes a new directory path to disk <em>if it does not already exist</em>.  This function does not overwrite an existing directory path.  Will perform a recursive directory tree write for multi-level directory structures.  Returns <tt class="docutils literal"><span class="pre">True</span></tt> if the directory write is successful.  Returns <tt class="docutils literal"><span class="pre">False</span></tt> if the directory write does not occur (e.g. requested directory already exists).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>directory_path</strong> (<em>string</em>) &#8211; the directory path to be written to disk</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = successful directory path write; <tt class="docutils literal"><span class="pre">False</span></tt> = unsuccessful directory path write</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#make-directory-examples"><em>Directory Write Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="symbolic-link-functions">
+<h2>Symbolic Link Functions<a class="headerlink" href="#symbolic-link-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.is_link">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">is_link</tt><big>(</big><em>link_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.is_link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for the presence of a symbolic link at <tt class="docutils literal"><span class="pre">link_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>link_path</strong> (<em>string</em>) &#8211; the path to test for the presence of a symbolic link</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(boolean) <tt class="docutils literal"><span class="pre">True</span></tt> = the path <tt class="docutils literal"><span class="pre">link_path</span></tt> is a symbolic link; <tt class="docutils literal"><span class="pre">False</span></tt> = the path <tt class="docutils literal"><span class="pre">link_path</span></tt> is not a symbolic link</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.real_path">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">real_path</tt><big>(</big><em>link_path</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.real_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the real file path pointed to by the path <tt class="docutils literal"><span class="pre">link_path</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>link_path</strong> (<em>string</em>) &#8211; the symbolic link path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(string) the real file path pointed to by the symbolic link <tt class="docutils literal"><span class="pre">link_path</span></tt></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="data-stream-functions">
+<h2>Data Stream Functions<a class="headerlink" href="#data-stream-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.stdout">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stdout</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the <tt class="docutils literal"><span class="pre">text</span></tt> string to the standard output stream with a newline character appended to the <tt class="docutils literal"><span class="pre">text</span></tt> string.  Identical to the Python <tt class="docutils literal"><span class="pre">print()</span></tt> function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em>) &#8211; the string that will be printed to the standard output stream</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.stdout_iter">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stdout_iter</tt><big>(</big><em>iter</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stdout_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the items in an iterable object (<tt class="docutils literal"><span class="pre">iter</span></tt>) to the standard output stream <em>with</em> a newline after each item.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iter</strong> (<em>object</em>) &#8211; An iterable object type in which all of the iterable items provide support for either the <tt class="docutils literal"><span class="pre">__str__</span></tt> or <tt class="docutils literal"><span class="pre">__repr__</span></tt> functions.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.stdout_iter_xnl">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stdout_iter_xnl</tt><big>(</big><em>iter</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stdout_iter_xnl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the items in an iterable object (<tt class="docutils literal"><span class="pre">iter</span></tt>) to the standard output stream <em>without</em> a newline character after each item.  This prints the items in sequence on the same line of output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>iter</strong> (<em>object</em>) &#8211; An iterable object type in which all of the iterable items provide support for either the <tt class="docutils literal"><span class="pre">__str__</span></tt> or <tt class="docutils literal"><span class="pre">__repr__</span></tt> functions.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.stdout_xnl">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stdout_xnl</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stdout_xnl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the <tt class="docutils literal"><span class="pre">text</span></tt> string to the standard output stream <em>without</em> a newline character appended to the <tt class="docutils literal"><span class="pre">text</span></tt> string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<em>string</em>) &#8211; the string that will be printed to the standard output stream</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.stderr">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stderr</tt><big>(</big><em>text</em><span class="optional">[</span>, <em>exit</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the <tt class="docutils literal"><span class="pre">text</span></tt> string to the standard error stream with an optional non-zero exit status code.  A newline character is appended to the <tt class="docutils literal"><span class="pre">text</span></tt> string.  For non-zero <tt class="docutils literal"><span class="pre">exit</span></tt> integers, <tt class="docutils literal"><span class="pre">SystemExit()</span></tt> is raised with the exit status code.  <tt class="docutils literal"><span class="pre">SystemExit()</span></tt> is not raised by default (or if <tt class="docutils literal"><span class="pre">exit</span></tt> is assigned a value of 0).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> (<em>string</em>) &#8211; the string that will be printed to the standard error stream</li>
+<li><strong>exit</strong> (<em>integer</em>) &#8211; (<em>optional</em>) the exit status code</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.stderr_xnl">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">stderr_xnl</tt><big>(</big><em>text</em><span class="optional">[</span>, <em>exit</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.system.stderr_xnl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the <tt class="docutils literal"><span class="pre">text</span></tt> string to the standard error stream with an optional non-zero exit status code.  This function does not append a newline character to the end of the <tt class="docutils literal"><span class="pre">text</span></tt> string before printing it to the standard error stream.  If the exit status code is changed to a non-zero integer, <tt class="docutils literal"><span class="pre">SystemExit()</span></tt> is raised with the exit status code.  <tt class="docutils literal"><span class="pre">SystemExit()</span></tt> is not raised by default (or if <tt class="docutils literal"><span class="pre">exit</span></tt> is assigned a value of 0).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>text</strong> (<em>string</em>) &#8211; the string that will be printed to the standard error stream</li>
+<li><strong>exit</strong> (<em>integer</em>) &#8211; (<em>optional</em>) the exit status code</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#data-stream-examples"><em>Data Stream Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="application-exit-functions">
+<h2>Application Exit Functions<a class="headerlink" href="#application-exit-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Naked.toolshed.system.exit_failure">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">exit_failure</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.system.exit_failure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the application with exit status code 1.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.exit_success">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">exit_success</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.system.exit_success" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the application with exit status code 0.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Naked.toolshed.system.exit_with_status">
+<tt class="descclassname">Naked.toolshed.system.</tt><tt class="descname">exit_with_status</tt><big>(</big><em>exit_code</em><big>)</big><a class="headerlink" href="#Naked.toolshed.system.exit_with_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the application with exit status code <tt class="docutils literal"><span class="pre">exit_code</span></tt>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>exit_code</strong> (<em>integer</em>) &#8211; the exit status code. By default, an exit status code of 0 is used.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p><a class="reference internal" href="#application-exit-examples"><em>Application Exit Examples</em></a> are available below.</p>
+</div>
+<div class="section" id="file-and-directory-path-examples">
+<span id="file-directory-path-examples"></span><h2>File and Directory Path Examples<a class="headerlink" href="#file-and-directory-path-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Current Working Directory</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">cwd</span>
+
+<span class="n">curr_dir</span> <span class="o">=</span> <span class="n">cwd</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Make OS Independent Path String</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">make_path</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;path&#39;</span><span class="p">,</span> <span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="c"># prints path with OS dependent path delimiters</span>
+</pre></div>
+</div>
+<p><strong>Directory Path to File</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">directory</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;path&#39;</span><span class="p">,</span> <span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">dir_path</span> <span class="o">=</span> <span class="n">directory</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span> <span class="c"># prints &#39;/path/to/&#39; with OS dependent delimiters</span>
+</pre></div>
+</div>
+<p><strong>File Extension</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">file_extension</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;path&#39;</span><span class="p">,</span> <span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">extension</span> <span class="o">=</span> <span class="n">file_extension</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">extension</span><span class="p">)</span> <span class="c"># prints &#39;.txt&#39;</span>
+</pre></div>
+</div>
+<p><strong>Filename</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">filename</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;path&#39;</span><span class="p">,</span> <span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="n">filename</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="c"># prints &#39;test.txt&#39;</span>
+</pre></div>
+</div>
+<p><strong>Absolute File Path</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">fullpath</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="c"># file /usr/c/test/test.txt &amp; current working directory is /usr/c/test/</span>
+<span class="n">absolute_path</span> <span class="o">=</span> <span class="n">fullpath</span><span class="p">(</span><span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">)</span> <span class="c"># prints &#39;/usr/c/test/test.txt&#39; with OS dependent delimiters</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-path-decorator-examples">
+<span id="id3"></span><h2>File Path Decorator Examples<a class="headerlink" href="#file-path-decorator-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Current Working Directory Path Concatenation to First Parameter</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">currentdir_to_basefile</span>
+
+<span class="nd">@currentdir_to_basefile</span>
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="c"># when run as tester(&#39;test.txt&#39;) from /usr/c/test/, prints &#39;/usr/c/test/test.txt&#39; with OS dependent delimiters</span>
+</pre></div>
+</div>
+<p><strong>Current Working Directory Path as First Parameter</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">currentdir_firstparam</span>
+
+<span class="nd">@currentdir_firstparam</span>
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+<span class="c"># when run as tester() from /usr/c/test/, prints &#39;/usr/c/test/&#39; with OS dependent delimiters</span>
+</pre></div>
+</div>
+<p><strong>Current Working Directory Path as Last Parameter</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">currentdir_lastparam</span>
+
+<span class="nd">@currentdir_lastparam</span>
+<span class="k">def</span> <span class="nf">tester</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">dir_path</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">dir_path</span> <span class="o">+</span> <span class="n">file_name</span><span class="p">)</span>
+
+<span class="c"># when run as tester(&#39;test.txt&#39;) from /usr/c/test/, prints &#39;/usr/c/test/test.txt&#39; with OS dependent delimiters</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-and-directory-testing-examples">
+<span id="file-directory-testing-examples"></span><h2>File and Directory Testing Examples<a class="headerlink" href="#file-and-directory-testing-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Directory Testing</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">dir_exists</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="c"># /usr/c/test does exist</span>
+
+<span class="n">dir_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;usr&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="s">&#39;test&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">dir_exists</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;yep&#39;</span><span class="p">)</span>  <span class="c"># prints &#39;yep&#39;</span>
+</pre></div>
+</div>
+<p><strong>File Testing</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">file_exists</span><span class="p">,</span> <span class="n">make_path</span>
+
+<span class="c"># /usr/c/test/test.txt exists</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;usr&#39;</span><span class="p">,</span> <span class="s">&#39;c&#39;</span><span class="p">,</span> <span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">file_exists</span><span class="p">(</span><span class="s">&#39;/usr/c/test/test.txt&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;yep&#39;</span><span class="p">)</span> <span class="c"># prints yep</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-metadata-examples">
+<span id="id4"></span><h2>File Metadata Examples<a class="headerlink" href="#file-metadata-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>File Size</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">file_size</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="n">file_size</span><span class="p">(</span><span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">size</span><span class="p">)</span> <span class="c"># prints size of &#39;test.txt&#39; in current working directory in bytes</span>
+</pre></div>
+</div>
+<p><strong>File Modification Time and Date</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">file_mod_time</span>
+
+<span class="n">m_time</span> <span class="o">=</span> <span class="n">file_mod_time</span><span class="p">(</span><span class="s">&#39;test.txt&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">m_time</span><span class="p">)</span> <span class="c"># prints &#39;Wed Jan 29 23:49:04 2014&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-listings-examples">
+<span id="id5"></span><h2>File Listings Examples<a class="headerlink" href="#file-listings-examples" title="Permalink to this headline">¶</a></h2>
+<p>For the following examples, the test directory contains the files: &#8216;test.txt&#8217;, &#8216;pytest.py&#8217;, and &#8216;rbtest.rb&#8217;</p>
+<p><strong>All Files in Current Working Directory</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">list_all_files_cwd</span>
+
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">list_all_files_cwd</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c"># prints:</span>
+<span class="c">#   test.txt</span>
+<span class="c">#   pytest.py</span>
+<span class="c">#   rbtest.rb</span>
+</pre></div>
+</div>
+<p><strong>All Files in Target Directory</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">list_all_files</span>
+
+<span class="n">dir_path</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="s">&#39;path&#39;</span><span class="p">,</span> <span class="s">&#39;to&#39;</span><span class="p">,</span> <span class="s">&#39;test&#39;</span><span class="p">)</span>
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">list_all_files</span><span class="p">(</span><span class="n">dir_path</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c"># prints:</span>
+<span class="c">#   test.txt</span>
+<span class="c">#   pytest.py</span>
+<span class="c">#   rbtest.rb</span>
+</pre></div>
+</div>
+<p><strong>Filter Files by File Extension in Current Working Directory</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">list_filter_files_cwd</span>
+
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">list_filter_files_cwd</span><span class="p">(</span><span class="s">&#39;.py&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c"># prints:</span>
+<span class="c">#   pytest.py</span>
+</pre></div>
+</div>
+<p><strong>Filter Files by Wildcard</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">list_match_pattern</span>
+
+<span class="n">file_list</span> <span class="o">=</span> <span class="n">list_match_pattern</span><span class="p">(</span><span class="s">&#39;./*.py&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">file_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c"># prints:</span>
+<span class="c">#   pytest.py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="directory-write-examples">
+<span id="make-directory-examples"></span><h2>Directory Write Examples<a class="headerlink" href="#directory-write-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Make Directory When it Does Not Exist</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">make_dirs</span>
+
+<span class="k">if</span> <span class="n">make_dirs</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;success&#39;</span><span class="p">)</span> <span class="c"># prints &#39;success&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;fail&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Make Directory When it Does Exist</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">make_dirs</span>
+
+<span class="k">if</span> <span class="n">make_dirs</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;success&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;fail&#39;</span><span class="p">)</span> <span class="c"># prints &#39;fail&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-stream-examples">
+<span id="id6"></span><h2>Data Stream Examples<a class="headerlink" href="#data-stream-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Standard Output Stream Write, With Newline</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stdout</span>
+
+<span class="n">stdout</span><span class="p">(</span><span class="s">&#39;This is a test string&#39;</span><span class="p">)</span>
+
+<span class="c"># prints &#39;This is a test string\n&#39; to standard output with OS dependent newline character(s)</span>
+</pre></div>
+</div>
+<p><strong>Standard Output Stream Write, Without Newline</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stdout_xnl</span>
+
+<span class="n">stdout</span><span class="p">(</span><span class="s">&#39;This is a test string&#39;</span><span class="p">)</span>
+
+<span class="c"># prints &#39;This is a test string&#39; to standard output</span>
+</pre></div>
+</div>
+<p><strong>Standard Output Stream Write with Iterable Object, With Newline</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stdout_iter</span>
+
+<span class="n">the_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;this&#39;</span><span class="p">,</span> <span class="s">&#39;string&#39;</span><span class="p">]</span>
+<span class="n">stdout_iter</span><span class="p">(</span><span class="n">the_list</span><span class="p">)</span>
+
+<span class="c"># prints to standard output:</span>
+<span class="c">#   test</span>
+<span class="c">#   this</span>
+<span class="c">#   string</span>
+</pre></div>
+</div>
+<p><strong>Standard Output Stream Write with Iterable Object, Without Newline</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stdout_iter_xnl</span>
+
+<span class="n">the_list</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;1&#39;</span><span class="p">,</span> <span class="s">&#39; &#39;</span> <span class="p">,</span> <span class="s">&#39;2&#39;</span><span class="p">,</span> <span class="s">&#39; &#39;</span> <span class="p">,</span> <span class="s">&#39;3&#39;</span><span class="p">]</span>
+<span class="n">stdout_iter_xnl</span><span class="p">(</span><span class="n">the_list</span><span class="p">)</span>
+
+<span class="c"># prints &#39;1 2 3&#39; to standard output</span>
+</pre></div>
+</div>
+<p><strong>Standard Error Stream Write, With Newline, with Exit Status Code 1</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stderr</span>
+
+<span class="n">stderr</span><span class="p">(</span><span class="s">&quot;Um, that was an error.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c"># prints &#39;Um, that was an error.\n&#39; to standard output with OS dependent newline character(s) and raises SystemExit(1)</span>
+</pre></div>
+</div>
+<p><strong>Standard Error Stream Write, Without Newline, Without SystemExit</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">stderr_xnl</span>
+
+<span class="n">stderr_xnl</span><span class="p">(</span><span class="s">&quot;Um, that was an error.&quot;</span><span class="p">)</span>
+
+<span class="c"># prints &#39;Um, that was an error&#39; to standard error and does not raise SystemExit()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="application-exit-examples">
+<span id="id7"></span><h2>Application Exit Examples<a class="headerlink" href="#application-exit-examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Exit with Zero Status Code</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">exit_success</span>
+
+<span class="c"># successful code here</span>
+<span class="n">exit_success</span><span class="p">()</span> <span class="c"># raises SystemExit(0)</span>
+</pre></div>
+</div>
+<p><strong>Exit with Status Code 1</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">exit_failure</span>
+
+<span class="c"># failing code here</span>
+<span class="n">exit_failure</span><span class="p">()</span> <span class="c"># raises SystemExit(1)</span>
+</pre></div>
+</div>
+<p><strong>Exit with Any Status Code</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.system</span> <span class="kn">import</span> <span class="n">exit_with_status</span>
+
+<span class="c"># failing code here</span>
+<span class="n">exit_with_status</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c"># raises SystemExit(10)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_state.html" class="btn btn-neutral" title="Toolshed: state"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <p>
+      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
+  </p>
+
+  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

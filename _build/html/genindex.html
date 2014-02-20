@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Naked 0.1.25 documentation</title>
+  <title>Index &mdash; Naked 0.1.26 documentation</title>
   
 
   
@@ -23,7 +23,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.25',
+        VERSION:'0.1.26',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -44,7 +44,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.25 documentation" href="index.html"/> 
+    <link rel="top" title="Naked 0.1.26 documentation" href="index.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -217,6 +217,29 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-module">Import System Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-c-module">Import System C Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-functions">File and Directory Path Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorators">File Path Decorators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-functions">File Metadata Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-functions">File Listings Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-function">Directory Write Function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#symbolic-link-functions">Symbolic Link Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-functions">Data Stream Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-functions">Application Exit Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-examples">File and Directory Path Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorator-examples">File Path Decorator Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-examples">File Metadata Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-examples">File Listings Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-examples">Directory Write Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-examples">Data Stream Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
@@ -262,6 +285,7 @@
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
@@ -288,7 +312,25 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.currentdir_firstparam">currentdir_firstparam() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.currentdir_lastparam">currentdir_lastparam() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.currentdir_to_basefile">currentdir_to_basefile() (in module Naked.toolshed.system)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.cwd">cwd (Naked.toolshed.state.StateObject attribute)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.cwd">cwd() (in module Naked.toolshed.system)</a>
   </dt>
 
   </dl></td>
@@ -301,10 +343,18 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.day">day (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.default_path">default_path (Naked.toolshed.state.StateObject attribute)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.default_path">default_path (Naked.toolshed.state.StateObject attribute)</a>
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.dir_exists">dir_exists() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.directory">directory() (in module Naked.toolshed.system)</a>
   </dt>
 
   </dl></td>
@@ -325,10 +375,22 @@
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute_js">execute_js() (in module Naked.toolshed.shell)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute_rb">execute_rb() (in module Naked.toolshed.shell)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.execute_rb">execute_rb() (in module Naked.toolshed.shell)</a>
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.exit_failure">exit_failure() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.exit_success">exit_success() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.exit_with_status">exit_with_status() (in module Naked.toolshed.system)</a>
   </dt>
 
       
@@ -346,13 +408,37 @@
   </dt>
 
       
-  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader">FileReader (class in Naked.toolshed.file)</a>
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.file_exists">file_exists() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.file_extension">file_extension() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.file_mod_time">file_mod_time() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.file_size">file_size() (in module Naked.toolshed.system)</a>
   </dt>
 
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.filename">filename() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader">FileReader (class in Naked.toolshed.file)</a>
+  </dt>
+
+      
   <dt><a href="toolshed_file.html#Naked.toolshed.file.FileWriter">FileWriter (class in Naked.toolshed.file)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.fullpath">fullpath() (in module Naked.toolshed.system)</a>
   </dt>
 
   </dl></td>
@@ -418,6 +504,20 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.is_dir">is_dir() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.is_file">is_file() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.is_link">is_link() (in module Naked.toolshed.system)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
   <dt><a href="toolshed_python.html#Naked.toolshed.python.is_py2">is_py2() (in module Naked.toolshed.python)</a>
   </dt>
 
@@ -425,10 +525,36 @@
   <dt><a href="toolshed_python.html#Naked.toolshed.python.is_py3">is_py3() (in module Naked.toolshed.python)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.is_var">is_var() (Naked.toolshed.shell.Environment method)</a>
+  </dt>
+
+  </dl></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%" valign="top"><dl>
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.list_all_files">list_all_files() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.list_all_files_cwd">list_all_files_cwd() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.list_filter_files">list_filter_files() (in module Naked.toolshed.system)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
-  <dt><a href="toolshed_shell.html#Naked.toolshed.shell.Environment.is_var">is_var() (Naked.toolshed.shell.Environment method)</a>
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.list_filter_files_cwd">list_filter_files_cwd() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.list_match_pattern">list_match_pattern() (in module Naked.toolshed.system)</a>
   </dt>
 
   </dl></td>
@@ -438,6 +564,14 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%" valign="top"><dl>
       
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.make_dirs">make_dirs() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.make_path">make_path() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.min">min (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
@@ -445,12 +579,12 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject.month">month (Naked.toolshed.state.StateObject attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.muterun">muterun() (in module Naked.toolshed.shell)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.muterun_js">muterun_js() (in module Naked.toolshed.shell)</a>
   </dt>
@@ -493,6 +627,10 @@
 
       
   <dt><a href="toolshed_state.html#module-Naked.toolshed.state">Naked.toolshed.state (module)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#module-Naked.toolshed.system">Naked.toolshed.system (module)</a>
   </dt>
 
   </dl></td>
@@ -603,6 +741,10 @@
   <dt><a href="toolshed_file.html#Naked.toolshed.file.FileReader.readlines_as">readlines_as() (Naked.toolshed.file.FileReader method)</a>
   </dt>
 
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.real_path">real_path() (in module Naked.toolshed.system)</a>
+  </dt>
+
   </dl></td>
   <td style="width: 33%" valign="top"><dl>
       
@@ -651,14 +793,38 @@
   <dt><a href="toolshed_state.html#Naked.toolshed.state.StateObject">StateObject (class in Naked.toolshed.state)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stderr">stderr (Naked.toolshed.shell.NakedObject attribute)</a>
   </dt>
 
       
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stderr">stderr() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stderr_xnl">stderr_xnl() (in module Naked.toolshed.system)</a>
+  </dt>
+
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
+      
   <dt><a href="toolshed_shell.html#Naked.toolshed.shell.NakedObject.stdout">stdout (Naked.toolshed.shell.NakedObject attribute)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stdout">stdout() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stdout_iter">stdout_iter() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stdout_iter_xnl">stdout_iter_xnl() (in module Naked.toolshed.system)</a>
+  </dt>
+
+      
+  <dt><a href="toolshed_system.html#Naked.toolshed.system.stdout_xnl">stdout_xnl() (in module Naked.toolshed.system)</a>
   </dt>
 
       
