@@ -560,7 +560,7 @@ Data Stream Examples
 
     from Naked.toolshed.system import stdout_xnl
 
-    stdout('This is a test string')
+    stdout_xnl('This is a test string')
 
     # prints 'This is a test string' to standard output
 
