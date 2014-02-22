@@ -122,6 +122,9 @@ Types Module
 
 The ``types`` module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extensions permit assignment of attributes to both mutable and immutable Python types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  New methods for use with these common Python types are also available.
 
-Documentation: coming soon...
+Documentation:
 
-.. _Build Command Documentation: http://docs.naked-py.com/executable.html#build-command-label
+	* `NakedObject Documentation`_
+
+.. _Build Command Documentation: executable.html#build-command-label
+.. _NakedObject Documentation: toolshed_types_nakedobject.html

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Python Module Index &mdash; Naked 0.1.26 documentation</title>
+  <title>Toolshed: types : NakedObject &mdash; Naked 0.1.26 documentation</title>
   
 
   
@@ -44,9 +44,8 @@
 
   
     <link rel="top" title="Naked 0.1.26 documentation" href="index.html"/>
- 
-
-
+        <link rel="next" title="Changelog" href="change_log.html"/>
+        <link rel="prev" title="Toolshed: system" href="toolshed_system.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
@@ -70,7 +69,7 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix">
         
         
-            <ul>
+            <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
@@ -242,11 +241,11 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject-from-c-source-file">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Source File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#examples">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-nakedobject">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-nakedobject-from-c-source-file">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Source File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -276,78 +275,102 @@
         <div class="rst-content">
           <ul class="wy-breadcrumbs">
   <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href=""></a></li>
+  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
   
 </ul>
 <hr/>
 
           
+  <div class="section" id="module-Naked.toolshed.types">
+<span id="toolshed-types-nakedobject"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt><a class="headerlink" href="#module-Naked.toolshed.types" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-nakedobject">
+<h2>Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt><a class="headerlink" href="#import-nakedobject" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="import-nakedobject-from-c-source-file">
+<h2>Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Source File<a class="headerlink" href="#import-nakedobject-from-c-source-file" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.c.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+</pre></div>
+</div>
+<p>The C module must be compiled before you import it.  See the <a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">naked build</a> documentation for more information.</p>
+</div>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>A <tt class="docutils literal"><span class="pre">NakedObject</span></tt> class is a generic object.</p>
+<dl class="class">
+<dt id="Naked.toolshed.types.NakedObject">
+<em class="property">class </em><tt class="descclassname">Naked.toolshed.types.</tt><tt class="descname">NakedObject</tt><big>(</big><span class="optional">[</span><em>attribute_dictionary</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.types.NakedObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <tt class="docutils literal"><span class="pre">NakedObject</span></tt> is instantiated with an optional Python dictionary parameter.  If the parameter is included, the dictionary keys are mapped to <tt class="docutils literal"><span class="pre">NakedObject</span></tt> attributes and the corresponding dictionary values are used to define the attribute values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attribute_dictionary</strong> (<em>dictionary</em>) &#8211; (<em>optional</em>) a Python dictionary that is used to define the attributes of a new instance of a <tt class="docutils literal"><span class="pre">NakedObject</span></tt>.  Key names are mapped to attribute names and their corresponding values are mapped to the attribute values.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
-   <h1>Python Module Index</h1>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create a New Instance of an Empty NakedObject</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
 
-   <div class="modindex-jumpbox">
-   <a href="#cap-n"><strong>n</strong></a>
-   </div>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Create a New Instance of a NakedObject with Attributes</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
 
-   <table class="indextable modindextable" cellspacing="0" cellpadding="2">
-     <tr class="pcap"><td></td><td>&nbsp;</td><td></td></tr>
-     <tr class="cap" id="cap-n"><td></td><td>
-       <strong>n</strong></td><td></td></tr>
-     <tr>
-       <td><img src="_static/minus.png" class="toggler"
-              id="toggle-1" style="display: none" alt="-" /></td>
-       <td>
-       <tt class="xref">Naked</tt></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_benchmarking.html#module-Naked.toolshed.benchmarking"><tt class="xref">Naked.toolshed.benchmarking</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_file.html#module-Naked.toolshed.file"><tt class="xref">Naked.toolshed.file</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_ink.html#module-Naked.toolshed.ink"><tt class="xref">Naked.toolshed.ink</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_network.html#module-Naked.toolshed.network"><tt class="xref">Naked.toolshed.network</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_python.html#module-Naked.toolshed.python"><tt class="xref">Naked.toolshed.python</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_shell.html#module-Naked.toolshed.shell"><tt class="xref">Naked.toolshed.shell</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_state.html#module-Naked.toolshed.state"><tt class="xref">Naked.toolshed.state</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_system.html#module-Naked.toolshed.system"><tt class="xref">Naked.toolshed.system</tt></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&nbsp;&nbsp;&nbsp;
-       <a href="toolshed_types_nakedobject.html#module-Naked.toolshed.types"><tt class="xref">Naked.toolshed.types</tt></a></td><td>
-       <em></em></td></tr>
-   </table>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">({</span><span class="s">&#39;example&#39;</span><span class="p">:</span> <span class="s">&#39;an example string&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p><strong>Set New Attribute on NakedObject</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">example</span> <span class="o">=</span> <span class="s">&#39;an example string&#39;</span>
+</pre></div>
+</div>
+<p><strong>Get Attribute Value from NakedObject</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">({</span><span class="s">&#39;example&#39;</span><span class="p">:</span> <span class="s">&#39;an example string&#39;</span><span class="p">})</span>
+<span class="n">the_value</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">example</span>
+</pre></div>
+</div>
+<p><strong>Delete Attribute from NakedObject</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">({</span><span class="s">&#39;example&#39;</span><span class="p">:</span> <span class="s">&#39;an example string&#39;</span><span class="p">})</span>
+<span class="k">del</span> <span class="n">obj</span><span class="o">.</span><span class="n">example</span>
+</pre></div>
+</div>
+<p><strong>Test for Existence of an Attribute</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">NakedObject</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">NakedObject</span><span class="p">({</span><span class="s">&#39;example&#39;</span><span class="p">:</span> <span class="s">&#39;an example string&#39;</span><span class="p">})</span>
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="s">&#39;example&#39;</span><span class="p">):</span>
+    <span class="c"># do something with the attribute</span>
+</pre></div>
+</div>
+</div>
+</div>
 
 
           <footer>
+  
+    <div class="rst-footer-buttons">
+      
+        <a href="change_log.html" class="btn btn-neutral float-right" title="Changelog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="toolshed_system.html" class="btn btn-neutral" title="Toolshed: system"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

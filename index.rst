@@ -290,6 +290,7 @@ Contents
    toolshed_shell
    toolshed_state
    toolshed_system
+   toolshed_types_nakedobject
    change_log
    licenses
 
