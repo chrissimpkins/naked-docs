@@ -139,19 +139,6 @@ File I/O
 
 There are a number of I/O methods in the ``FileReader`` and ``FileWriter`` classes.  See the :doc:`toolshed_file` documentation for details.
 
-Filtered File Listings
-^^^^^^^^^^^^^^^^^^^^^^^^
-* Support for wildcard file filters
-
-.. code-block:: python
-
-    from Naked.toolshed.system import list_filter_files_cwd
-
-    file_list = list_filter_files_cwd('*.py')
-    for x in file_list:
-      print(x) # prints each python file (.py extension) in the current working directory
-
-See the :doc:`toolshed_system` documentation for details about the available functions and decorators in the ``system`` module.
 
 Execution of System Executables and Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
