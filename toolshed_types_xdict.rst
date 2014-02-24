@@ -20,7 +20,7 @@ The C module must be compiled before you import it.  See the `naked build <http:
 
 Description
 ^^^^^^^^^^^^
-The ``XDict`` class is an extension of the Python dictionary type.  You can use all built-in Python dictionary methods with it.  It extends the built-in Python dictionary type with operator overloads, metadata definitions on instantiation, perservation of metadata on conversion to other types (with included methods), and a number of additional dictionary methods.
+The ``XDict`` class is an extension of the Python dictionary type.  You can use all built-in Python dictionary methods with it.  It extends the built-in Python dictionary type with operator overloads, metadata definitions on instantiation, preservation of metadata on conversion to other types (with included XDict methods), and a number of additional dictionary methods.
 
 The ``XDict`` supports equality testing based upon **both** the dictionary data as well as the supplemental metadata (if included).  You can use the ``==`` and ``!=`` operators to perform this testing (or alternatively, the :meth:`XDict.equals` method).
 

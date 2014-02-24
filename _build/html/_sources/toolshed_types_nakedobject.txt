@@ -170,9 +170,3 @@ Examples
     print(obj == obj2) # prints False
 
 
-
-
-
-
-
-
