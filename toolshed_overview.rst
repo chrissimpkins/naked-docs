@@ -125,6 +125,10 @@ The ``types`` module includes extensions to built-in Python dictionary, list, se
 Documentation:
 
 	* `NakedObject Documentation`_
+	* `XDict Documentation`_
 
 .. _Build Command Documentation: executable.html#build-command-label
 .. _NakedObject Documentation: toolshed_types_nakedobject.html
+.. _XDict Documentation: toolshed_types_xdict.html
+
+

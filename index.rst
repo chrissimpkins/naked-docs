@@ -291,6 +291,7 @@ Contents
    toolshed_state
    toolshed_system
    toolshed_types_nakedobject
+   toolshed_types_xdict
    change_log
    licenses
 
