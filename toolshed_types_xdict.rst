@@ -10,8 +10,8 @@ Import ``XDict``
     from Naked.toolshed.types import XDict
 
 
-Import ``XDict`` from C Source File
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Import ``XDict`` from C Module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: python
 
     from Naked.toolshed.c.types import XDict

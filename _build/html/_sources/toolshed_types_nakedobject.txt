@@ -11,8 +11,8 @@ Import ``NakedObject``
     from Naked.toolshed.types import NakedObject
 
 
-Import ``NakedObject`` from C Source File
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Import ``NakedObject`` from C Module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: python
 
     from Naked.toolshed.c.types import NakedObject
