@@ -246,6 +246,39 @@ Testing
 
 Details are available in the `naked executable test documentation`_. An example is provided in the :doc:`quickstart`.
 
+Python Documentation
+^^^^^^^^^^^^^^^^^^^^^
+* Search the built-in Python documentation from the command line with the ``pyh`` naked executable command.
+
+.. code-block:: bash
+
+    $ naked pyh dict
+
+    Help on class dict in module __builtin__:
+
+    class dict(object)
+     |  dict() -> new empty dictionary
+     |  dict(mapping) -> new dictionary initialized from a mapping object's
+     |      (key, value) pairs
+     |  dict(iterable) -> new dictionary initialized as if via:
+     |      d = {}
+     |      for k, v in iterable:
+     |          d[k] = v
+     |  dict(**kwargs) -> new dictionary initialized with the name=value pairs
+     |      in the keyword argument list.  For example:  dict(one=1, two=2)
+     |
+     |  Methods defined here:
+     |
+     |  __cmp__(...)
+     |      x.__cmp__(y) <==> cmp(x,y)
+     |
+     |  __contains__(...)
+     |      D.__contains__(k) -> True if D has a key k, else False
+
+     ...
+
+There is no need to enter the Python interactive interpreter.
+
 Flexible and No Commitment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

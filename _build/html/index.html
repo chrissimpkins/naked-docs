@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Naked &mdash; Naked 0.1.27 documentation</title>
+  <title>Naked &mdash; Naked 0.1.28 documentation</title>
   
 
   
@@ -22,7 +22,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:'./',
-        VERSION:'0.1.27',
+        VERSION:'0.1.28',
         COLLAPSE_INDEX:false,
         FILE_SUFFIX:'.html',
         HAS_SOURCE:  true
@@ -43,7 +43,7 @@
   
 
   
-    <link rel="top" title="Naked 0.1.27 documentation" href="#"/>
+    <link rel="top" title="Naked 0.1.28 documentation" href="#"/>
         <link rel="next" title="Naked Resources" href="resources.html"/> 
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-pyh-command">The pyh Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
 </ul>
 </li>
@@ -528,6 +529,39 @@
 </ul>
 <p>Details are available in the <a class="reference external" href="executable.html#test-command-label">naked executable test documentation</a>. An example is provided in the <a class="reference internal" href="quickstart.html"><em>QuickStart Guide</em></a>.</p>
 </div>
+<div class="section" id="python-documentation">
+<h3>Python Documentation<a class="headerlink" href="#python-documentation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Search the built-in Python documentation from the command line with the <tt class="docutils literal"><span class="pre">pyh</span></tt> naked executable command.</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>$ naked pyh dict
+
+Help on class dict in module __builtin__:
+
+class dict(object)
+ |  dict() -&gt; new empty dictionary
+ |  dict(mapping) -&gt; new dictionary initialized from a mapping object&#39;s
+ |      (key, value) pairs
+ |  dict(iterable) -&gt; new dictionary initialized as if via:
+ |      d = {}
+ |      for k, v in iterable:
+ |          d[k] = v
+ |  dict(**kwargs) -&gt; new dictionary initialized with the name=value pairs
+ |      in the keyword argument list.  For example:  dict(one=1, two=2)
+ |
+ |  Methods defined here:
+ |
+ |  __cmp__(...)
+ |      x.__cmp__(y) &lt;==&gt; cmp(x,y)
+ |
+ |  __contains__(...)
+ |      D.__contains__(k) -&gt; True if D has a key k, else False
+
+ ...
+</pre></div>
+</div>
+<p>There is no need to enter the Python interactive interpreter.</p>
+</div>
 <div class="section" id="flexible-and-no-commitment">
 <h3>Flexible and No Commitment<a class="headerlink" href="#flexible-and-no-commitment" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -583,6 +617,7 @@
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="executable.html#the-pyh-command">The pyh Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
 </ul>
 </li>

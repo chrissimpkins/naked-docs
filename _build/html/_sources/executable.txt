@@ -12,6 +12,7 @@ The primary commands include:
 * :ref:`locate-command-label`   - Locate important project files
 * :ref:`make-command-label`     - Generate a new project
 * :ref:`profile-command-label`  - Project profiling
+* :ref:`pyh-command-label`      - Help for built-in Python modules, classes, methods & functions
 * :ref:`test-command-label`     - Project unit testing
 
 .. _args-command-label:
@@ -319,6 +320,56 @@ Help is available for the profile command with:
 .. code-block:: python
 
 	naked profile help
+
+.. _pyh-command-label:
+
+The pyh Command
+------------------
+The pyh command displays built-in Python module, class, method, or function documentation for a query.
+
+Usage
+^^^^^^^
+
+.. code-block:: bash
+
+	naked pyh <query>
+
+Submit a built-in Python module, class, method, or function as the ``query``.
+
+Examples
+^^^^^^^^^
+
+**Python Module**
+
+.. code-block:: bash
+
+	naked pyh sys
+
+**Python Class**
+
+.. code-block:: bash
+
+	naked pyh dict
+
+**Python Method**
+
+.. code-block:: bash
+
+	naked pyh dict.update
+
+**Python Function**
+
+.. code-block:: bash
+
+	naked pyh max
+
+
+pyh Command Help
+^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+	naked pyh help
 
 .. _test-command-label:
 
