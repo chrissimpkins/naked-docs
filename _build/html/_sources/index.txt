@@ -312,6 +312,7 @@ Contents
    toolshed_system
    toolshed_types_nakedobject
    toolshed_types_xdict
+   toolshed_types_xlist
    change_log
    licenses
 
