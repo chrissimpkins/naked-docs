@@ -67,6 +67,7 @@ The ``XList`` supports equality testing based upon **both** the values of the li
 
         :param function conditional_func: a function that returns a boolean value where ``True`` means that the ``map_func`` should be executed on the item
         :param function map_func:  the function that is conditionally executed with the ``XList`` item as a parameter.  The return value is used as the replacement value in the ``XList``.  If the function does not return a value, the item is replaced with ``None``.
+        :returns: (*XList*) returns a ``XList`` with the above modifications
 
     .. py:method: count_ci(test_string)
 
@@ -144,13 +145,13 @@ The ``XList`` supports equality testing based upon **both** the values of the li
 
     .. py:method:: random()
 
-        Return a random item from the ``XList``.  The random selection is performed with the Python random.choice() method.
+        Return a random item from the ``XList``.  The random selection is performed with the Python ``random.choice()`` method.
 
         :returns: random item from the ``XList``
 
     .. py:method:: random_sample(number_items)
 
-        Return a random sample of items from the ``XList``.  The number of items in the sample is defined with the ``number_items`` parameter.  Random sampling is performed without replacement.
+        Return a random sample of items from the ``XList``.  Random sampling is performed with the Python ``random.sample()`` method. The number of items in the sample is defined with the ``number_items`` parameter.  Random sampling is performed without replacement.
 
         :param integer number_items: the number of items to include in the sample
         :returns: (*list*) returns a Python list containing ``number_items`` randomly sampled items from the ``XList``.
@@ -342,7 +343,7 @@ Examples
     from Naked.toolshed.types import XList
 
     def true_a(xlist_item):
-            return xlist_item.startswith('a')
+        return xlist_item.startswith('a')
 
     def cap_val(xlist_item):
         return xlist_item.upper()

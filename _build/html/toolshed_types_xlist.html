@@ -401,10 +401,13 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>conditional_func</strong> (<em>function</em>) &#8211; a function that returns a boolean value where <tt class="docutils literal"><span class="pre">True</span></tt> means that the <tt class="docutils literal"><span class="pre">map_func</span></tt> should be executed on the item</li>
 <li><strong>map_func</strong> (<em>function</em>) &#8211; the function that is conditionally executed with the <tt class="docutils literal"><span class="pre">XList</span></tt> item as a parameter.  The return value is used as the replacement value in the <tt class="docutils literal"><span class="pre">XList</span></tt>.  If the function does not return a value, the item is replaced with <tt class="docutils literal"><span class="pre">None</span></tt>.</li>
 </ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>XList</em>) returns a <tt class="docutils literal"><span class="pre">XList</span></tt> with the above modifications</p>
 </td>
 </tr>
 </tbody>
@@ -568,7 +571,7 @@
 <dl class="method">
 <dt id="Naked.toolshed.types.XList.random">
 <tt class="descname">random</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XList.random" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a random item from the <tt class="docutils literal"><span class="pre">XList</span></tt>.  The random selection is performed with the Python random.choice() method.</p>
+<dd><p>Return a random item from the <tt class="docutils literal"><span class="pre">XList</span></tt>.  The random selection is performed with the Python <tt class="docutils literal"><span class="pre">random.choice()</span></tt> method.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -582,7 +585,7 @@
 <dl class="method">
 <dt id="Naked.toolshed.types.XList.random_sample">
 <tt class="descname">random_sample</tt><big>(</big><em>number_items</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XList.random_sample" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a random sample of items from the <tt class="docutils literal"><span class="pre">XList</span></tt>.  The number of items in the sample is defined with the <tt class="docutils literal"><span class="pre">number_items</span></tt> parameter.  Random sampling is performed without replacement.</p>
+<dd><p>Return a random sample of items from the <tt class="docutils literal"><span class="pre">XList</span></tt>.  Random sampling is performed with the Python <tt class="docutils literal"><span class="pre">random.sample()</span></tt> method. The number of items in the sample is defined with the <tt class="docutils literal"><span class="pre">number_items</span></tt> parameter.  Random sampling is performed without replacement.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -838,7 +841,7 @@
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XList</span>
 
 <span class="k">def</span> <span class="nf">true_a</span><span class="p">(</span><span class="n">xlist_item</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">xlist_item</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">xlist_item</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">cap_val</span><span class="p">(</span><span class="n">xlist_item</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">xlist_item</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
