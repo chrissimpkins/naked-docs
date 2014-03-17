@@ -376,7 +376,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>item type dependent</em>) returns the lowest priority item which is defined as the item that has the lowest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>item type dependent</em>) returns the lowest priority item which is defined as the item that has the lowest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the queue is empty, returns <tt class="docutils literal"><span class="pre">None</span></tt>.</td>
 </tr>
 </tbody>
 </table>
@@ -414,7 +414,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>item type dependent</em>) returns the lowest priority item which is defined as the item that has the lowest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the lowest priority item, it is immediately returned.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>item type dependent</em>) returns the lowest priority item which is defined as the item that has the lowest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the lowest priority item, it is immediately returned.  If the queue is empty, returns <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
 </td>
 </tr>
 </tbody>

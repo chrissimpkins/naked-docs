@@ -42,7 +42,7 @@ The ``XMinHeap`` class is a min heap priority queue that extends Python ``heapq`
 
 			Pops the lowest priority item off of the queue.
 
-			:returns: (*item type dependent*) returns the lowest priority item which is defined as the item that has the lowest ``item_priority`` value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).
+			:returns: (*item type dependent*) returns the lowest priority item which is defined as the item that has the lowest ``item_priority`` value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the queue is empty, returns ``None``.
 
 		.. py:method:: push(queue_item, item_priority)
 
@@ -59,7 +59,7 @@ The ``XMinHeap`` class is a min heap priority queue that extends Python ``heapq`
 
 			:param int item_priority: an integer that represents the priority of the item from 1 (min) to x (max).  It is possible to assign the same priority level to multiple items in the queue.
 
-			:returns: (*item type dependent*) returns the lowest priority item which is defined as the item that has the lowest ``item_priority`` value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the lowest priority item, it is immediately returned.
+			:returns: (*item type dependent*) returns the lowest priority item which is defined as the item that has the lowest ``item_priority`` value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the lowest priority item, it is immediately returned.  If the queue is empty, returns ``None``.
 
 
 Examples

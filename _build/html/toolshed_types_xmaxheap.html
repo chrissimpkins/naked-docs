@@ -274,6 +274,7 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt> from C Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -374,7 +375,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>item type dependent</em>) returns the highest priority item which is defined as the item that has the highest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>item type dependent</em>) returns the highest priority item which is defined as the item that has the highest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the queue is empty, returns <tt class="docutils literal"><span class="pre">None</span></tt>.</td>
 </tr>
 </tbody>
 </table>
@@ -412,7 +413,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>item type dependent</em>) returns the highest priority item which is defined as the item that has the highest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the highest priority item, it is immediately returned.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>item type dependent</em>) returns the highest priority item which is defined as the item that has the highest <tt class="docutils literal"><span class="pre">item_priority</span></tt> value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the highest priority item, it is immediately returned.  If the queue is empty, returns <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
 </td>
 </tr>
 </tbody>
