@@ -193,10 +193,10 @@ Function, Method, Class Extensions
     * **XString** extends the Python string
     * **XDict** extends the Python dictionary
     * **XList** extends the Python list
+    * **XMaxHeap** a max heap priority queue that extends the Python heapq
+    * **XMinHeap** a min heap priority queue that extends the Python heapq
     * **XSet** extends the Python set
-    * **XFSet** extends the Python frozenset
     * **XQueue** extends the Python deque
-    * **XPriorityQueue** adds a new type
 
 * **Faster, compiled C versions of the library modules** with an *optional* post-install compile for those who need a jetpack.
 
@@ -313,6 +313,8 @@ Contents
    toolshed_types_nakedobject
    toolshed_types_xdict
    toolshed_types_xlist
+   toolshed_types_xmaxheap
+   toolshed_types_xminheap
    change_log
    licenses
 

@@ -127,10 +127,14 @@ Documentation:
 	* `NakedObject Documentation`_
 	* `XDict Documentation`_
 	* `XList Documentation`_
+	* `XMaxHeap Documentation`_
+	* `XMinHeap Documentation`_
 
 .. _Build Command Documentation: executable.html#build-command-label
 .. _NakedObject Documentation: toolshed_types_nakedobject.html
 .. _XDict Documentation: toolshed_types_xdict.html
 .. _XList Documentation: toolshed_types_xlist.html
+.. _XMaxHeap Documentation: toolshed_types_xmaxheap.html
+.. _XMinHeap Documentation: toolshed_types_xminheap.html
 
 
