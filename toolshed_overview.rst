@@ -120,7 +120,7 @@ Types Module
 
 **C Module Import**: ``Naked.toolshed.c.types``
 
-The ``types`` module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, deque, and string classes.  It also includes a new type, the PriorityQueue.  These extensions permit assignment of attributes to both mutable and immutable Python types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  New methods for use with these common Python types are also available.
+The ``types`` module includes extensions to built-in Python dictionary, list, set, frozenset, tuple, heapq, deque, and string classes. These extensions permit assignment of attributes to both mutable and immutable Python types with dictionary key to attribute name mapping in the constructor.  Dictionary values are mapped to the attribute value.  New methods for use with these common Python types are also available.
 
 Documentation:
 
