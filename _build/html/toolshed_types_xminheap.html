@@ -267,12 +267,14 @@
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt> from C Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#import-xminheap">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a></li>
 <li class="toctree-l2"><a class="reference internal" href="#import-xminheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt> from C Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changelog</a></li>
@@ -422,6 +424,68 @@
 </div></blockquote>
 </dd></dl>
 
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create a New Instance of XMinHeap, No Metadata</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Create a New Instance of XMinHeap, With Metadata</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</pre></div>
+</div>
+<p><strong>Access XMinHeap Attribute Data</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">heapnumber</span><span class="p">)</span> <span class="c"># prints 1</span>
+</pre></div>
+</div>
+<p><strong>Push Items on to the XMinHeap</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat eggs&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat spam&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Pop Items off of the XMinHeap by Priority</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat eggs&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat spam&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c"># prints &#39;eat eggs&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c"># prints &#39;eat spam&#39;</span>
+</pre></div>
+</div>
+<p><strong>Priority Tie Handling with XMinHeap</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat eggs&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat spam&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c"># same priority as above</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c"># prints &#39;eat eggs&#39; --&gt; FIFO handling of ties</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span> <span class="c"># prints &#39;eat spam&#39;</span>
+</pre></div>
+</div>
+<p><strong>Simultaneous Push and Pop with XMinHeap</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XMinHeap</span>
+
+<span class="n">xmh</span> <span class="o">=</span> <span class="n">XMinHeap</span><span class="p">({</span><span class="s">&#39;heapnumber&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat eggs&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">xmh</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s">&#39;eat spam&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">xmh</span><span class="o">.</span><span class="n">pushpop</span><span class="p">(</span><span class="s">&#39;buy Chris a coffee&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>      <span class="c"># prints &#39;eat eggs&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>   <span class="c"># prints &#39;buy Chris a coffee&#39; ;)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">xmh</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>   <span class="c"># prints &#39;eat spam&#39;</span>
+</pre></div>
+</div>
 </div>
 </div>
 

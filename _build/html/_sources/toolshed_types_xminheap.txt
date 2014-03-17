@@ -62,3 +62,83 @@ The ``XMinHeap`` class is a min heap priority queue that extends Python ``heapq`
 			:returns: (*item type dependent*) returns the lowest priority item which is defined as the item that has the lowest ``item_priority`` value.  If multiple items have the same value, they are returned on a first-in, first-out order (FIFO).  If the item that is pushed to the queue is the lowest priority item, it is immediately returned.
 
 
+Examples
+^^^^^^^^^^
+
+**Create a New Instance of XMinHeap, No Metadata**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap()
+
+**Create a New Instance of XMinHeap, With Metadata**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+
+**Access XMinHeap Attribute Data**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+    print(xmh.heapnumber) # prints 1
+
+**Push Items on to the XMinHeap**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+    xmh.push('eat eggs', 1)
+    xmh.push('eat spam', 2)
+
+**Pop Items off of the XMinHeap by Priority**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+    xmh.push('eat eggs', 1)
+    xmh.push('eat spam', 2)
+    print(xmh.pop()) # prints 'eat eggs'
+    print(xmh.pop()) # prints 'eat spam'
+
+**Priority Tie Handling with XMinHeap**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+    xmh.push('eat eggs', 1)
+    xmh.push('eat spam', 1)  # same priority as above
+    print(xmh.pop()) # prints 'eat eggs' --> FIFO handling of ties
+    print(xmh.pop()) # prints 'eat spam'
+
+**Simultaneous Push and Pop with XMinHeap**
+
+.. code-block:: python
+
+    from Naked.toolshed.types import XMinHeap
+
+    xmh = XMinHeap({'heapnumber': 1})
+    xmh.push('eat eggs', 1)
+    xmh.push('eat spam', 2)
+    result = xmh.pushpop('buy Chris a coffee', 1)
+    print(result)      # prints 'eat eggs'
+    print(xmh.pop())   # prints 'buy Chris a coffee' ;)
+    print(xmh.pop())   # prints 'eat spam'
+
+
+
+
+
