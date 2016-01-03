@@ -5,17 +5,7 @@ body {
 	background-position:center;
 	background-color: #212121;
 	font-family:'Raleway', 'Helvetica Neue', Helvetica, Arial, sans;
-	color:#CDC7C7;
-}
-
-body:after {
-    content:"";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 10%;
-    border-left: 4px solid #25B0CA;
+	color:#FFF;
 }
 
 a:link {
@@ -32,6 +22,12 @@ a:hover{
 	border-bottom: 5px solid #000;
 }
 
+.copyrighttwo a:hover{
+	color:#FFF;
+	opacity:1.0;
+	border-bottom: 2px solid #000;
+}
+
 #logo {
 	margin-top: 75px;
 	display: block;
@@ -39,17 +35,35 @@ a:hover{
     margin-right: auto
 }
 
-.main {
-	background-color: rgba(167,209,217,0.2);
- 	border-top: 1px solid #eaeaea;
+.subtext{
+	text-align: center;
+	font-size: 24px;
+	width: 100%;
+	position: fixed;
+	bottom: 20%;
+	color:#e5e5e5;
+}
+
+.footerlinks {
+	background-color: #FF3D7F;
+ 	border-top: 2px solid #FFF;
  	margin-left: -8px;
-	font-size:30px;
-	padding-bottom:35px;
-	padding-top:25px;
+	font-size:32px;
+	padding-bottom:15px;
+	padding-top:50px;
 	width:100% !important;
 	text-align:center;
 	position:fixed;
     bottom: 0;
+}
+
+.copyright{
+	font-size: 18px;
+	opacity:0.6;
+}
+
+.copyrighttwo{
+	font-size:14px;
 }
 
 /* Change image and font-size based upon resized screens */
@@ -57,11 +71,11 @@ a:hover{
 	body {
 		background-image:url('../img/nf-logo-450.png') !important;
 	}
-	body:after {
-    	border-left: 3px solid #25B0CA;
-	}
-	.main {
+	.footerlinks {
 		font-size:26px !important;
+	}
+	.copyright {
+		font-size:16px;
 	}
 }
 
@@ -69,14 +83,13 @@ a:hover{
 	body {
 		background-image:url('../img/nf-logo-250.png') !important;
 	}
-	body:after {
-    	border-left: 2px solid #25B0CA;
-    	left:4%;
-	}
-	.main {
+	.footerlinks {
 		font-size:16px !important;
 		padding-top: 15px;
 		padding-bottom:12px;
+	}
+	.copyright {
+		display:none !important;
 	}
 }
 
@@ -85,15 +98,13 @@ a:hover{
 		background-image:url('../img/nf-logo-250.png') !important;
 	}
 
-	body:after {
-    	border-left: 2px solid #25B0CA;
-    	left: 4%;
-	}
-
-	.main{
+	.footerlinks{
 		font-size:14px;
 		padding-top:15px;
 		padding-bottom:12px;
+	}
+	.copyright{
+		display: none !important;
 	}
 }
 
