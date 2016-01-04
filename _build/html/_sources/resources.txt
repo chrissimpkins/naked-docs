@@ -6,10 +6,6 @@ The Source Code
 The source is available on `GitHub`_ and `PyPI`_.
 
 
-The Developer Log
--------------------
-The `devlog`_ is the site for current project news and updates.
-
 
 Issue Reports
 --------------

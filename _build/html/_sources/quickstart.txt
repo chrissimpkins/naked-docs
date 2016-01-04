@@ -40,7 +40,7 @@ Make a New Project with ``naked make``
 
     ----------------------------------------------------------
      spameggs
-     Copyright 2014 Guido
+     Copyright 2016 Guido
      MIT license
     ----------------------------------------------------------
 

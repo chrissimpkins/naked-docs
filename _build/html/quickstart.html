@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>QuickStart Guide &mdash; Naked 0.1.30 documentation</title>
@@ -14,24 +15,9 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
-
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:'./',
-        VERSION:'0.1.30',
-        COLLAPSE_INDEX:false,
-        FILE_SUFFIX:'.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
     
 
   
@@ -39,7 +25,8 @@
   
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
   
 
   
@@ -47,288 +34,192 @@
         <link rel="next" title="Naked Executable" href="executable.html"/>
         <link rel="prev" title="Definitions" href="definitions.html"/> 
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="search.html" method="get">
-  <input type="text" name="q" placeholder="Search docs" />
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-      </div>
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
-</ul>
-</li>
+          
+            <a href="index.html" class="icon icon-home"> Naked
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.30
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">QuickStart Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#test-your-application-version-command">Test Your Application Version Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#inspect-your-project-files">Inspect Your Project Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-your-application">Create Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-your-help-text">Create Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#create-your-usage-text">Create Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-a-new-project-with-naked-make">Make a New Project with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#learn-more">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-pyh-command">The pyh Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-your-application-version-command">Test Your Application Version Command</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#inspect-your-project-files">Inspect Your Project Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-application">Create Your Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-help-text">Create Your Help Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-usage-text">Create Your Usage Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-with-naked-test">Testing with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#profiling-with-naked-profile">Profiling with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#complete-your-setup-py-file">Complete Your setup.py File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#verify-your-release-version-number">Verify Your Release Version Number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#complete-your-readme-rst-file">Complete Your README.rst File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register">Register</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#push-to-pypi">Push to PyPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-instructions-for-users-with-pip">Install Instructions for Users WITH <code class="docutils literal"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-instructions-for-users-without-pip">Install Instructions for Users WITHOUT <code class="docutils literal"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">Learn More</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-module">Import System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-c-module">Import System C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-functions">File and Directory Path Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorators">File Path Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-functions">File Metadata Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-functions">File Listings Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-function">Directory Write Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#symbolic-link-functions">Symbolic Link Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-functions">Data Stream Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-functions">Application Exit Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-examples">File and Directory Path Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorator-examples">File Path Decorator Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-examples">File Metadata Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-examples">File Listings Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-examples">Directory Write Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-examples">Data Stream Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject-from-c-module">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xdict.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XDict</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#import-xdict">Import <tt class="docutils literal"><span class="pre">XDict</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#import-xdict-from-c-module">Import <tt class="docutils literal"><span class="pre">XDict</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XList</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist">Import <tt class="docutils literal"><span class="pre">XList</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist-from-c-module">Import <tt class="docutils literal"><span class="pre">XList</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#examples">Examples</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <code class="docutils literal"><span class="pre">benchmarking</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <code class="docutils literal"><span class="pre">file</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <code class="docutils literal"><span class="pre">ink</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <code class="docutils literal"><span class="pre">network</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <code class="docutils literal"><span class="pre">python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <code class="docutils literal"><span class="pre">shell</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <code class="docutils literal"><span class="pre">state</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <code class="docutils literal"><span class="pre">system</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">NakedObject</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xdict.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XDict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XList</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMaxHeap</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMinHeap</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top">
-        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
-        <a href="/">Naked</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Naked</a>
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <ul class="wy-breadcrumbs">
-  <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href="">QuickStart Guide</a></li>
-  
-</ul>
-<hr/>
-
           
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>QuickStart Guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/quickstart.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="quickstart-guide">
 <h1>QuickStart Guide<a class="headerlink" href="#quickstart-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="make-your-own-spam-and-eggs">
 <h2>Make Your Own Spam and Eggs<a class="headerlink" href="#make-your-own-spam-and-eggs" title="Permalink to this headline">¶</a></h2>
 <p>This guide will take you from an empty directory to a PyPI push of your first application release using features available in the Naked framework.  You will learn how to:</p>
 <ol class="arabic simple">
-<li>Create a new <tt class="docutils literal"><span class="pre">spameggs</span></tt> project with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command</li>
-<li>Implement the command line logic for your <tt class="docutils literal"><span class="pre">spameggs</span></tt> executable with the Naked parser</li>
+<li>Create a new <code class="docutils literal"><span class="pre">spameggs</span></code> project with the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> command</li>
+<li>Implement the command line logic for your <code class="docutils literal"><span class="pre">spameggs</span></code> executable with the Naked parser</li>
 <li>Import part of the Naked toolshed library for use in the application</li>
-<li>Perform unit tests across multiple Python versions with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt> command</li>
-<li>Perform profiling with cProfile and pstats using the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt> command</li>
-<li>Distribute your project to PyPI with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt> command.</li>
+<li>Perform unit tests across multiple Python versions with the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></code> command</li>
+<li>Perform profiling with cProfile and pstats using the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></code> command</li>
+<li>Distribute your project to PyPI with the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></code> command.</li>
 </ol>
 <p>Links are provided to other parts of the documentation where you can learn much more about how to incorporate the components of the Naked Framework into the stages of your development process.</p>
 </div>
 <div class="section" id="make-a-new-project-with-naked-make">
-<h2>Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt><a class="headerlink" href="#make-a-new-project-with-naked-make" title="Permalink to this headline">¶</a></h2>
+<h2>Make a New Project with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code><a class="headerlink" href="#make-a-new-project-with-naked-make" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Create a new directory and save a <tt class="docutils literal"><span class="pre">naked.yaml</span></tt> file in the directory that includes the following data:</li>
+<li>Create a new directory and save a <code class="docutils literal"><span class="pre">naked.yaml</span></code> file in the directory that includes the following data:</li>
 </ul>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="l-Scalar-Plain">application</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">spameggs</span>
 <span class="l-Scalar-Plain">developer</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">Guido</span>
@@ -350,7 +241,7 @@ Please confirm the information below:
 
 ----------------------------------------------------------
  spameggs
- Copyright 2014 Guido
+ Copyright <span class="m">2016</span> Guido
  MIT license
 ----------------------------------------------------------
 
@@ -379,7 +270,7 @@ Use <span class="s1">&#39;python setup.py develop&#39;</span> from the top level
 <div class="highlight-bash"><div class="highlight"><pre>python setup.py develop
 </pre></div>
 </div>
-<p>Your application framework is all set for development. <tt class="docutils literal"><span class="pre">spameggs</span></tt> should be registered on your PATH so that you can use it.</p>
+<p>Your application framework is all set for development. <code class="docutils literal"><span class="pre">spameggs</span></code> should be registered on your PATH so that you can use it.</p>
 <div class="section" id="learn-more">
 <h3>Learn More<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -394,7 +285,7 @@ Use <span class="s1">&#39;python setup.py develop&#39;</span> from the top level
 <div class="section" id="test-your-application-version-command">
 <h2>Test Your Application Version Command<a class="headerlink" href="#test-your-application-version-command" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Let&#8217;s make sure that it is working.  <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> creates your version command for you.  Give it a try:</li>
+<li>Let&#8217;s make sure that it is working.  <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> creates your version command for you.  Give it a try:</li>
 </ul>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>spameggs --version
 spameggs 0.1.0
@@ -407,7 +298,7 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <ul class="simple">
-<li>The displayed text automatically changes when you increment your version number in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file and the format of the displayed string can be modified to your liking.  You can learn more with the links below.</li>
+<li>The displayed text automatically changes when you increment your version number in the <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></code> file and the format of the displayed string can be modified to your liking.  You can learn more with the links below.</li>
 </ul>
 <div class="section" id="id1">
 <h3>Learn More<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
@@ -421,7 +312,7 @@ spameggs 0.1.0
 <div class="section" id="inspect-your-project-files">
 <h2>Inspect Your Project Files<a class="headerlink" href="#inspect-your-project-files" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Have a look through your project directory to familiarize yourself with what <tt class="docutils literal"><span class="pre">naked</span></tt> created for you.</li>
+<li>Have a look through your project directory to familiarize yourself with what <code class="docutils literal"><span class="pre">naked</span></code> created for you.</li>
 </ul>
 <div class="section" id="id2">
 <h3>Learn More<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
@@ -434,13 +325,13 @@ spameggs 0.1.0
 </div>
 <div class="section" id="create-your-application">
 <h2>Create Your Application<a class="headerlink" href="#create-your-application" title="Permalink to this headline">¶</a></h2>
-<p><tt class="docutils literal"><span class="pre">spameggs</span></tt> is going to perform the extremely important task of printing &#8216;Spam and Eggs&#8217; to the standard output stream.  As with most academic exercises, this is going to be an extremely roundabout approach that is intended to be a demonstration of the capabilities of the framework rather than be the most efficient, or even correct (we are going to skip prints to std err and non-zero exit status returns for errors...), approach.</p>
+<p><code class="docutils literal"><span class="pre">spameggs</span></code> is going to perform the extremely important task of printing &#8216;Spam and Eggs&#8217; to the standard output stream.  As with most academic exercises, this is going to be an extremely roundabout approach that is intended to be a demonstration of the capabilities of the framework rather than be the most efficient, or even correct (we are going to skip prints to std err and non-zero exit status returns for errors...), approach.</p>
 <ul class="simple">
-<li>Open your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></tt> file in an editor and take a look through it.  <tt class="docutils literal"><span class="pre">main()</span></tt> is where execution of your application script begins.  <tt class="docutils literal"><span class="pre">naked</span></tt> included a few imports (the Python sys module, the Naked command line parser module, and the Naked state module for the StateObject).  It created an instance of the Naked parser (named <tt class="docutils literal"><span class="pre">c</span></tt>) and also included the methods that handle help, usage, and version requests.  We tested the version commands above and we&#8217;ll look at the help and usage below.  The last thing that <tt class="docutils literal"><span class="pre">naked</span></tt> inserts in this part of the file is a validation statement that confirms that the user entered a primary command (<tt class="docutils literal"><span class="pre">c.command_suite_validates()</span></tt>).</li>
+<li>Open your <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></code> file in an editor and take a look through it.  <code class="docutils literal"><span class="pre">main()</span></code> is where execution of your application script begins.  <code class="docutils literal"><span class="pre">naked</span></code> included a few imports (the Python sys module, the Naked command line parser module, and the Naked state module for the StateObject).  It created an instance of the Naked parser (named <code class="docutils literal"><span class="pre">c</span></code>) and also included the methods that handle help, usage, and version requests.  We tested the version commands above and we&#8217;ll look at the help and usage below.  The last thing that <code class="docutils literal"><span class="pre">naked</span></code> inserts in this part of the file is a validation statement that confirms that the user entered a primary command (<code class="docutils literal"><span class="pre">c.command_suite_validates()</span></code>).</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you are not making a command suite application with syntax like this: <tt class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">&lt;primary</span> <span class="pre">command&gt;</span> <span class="pre">...</span></tt>, you can replace the <tt class="docutils literal"><span class="pre">command_suite_validates()</span></tt> method with the <tt class="docutils literal"><span class="pre">app_validates_args()</span></tt> method.  The latter confirms that at least one argument, including short options (e.g. <tt class="docutils literal"><span class="pre">-s</span></tt>), long options (e.g. <tt class="docutils literal"><span class="pre">--long</span></tt>), and flags (e.g. <tt class="docutils literal"><span class="pre">--flag=argument</span></tt>), are included in the user&#8217;s command. More information is available in the <a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#syntax-validation">Syntax Validation</a> documentation.</p>
+<p class="last">If you are not making a command suite application with syntax like this: <code class="docutils literal"><span class="pre">&lt;executable&gt;</span> <span class="pre">&lt;primary</span> <span class="pre">command&gt;</span> <span class="pre">...</span></code>, you can replace the <code class="docutils literal"><span class="pre">command_suite_validates()</span></code> method with the <code class="docutils literal"><span class="pre">app_validates_args()</span></code> method.  The latter confirms that at least one argument, including short options (e.g. <code class="docutils literal"><span class="pre">-s</span></code>), long options (e.g. <code class="docutils literal"><span class="pre">--long</span></code>), and flags (e.g. <code class="docutils literal"><span class="pre">--flag=argument</span></code>), are included in the user&#8217;s command. More information is available in the <a class="reference external" href="http://docs.naked-py.com/command_line_parser.html#syntax-validation">Syntax Validation</a> documentation.</p>
 </div>
 <ul class="simple">
 <li>Let&#8217;s add a command that has the following syntax:</li>
@@ -449,7 +340,7 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <ul class="simple">
-<li>To do this, create a new module called <tt class="docutils literal"><span class="pre">seprinter</span></tt> in the path <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/commands</span></tt> with the following code:</li>
+<li>To do this, create a new module called <code class="docutils literal"><span class="pre">seprinter</span></code> in the path <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/commands</span></code> with the following code:</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 <span class="c"># encoding: utf-8</span>
@@ -474,9 +365,9 @@ spameggs 0.1.0
     <span class="k">pass</span>
 </pre></div>
 </div>
-<p>An instance of the SpamPrinter class is created with <tt class="docutils literal"><span class="pre">the_meatsub</span></tt> and <tt class="docutils literal"><span class="pre">the_egg</span></tt> arguments and these are used to define instance properties that we subsequently use in the run() method.</p>
-<p>Note how we imported the Naked toolshed library code for the Ink templating system in the command module code.  A Template instance is created from the template_string property on our SpamPrinter and it is rendered by passing a dictionary argument with keys that correspond to the strings inside your Template replacement tags.  The dictionary values are used to replace the corresponding tags in the template.  The opening <tt class="docutils literal"><span class="pre">{{</span></tt> and closing <tt class="docutils literal"><span class="pre">}}</span></tt> tags are the Ink template defaults.</p>
-<p>Any component of the Naked toolshed library can be imported for use in your project with standard Python imports.  Use the path, <tt class="docutils literal"><span class="pre">Naked.toolshed.&lt;MODULE&gt;</span></tt>, or for the compiled C versions of the library <tt class="docutils literal"><span class="pre">Naked.toolshed.c.&lt;MODULE&gt;</span></tt> (<a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">requires the C source files to be compiled first!</a>).</p>
+<p>An instance of the SpamPrinter class is created with <code class="docutils literal"><span class="pre">the_meatsub</span></code> and <code class="docutils literal"><span class="pre">the_egg</span></code> arguments and these are used to define instance properties that we subsequently use in the run() method.</p>
+<p>Note how we imported the Naked toolshed library code for the Ink templating system in the command module code.  A Template instance is created from the template_string property on our SpamPrinter and it is rendered by passing a dictionary argument with keys that correspond to the strings inside your Template replacement tags.  The dictionary values are used to replace the corresponding tags in the template.  The opening <code class="docutils literal"><span class="pre">{{</span></code> and closing <code class="docutils literal"><span class="pre">}}</span></code> tags are the Ink template defaults.</p>
+<p>Any component of the Naked toolshed library can be imported for use in your project with standard Python imports.  Use the path, <code class="docutils literal"><span class="pre">Naked.toolshed.&lt;MODULE&gt;</span></code>, or for the compiled C versions of the library <code class="docutils literal"><span class="pre">Naked.toolshed.c.&lt;MODULE&gt;</span></code> (<a class="reference external" href="http://docs.naked-py.com/executable.html#the-build-command">requires the C source files to be compiled first!</a>).</p>
 <div class="section" id="id3">
 <h3>Learn More<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -489,7 +380,7 @@ spameggs 0.1.0
 <div class="section" id="handle-command-line-arguments-for-your-application">
 <h2>Handle Command Line Arguments for Your Application<a class="headerlink" href="#handle-command-line-arguments-for-your-application" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Now let&#8217;s implement the command line argument handling.  Open the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></tt> file in your editor and add the following to the PRIMARY COMMAND LOGIC code block:</li>
+<li>Now let&#8217;s implement the command line argument handling.  Open the <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/app.py</span></code> file in your editor and add the following to the PRIMARY COMMAND LOGIC code block:</li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">cmd</span> <span class="o">==</span> <span class="s">&#39;print&#39;</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--meatsubstitute&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s">&#39;--overeasy&#39;</span><span class="p">):</span>
@@ -510,15 +401,15 @@ spameggs 0.1.0
 <p class="first admonition-title">Warning</p>
 <p class="last">Notice that we used &#8216;elif&#8217; rather than if.  This logic is in sequence with the help, usage, and version tests that were included in your script above this level.  If you remove the Naked implementation of these commands and handle them yourself, make sure that you switch your first statement in the command tests to an &#8216;if&#8217; statement.</p>
 </div>
-<p>Note how the Naked parser handles user entered arguments on the command line.  The primary command becomes an attribute of the <tt class="docutils literal"><span class="pre">c</span></tt> Command object that was instantiated earlier in the script.  <tt class="docutils literal"><span class="pre">cmd</span></tt> is the first positional argument to the executable (i.e. the primary command). See the link in the Learn More section below to view all of the available argument attributes and to learn how to use <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">args</span></tt> to help plan your command logic tests with the Naked parser.</p>
-<p>We begin by testing that the user entered the primary command &#8216;print&#8217; (i.e. <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">print</span> <span class="pre">...</span></tt>) .  If it was submitted, then we test for the presence of both of the options that are required to prepare our string.  The <tt class="docutils literal"><span class="pre">option()</span></tt> method returns a boolean for the question, &#8220;is the option argument that is passed to this method present?&#8221;.  If these tests return True, the SpamPrinter object that we just developed is imported from the commands directory.  The arguments to these options that the user listed on the command line are retrieved with the <tt class="docutils literal"><span class="pre">arg()</span></tt> method of the Command object.  In this case, we assign them to local variables for clarity.</p>
-<p>Next, we meet another branch in the logic that demonstrates one of the features of the Naked toolshed library StateObject (the instance is named &#8216;state&#8217;) that was automatically generated by <tt class="docutils literal"><span class="pre">naked</span></tt> when the project was built. This object collects a number of user state attributes at instantiation, including the version of the Python interpreter that they are using which we test for in the <tt class="docutils literal"><span class="pre">if</span> <span class="pre">state.py2:</span></tt> statement.  For Python 2 interpreters, we print the arguments to the <tt class="docutils literal"><span class="pre">meatsubstitute</span></tt> and <tt class="docutils literal"><span class="pre">overeasy</span></tt> options as is, and for Python 3 interpreters, we print them in all caps (with the <tt class="docutils literal"><span class="pre">string.upper()</span></tt> function).</p>
+<p>Note how the Naked parser handles user entered arguments on the command line.  The primary command becomes an attribute of the <code class="docutils literal"><span class="pre">c</span></code> Command object that was instantiated earlier in the script.  <code class="docutils literal"><span class="pre">cmd</span></code> is the first positional argument to the executable (i.e. the primary command). See the link in the Learn More section below to view all of the available argument attributes and to learn how to use <code class="docutils literal"><span class="pre">naked</span> <span class="pre">args</span></code> to help plan your command logic tests with the Naked parser.</p>
+<p>We begin by testing that the user entered the primary command &#8216;print&#8217; (i.e. <code class="docutils literal"><span class="pre">spameggs</span> <span class="pre">print</span> <span class="pre">...</span></code>) .  If it was submitted, then we test for the presence of both of the options that are required to prepare our string.  The <code class="docutils literal"><span class="pre">option()</span></code> method returns a boolean for the question, &#8220;is the option argument that is passed to this method present?&#8221;.  If these tests return True, the SpamPrinter object that we just developed is imported from the commands directory.  The arguments to these options that the user listed on the command line are retrieved with the <code class="docutils literal"><span class="pre">arg()</span></code> method of the Command object.  In this case, we assign them to local variables for clarity.</p>
+<p>Next, we meet another branch in the logic that demonstrates one of the features of the Naked toolshed library StateObject (the instance is named &#8216;state&#8217;) that was automatically generated by <code class="docutils literal"><span class="pre">naked</span></code> when the project was built. This object collects a number of user state attributes at instantiation, including the version of the Python interpreter that they are using which we test for in the <code class="docutils literal"><span class="pre">if</span> <span class="pre">state.py2:</span></code> statement.  For Python 2 interpreters, we print the arguments to the <code class="docutils literal"><span class="pre">meatsubstitute</span></code> and <code class="docutils literal"><span class="pre">overeasy</span></code> options as is, and for Python 3 interpreters, we print them in all caps (with the <code class="docutils literal"><span class="pre">string.upper()</span></code> function).</p>
 <p>Lastly, our run() method is called which executes the template replacements and prints the string to the standard output stream.</p>
 <p>Let&#8217;s give it a shot.  Try the following from your command line:</p>
 <div class="highlight-bash"><div class="highlight"><pre>spameggs print --meatsubstitute Spam --overeasy Eggs
 </pre></div>
 </div>
-<p>If you are using Python 2.x, you should see <tt class="docutils literal"><span class="pre">Spam</span> <span class="pre">and</span> <span class="pre">Eggs</span></tt> in your terminal and if you are using Python 3.x, you should see <tt class="docutils literal"><span class="pre">SPAM</span> <span class="pre">and</span> <span class="pre">EGGS</span></tt>.</p>
+<p>If you are using Python 2.x, you should see <code class="docutils literal"><span class="pre">Spam</span> <span class="pre">and</span> <span class="pre">Eggs</span></code> in your terminal and if you are using Python 3.x, you should see <code class="docutils literal"><span class="pre">SPAM</span> <span class="pre">and</span> <span class="pre">EGGS</span></code>.</p>
 <p>The following areas of the documentation are helpful if you would like to delve into more detailed treatment of the parser.</p>
 <div class="section" id="id4">
 <h3>Learn More<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
@@ -536,8 +427,8 @@ spameggs 0.1.0
 </div>
 <div class="section" id="create-your-help-text">
 <h2>Create Your Help Text<a class="headerlink" href="#create-your-help-text" title="Permalink to this headline">¶</a></h2>
-<p>Now that we have an application, let&#8217;s help our users out by providing some documentation when they request it with either <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">--help</span></tt>, <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">-h</span></tt>, or <tt class="docutils literal"><span class="pre">spameggs</span> <span class="pre">help</span></tt>.  There is no need to add anything to the app.py file in order to handle these requests.  The <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> build takes care of that for you.</p>
-<p>Open your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file in an editor and locate the help variable.  Add your help text like this:</p>
+<p>Now that we have an application, let&#8217;s help our users out by providing some documentation when they request it with either <code class="docutils literal"><span class="pre">spameggs</span> <span class="pre">--help</span></code>, <code class="docutils literal"><span class="pre">spameggs</span> <span class="pre">-h</span></code>, or <code class="docutils literal"><span class="pre">spameggs</span> <span class="pre">help</span></code>.  There is no need to add anything to the app.py file in order to handle these requests.  The <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> build takes care of that for you.</p>
+<p>Open your <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></code> file in an editor and locate the help variable.  Add your help text like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">help</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
 <span class="s">--------------------------</span>
 <span class="s">spameggs</span>
@@ -572,7 +463,7 @@ spameggs 0.1.0
 </div>
 <div class="section" id="create-your-usage-text">
 <h2>Create Your Usage Text<a class="headerlink" href="#create-your-usage-text" title="Permalink to this headline">¶</a></h2>
-<p>To set your usage text, locate the usage variable in the <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file that we just used above.  Let&#8217;s add the usage string that we just used in the help text:</p>
+<p>To set your usage text, locate the usage variable in the <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></code> file that we just used above.  Let&#8217;s add the usage string that we just used in the help text:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">usage</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
 <span class="s">Usage: spameggs [print] [--meatsubstitute] &lt;arg&gt; [--overeasy] &lt;arg&gt;</span>
 <span class="s">&quot;&quot;&quot;</span>
@@ -592,13 +483,13 @@ spameggs 0.1.0
 </div>
 </div>
 <div class="section" id="testing-with-naked-test">
-<h2>Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt><a class="headerlink" href="#testing-with-naked-test" title="Permalink to this headline">¶</a></h2>
+<h2>Testing with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></code><a class="headerlink" href="#testing-with-naked-test" title="Permalink to this headline">¶</a></h2>
 <p>Time to unit test.  Let&#8217;s set up a tox.ini file to test this in multiple versions of Python with the nose unit test runner.  If you are following along, both of these applications need to be installed in order to run the tests.  You can install them with pip:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>pip install tox
 <span class="nv">$ </span>pip install nose
 </pre></div>
 </div>
-<p>In the top directory of your project (where your setup.py file is located), save the following in a file named <tt class="docutils literal"><span class="pre">tox.ini</span></tt>:</p>
+<p>In the top directory of your project (where your setup.py file is located), save the following in a file named <code class="docutils literal"><span class="pre">tox.ini</span></code>:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="o">[</span>tox<span class="o">]</span>
 <span class="nv">envlist</span> <span class="o">=</span> py27,py33
 <span class="o">[</span>testenv<span class="o">]</span>
@@ -607,8 +498,8 @@ spameggs 0.1.0
          <span class="s2">&quot;--where=tests&quot;</span>
 </pre></div>
 </div>
-<p>This instructs tox to run the unit tests in our <tt class="docutils literal"><span class="pre">tests</span></tt> directory using the <tt class="docutils literal"><span class="pre">nosetests</span></tt> executable with our installed Python 2.7.x and Python 3.3.x versions (<em>Note</em>: both versions need to be installed locally to run these tests).  Refer to the tox documentation for instructions on how to test with other Python versions (including pypy).</p>
-<p>Next, create a unit test file named <tt class="docutils literal"><span class="pre">test_spameggs.py</span></tt> in the tests directory:</p>
+<p>This instructs tox to run the unit tests in our <code class="docutils literal"><span class="pre">tests</span></code> directory using the <code class="docutils literal"><span class="pre">nosetests</span></code> executable with our installed Python 2.7.x and Python 3.3.x versions (<em>Note</em>: both versions need to be installed locally to run these tests).  Refer to the tox documentation for instructions on how to test with other Python versions (including pypy).</p>
+<p>Next, create a unit test file named <code class="docutils literal"><span class="pre">test_spameggs.py</span></code> in the tests directory:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 <span class="c"># coding=utf-8</span>
 <span class="c"># file: test_spameggs.py</span>
@@ -632,15 +523,15 @@ spameggs 0.1.0
 </pre></div>
 </div>
 <p>This will launch tox and run the tests in Python 2.7 and 3.3 according to your specifications in the tox.ini file.  Confirm that they both pass and then we&#8217;ll move on.</p>
-<p>The <tt class="docutils literal"><span class="pre">test</span></tt> command also works with py.test and the built-in Python unittest test runner.  Click through the link below for more information.</p>
+<p>The <code class="docutils literal"><span class="pre">test</span></code> command also works with py.test and the built-in Python unittest test runner.  Click through the link below for more information.</p>
 <div class="section" id="id9">
 <h3>Learn More<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://docs.naked-py.com/executable.html#the-test-command">The Naked Test Command</a></p>
 </div>
 </div>
 <div class="section" id="profiling-with-naked-profile">
-<h2>Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt><a class="headerlink" href="#profiling-with-naked-profile" title="Permalink to this headline">¶</a></h2>
-<p>Open the <tt class="docutils literal"><span class="pre">spameggs/lib/profiler.py</span></tt> file in your editor.  The file is stubbed with all of the source that you need to profile with cProfile and pstats.  The setup and profiled code blocks are indicated in the file.  You can enter the code that you intend to profile in the block below the <tt class="docutils literal"><span class="pre">pr.enable()</span></tt> statement:</p>
+<h2>Profiling with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></code><a class="headerlink" href="#profiling-with-naked-profile" title="Permalink to this headline">¶</a></h2>
+<p>Open the <code class="docutils literal"><span class="pre">spameggs/lib/profiler.py</span></code> file in your editor.  The file is stubbed with all of the source that you need to profile with cProfile and pstats.  The setup and profiled code blocks are indicated in the file.  You can enter the code that you intend to profile in the block below the <code class="docutils literal"><span class="pre">pr.enable()</span></code> statement:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
 <span class="c"># encoding: utf-8</span>
 
@@ -695,14 +586,14 @@ spameggs 0.1.0
 </div>
 </div>
 <div class="section" id="distribution-to-pypi-with-naked-dist">
-<h2>Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt><a class="headerlink" href="#distribution-to-pypi-with-naked-dist" title="Permalink to this headline">¶</a></h2>
+<h2>Distribution to PyPI with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></code><a class="headerlink" href="#distribution-to-pypi-with-naked-dist" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">The following set of instructions are intended to demonstrate how you would distribute this application to PyPI.  If you run them, be aware that you will actually push spameggs to PyPI.  While this will instantly improve your reputation in the Python community, it is likely not what you intend to do.</p>
 </div>
 <div class="section" id="complete-your-setup-py-file">
 <h3>Complete Your setup.py File<a class="headerlink" href="#complete-your-setup-py-file" title="Permalink to this headline">¶</a></h3>
-<p>For an application that you really intend to release, you will need to fill in the remainder of the fields in your <tt class="docutils literal"><span class="pre">setup.py</span></tt> file before you perform the next steps.  Refer to the Python documentation for more information.</p>
+<p>For an application that you really intend to release, you will need to fill in the remainder of the fields in your <code class="docutils literal"><span class="pre">setup.py</span></code> file before you perform the next steps.  Refer to the Python documentation for more information.</p>
 <p>If you use the Naked toolshed library in your projects (including the command line parser), Naked should be listed as a dependency in your setup.py file with a line like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">install_requires</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;Naked&#39;</span><span class="p">],</span>
 </pre></div>
@@ -710,11 +601,11 @@ spameggs 0.1.0
 </div>
 <div class="section" id="verify-your-release-version-number">
 <h3>Verify Your Release Version Number<a class="headerlink" href="#verify-your-release-version-number" title="Permalink to this headline">¶</a></h3>
-<p>Confirm that the version number in your <tt class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></tt> file is set to the correct release.  This is imported into your setup.py file as the release version number and then pushed to PyPI where it becomes the current release version for your project.</p>
+<p>Confirm that the version number in your <code class="docutils literal"><span class="pre">spameggs/lib/spameggs/settings.py</span></code> file is set to the correct release.  This is imported into your setup.py file as the release version number and then pushed to PyPI where it becomes the current release version for your project.</p>
 </div>
 <div class="section" id="complete-your-readme-rst-file">
 <h3>Complete Your README.rst File<a class="headerlink" href="#complete-your-readme-rst-file" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">spameggs/docs/README.rst</span></tt> file is imported into your <tt class="docutils literal"><span class="pre">setup.py</span></tt> file as the long description for your project and then pushed to PyPI where it serves as the project description on your application page.  In this project that would be located at <tt class="docutils literal"><span class="pre">http://pypi.python.org/pypi/spameggs</span></tt>.</p>
+<p>The <code class="docutils literal"><span class="pre">spameggs/docs/README.rst</span></code> file is imported into your <code class="docutils literal"><span class="pre">setup.py</span></code> file as the long description for your project and then pushed to PyPI where it serves as the project description on your application page.  In this project that would be located at <code class="docutils literal"><span class="pre">http://pypi.python.org/pypi/spameggs</span></code>.</p>
 <p>Fill in any details that you would like to display to potential users in this file.  You can use reStructuredText in the file and this will be converted to valid HTML by the PyPI servers.</p>
 </div>
 <div class="section" id="register">
@@ -727,23 +618,23 @@ spameggs 0.1.0
 </div>
 <div class="section" id="push-to-pypi">
 <h3>Push to PyPI<a class="headerlink" href="#push-to-pypi" title="Permalink to this headline">¶</a></h3>
-<p>You can push versions of your application to PyPI with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt> command as well.  There are secondary commands for various distribution types.  Let&#8217;s push both a Python wheel and source distribution:</p>
+<p>You can push versions of your application to PyPI with the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></code> command as well.  There are secondary commands for various distribution types.  Let&#8217;s push both a Python wheel and source distribution:</p>
 <div class="highlight-bash"><div class="highlight"><pre>naked dist swheel
 </pre></div>
 </div>
-<p>See the <tt class="docutils literal"><span class="pre">dist</span></tt> command documentation link below for more information about the available release types.  When the command completes, your release will be live in the remote PyPI repository and ready to be installed by the masses.</p>
+<p>See the <code class="docutils literal"><span class="pre">dist</span></code> command documentation link below for more information about the available release types.  When the command completes, your release will be live in the remote PyPI repository and ready to be installed by the masses.</p>
 <p>You can provide future users with install instructions using pip and non-pip approaches:</p>
 </div>
 <div class="section" id="install-instructions-for-users-with-pip">
-<h3>Install Instructions for Users WITH <tt class="docutils literal"><span class="pre">pip</span></tt><a class="headerlink" href="#install-instructions-for-users-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>Install Instructions for Users WITH <code class="docutils literal"><span class="pre">pip</span></code><a class="headerlink" href="#install-instructions-for-users-with-pip" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-bash"><div class="highlight"><pre>pip install &lt;executable&gt;
 </pre></div>
 </div>
 <p>This command pulls your project source from the PyPI repository (by default) and automatically installs it on the user&#8217;s system.</p>
 </div>
 <div class="section" id="install-instructions-for-users-without-pip">
-<h3>Install Instructions for Users WITHOUT <tt class="docutils literal"><span class="pre">pip</span></tt><a class="headerlink" href="#install-instructions-for-users-without-pip" title="Permalink to this headline">¶</a></h3>
-<p>Instruct your users to download your source code from your remote repository, unpack the source archive, and navigate to the top level directory of the project (where <tt class="docutils literal"><span class="pre">setup.py</span></tt> is located). Then provide them with instructions to enter the following:</p>
+<h3>Install Instructions for Users WITHOUT <code class="docutils literal"><span class="pre">pip</span></code><a class="headerlink" href="#install-instructions-for-users-without-pip" title="Permalink to this headline">¶</a></h3>
+<p>Instruct your users to download your source code from your remote repository, unpack the source archive, and navigate to the top level directory of the project (where <code class="docutils literal"><span class="pre">setup.py</span></code> is located). Then provide them with instructions to enter the following:</p>
 <div class="highlight-bash"><div class="highlight"><pre>python setup.py install
 </pre></div>
 </div>
@@ -760,26 +651,32 @@ spameggs 0.1.0
 </div>
 
 
+           </div>
+          </div>
           <footer>
   
-    <div class="rst-footer-buttons">
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="executable.html" class="btn btn-neutral float-right" title="Naked Executable"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="executable.html" class="btn btn-neutral float-right" title="Naked Executable" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="definitions.html" class="btn btn-neutral" title="Definitions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="definitions.html" class="btn btn-neutral" title="Definitions" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
 
   <hr/>
 
-  <p>
-      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
-  </p>
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Christopher Simpkins. CC BY-SA 4.0 license.
 
-  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
+
         </div>
       </div>
 
@@ -787,6 +684,38 @@ spameggs 0.1.0
 
   </div>
   
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.30',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
 
 </body>
 </html>

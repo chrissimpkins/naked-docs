@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Toolshed: types : XDict &mdash; Naked 0.1.30 documentation</title>
@@ -14,24 +15,9 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
-
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:'./',
-        VERSION:'0.1.30',
-        COLLAPSE_INDEX:false,
-        FILE_SUFFIX:'.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
     
 
   
@@ -39,7 +25,8 @@
   
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
   
 
   
@@ -47,279 +34,139 @@
         <link rel="next" title="Toolshed: types : XList" href="toolshed_types_xlist.html"/>
         <link rel="prev" title="Toolshed: types : NakedObject" href="toolshed_types_nakedobject.html"/> 
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="search.html" method="get">
-  <input type="text" name="q" placeholder="Search docs" />
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-      </div>
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
-</ul>
-</li>
+          
+            <a href="index.html" class="icon icon-home"> Naked
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.30
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-pyh-command">The pyh Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#a-naked-project">A Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#directories">Directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="naked_project_structure.html#files">Files</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-module">Import System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-c-module">Import System C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-functions">File and Directory Path Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorators">File Path Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-functions">File Metadata Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-functions">File Listings Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-function">Directory Write Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#symbolic-link-functions">Symbolic Link Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-functions">Data Stream Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-functions">Application Exit Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-examples">File and Directory Path Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorator-examples">File Path Decorator Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-examples">File Metadata Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-examples">File Listings Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-examples">Directory Write Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-examples">Data Stream Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject-from-c-module">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XDict</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#import-xdict">Import <tt class="docutils literal"><span class="pre">XDict</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#import-xdict-from-c-module">Import <tt class="docutils literal"><span class="pre">XDict</span></tt> from C Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naked_project_structure.html">Naked Project Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <code class="docutils literal"><span class="pre">benchmarking</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <code class="docutils literal"><span class="pre">file</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <code class="docutils literal"><span class="pre">ink</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <code class="docutils literal"><span class="pre">network</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <code class="docutils literal"><span class="pre">python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <code class="docutils literal"><span class="pre">shell</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <code class="docutils literal"><span class="pre">state</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <code class="docutils literal"><span class="pre">system</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">NakedObject</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XDict</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import-xdict">Import <code class="docutils literal"><span class="pre">XDict</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-xdict-from-c-module">Import <code class="docutils literal"><span class="pre">XDict</span></code> from C Module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XList</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist">Import <tt class="docutils literal"><span class="pre">XList</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist-from-c-module">Import <tt class="docutils literal"><span class="pre">XList</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#examples">Examples</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XList</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMaxHeap</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMinHeap</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top">
-        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
-        <a href="/">Naked</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Naked</a>
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <ul class="wy-breadcrumbs">
-  <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href="">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XDict</span></tt></a></li>
-  
-</ul>
-<hr/>
-
           
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XDict</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/toolshed_types_xdict.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="module-Naked.toolshed.types">
-<span id="toolshed-types-xdict"></span><h1>Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XDict</span></tt><a class="headerlink" href="#module-Naked.toolshed.types" title="Permalink to this headline">¶</a></h1>
+<span id="toolshed-types-xdict"></span><h1>Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XDict</span></code><a class="headerlink" href="#module-Naked.toolshed.types" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="import-xdict">
-<h2>Import <tt class="docutils literal"><span class="pre">XDict</span></tt><a class="headerlink" href="#import-xdict" title="Permalink to this headline">¶</a></h2>
+<h2>Import <code class="docutils literal"><span class="pre">XDict</span></code><a class="headerlink" href="#import-xdict" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.types</span> <span class="kn">import</span> <span class="n">XDict</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="import-xdict-from-c-module">
-<h2>Import <tt class="docutils literal"><span class="pre">XDict</span></tt> from C Module<a class="headerlink" href="#import-xdict-from-c-module" title="Permalink to this headline">¶</a></h2>
+<h2>Import <code class="docutils literal"><span class="pre">XDict</span></code> from C Module<a class="headerlink" href="#import-xdict-from-c-module" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Naked.toolshed.c.types</span> <span class="kn">import</span> <span class="n">XDict</span>
 </pre></div>
 </div>
@@ -327,19 +174,19 @@
 </div>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="docutils literal"><span class="pre">XDict</span></tt> class is an extension of the Python dictionary type.  You can use all built-in Python dictionary methods with it.  It extends the built-in Python dictionary type with operator overloads, metadata definitions on instantiation, preservation of metadata on conversion to other types (with included XDict methods), and a number of additional dictionary methods.</p>
-<p>The <tt class="docutils literal"><span class="pre">XDict</span></tt> supports equality testing based upon <strong>both</strong> the dictionary data as well as the supplemental metadata (if included).  You can use the <tt class="docutils literal"><span class="pre">==</span></tt> and <tt class="docutils literal"><span class="pre">!=</span></tt> operators to perform this testing (or alternatively, the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><tt class="xref py py-meth docutils literal"><span class="pre">XDict.equals()</span></tt></a> method).</p>
+<p>The <code class="docutils literal"><span class="pre">XDict</span></code> class is an extension of the Python dictionary type.  You can use all built-in Python dictionary methods with it.  It extends the built-in Python dictionary type with operator overloads, metadata definitions on instantiation, preservation of metadata on conversion to other types (with included XDict methods), and a number of additional dictionary methods.</p>
+<p>The <code class="docutils literal"><span class="pre">XDict</span></code> supports equality testing based upon <strong>both</strong> the dictionary data as well as the supplemental metadata (if included).  You can use the <code class="docutils literal"><span class="pre">==</span></code> and <code class="docutils literal"><span class="pre">!=</span></code> operators to perform this testing (or alternatively, the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><code class="xref py py-meth docutils literal"><span class="pre">XDict.equals()</span></code></a> method).</p>
 <dl class="class">
 <dt id="Naked.toolshed.types.XDict">
-<em class="property">class </em><tt class="descclassname">Naked.toolshed.types.</tt><tt class="descname">XDict</tt><big>(</big><em>the_dictionary</em><span class="optional">[</span>, <em>attribute_dictionary</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict" title="Permalink to this definition">¶</a></dt>
-<dd><p>A <tt class="docutils literal"><span class="pre">XDict</span></tt> is instantiated with a Python dictionary.  You have the option to include a second Python dictionary to include additional metadata.  The metadata are stored as attributes on the <tt class="docutils literal"><span class="pre">XDict</span></tt> with dictionary keys mapped to attribute names and dictionary values mapped to the corresponding attribute values.</p>
+<em class="property">class </em><code class="descclassname">Naked.toolshed.types.</code><code class="descname">XDict</code><span class="sig-paren">(</span><em>the_dictionary</em><span class="optional">[</span>, <em>attribute_dictionary</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal"><span class="pre">XDict</span></code> is instantiated with a Python dictionary.  You have the option to include a second Python dictionary to include additional metadata.  The metadata are stored as attributes on the <code class="docutils literal"><span class="pre">XDict</span></code> with dictionary keys mapped to attribute names and dictionary values mapped to the corresponding attribute values.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>the_dictionary</strong> (<em>dictionary</em>) &#8211; the data that are used to create an instance of a <tt class="docutils literal"><span class="pre">XDict</span></tt> dictionary.</li>
-<li><strong>attribute_dictionary</strong> (<em>dictionary</em>) &#8211; (<em>optional</em>) a Python dictionary that is used to define the attributes of a new instance of a <tt class="docutils literal"><span class="pre">XDict</span></tt>.  Key names are mapped to attribute names and their corresponding values are mapped to the attribute values.</li>
+<li><strong>the_dictionary</strong> (<em>dictionary</em>) &#8211; the data that are used to create an instance of a <code class="docutils literal"><span class="pre">XDict</span></code> dictionary.</li>
+<li><strong>attribute_dictionary</strong> (<em>dictionary</em>) &#8211; (<em>optional</em>) a Python dictionary that is used to define the attributes of a new instance of a <code class="docutils literal"><span class="pre">XDict</span></code>.  Key names are mapped to attribute names and their corresponding values are mapped to the attribute values.</li>
 </ul>
 </td>
 </tr>
@@ -348,15 +195,15 @@
 <p><strong>Overloaded Operators</strong></p>
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.__add__">
-<tt class="descname">__add__</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.__add__" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <tt class="docutils literal"><span class="pre">+</span></tt> operator is overloaded to update the <tt class="docutils literal"><span class="pre">XDict</span></tt> with new key:value pairs from a Python dictionary or another <tt class="docutils literal"><span class="pre">XDict</span></tt>.  An <tt class="docutils literal"><span class="pre">XDict</span></tt> must be the left sided operand in this statement as standard Python dictionaries do not support this form of dictionary combination.  When used with a Python dictionary, the key:value pairs in the Python dictionary are added to the <tt class="docutils literal"><span class="pre">XDict</span></tt> dictionary.  When used with another <tt class="docutils literal"><span class="pre">XDict</span></tt>, the key:value pairs from the <tt class="docutils literal"><span class="pre">XDict</span></tt> parameter are defined in the <tt class="docutils literal"><span class="pre">XDict</span></tt> dictionary <strong>and</strong> the attributes from the <tt class="docutils literal"><span class="pre">XDict</span></tt> parameter are defined in the <tt class="docutils literal"><span class="pre">XDict</span></tt>.  The parameter dictionary definitions take precedence for key:value and attributes on the returned <tt class="docutils literal"><span class="pre">XDict</span></tt> when both objects contain the same dictionary key or attribute name.</p>
+<code class="descname">__add__</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.__add__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal"><span class="pre">+</span></code> operator is overloaded to update the <code class="docutils literal"><span class="pre">XDict</span></code> with new key:value pairs from a Python dictionary or another <code class="docutils literal"><span class="pre">XDict</span></code>.  An <code class="docutils literal"><span class="pre">XDict</span></code> must be the left sided operand in this statement as standard Python dictionaries do not support this form of dictionary combination.  When used with a Python dictionary, the key:value pairs in the Python dictionary are added to the <code class="docutils literal"><span class="pre">XDict</span></code> dictionary.  When used with another <code class="docutils literal"><span class="pre">XDict</span></code>, the key:value pairs from the <code class="docutils literal"><span class="pre">XDict</span></code> parameter are defined in the <code class="docutils literal"><span class="pre">XDict</span></code> dictionary <strong>and</strong> the attributes from the <code class="docutils literal"><span class="pre">XDict</span></code> parameter are defined in the <code class="docutils literal"><span class="pre">XDict</span></code>.  The parameter dictionary definitions take precedence for key:value and attributes on the returned <code class="docutils literal"><span class="pre">XDict</span></code> when both objects contain the same dictionary key or attribute name.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns the original XDict updated with data in the <tt class="docutils literal"><span class="pre">other_dictionary</span></tt> as defined above</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns the original XDict updated with data in the <code class="docutils literal"><span class="pre">other_dictionary</span></code> as defined above</td>
 </tr>
 </tbody>
 </table>
@@ -364,13 +211,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.__iadd__">
-<tt class="descname">__iadd__</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.__iadd__" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <tt class="docutils literal"><span class="pre">+=</span></tt> operator is overloaded to update the <tt class="docutils literal"><span class="pre">XDict</span></tt> operand on the left side of the operator with the Python dictionary or <tt class="docutils literal"><span class="pre">XDict</span></tt> on the right side of the operator.  The update takes place as defined in the description of the <a class="reference internal" href="#Naked.toolshed.types.XDict.__add__" title="Naked.toolshed.types.XDict.__add__"><tt class="xref py py-meth docutils literal"><span class="pre">__add__()</span></tt></a> method above.</p>
+<code class="descname">__iadd__</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.__iadd__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal"><span class="pre">+=</span></code> operator is overloaded to update the <code class="docutils literal"><span class="pre">XDict</span></code> operand on the left side of the operator with the Python dictionary or <code class="docutils literal"><span class="pre">XDict</span></code> on the right side of the operator.  The update takes place as defined in the description of the <a class="reference internal" href="#Naked.toolshed.types.XDict.__add__" title="Naked.toolshed.types.XDict.__add__"><code class="xref py py-meth docutils literal"><span class="pre">__add__()</span></code></a> method above.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns a <tt class="docutils literal"><span class="pre">XDict</span></tt> that is updated with the data in the right sided operand.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns a <code class="docutils literal"><span class="pre">XDict</span></code> that is updated with the data in the right sided operand.</td>
 </tr>
 </tbody>
 </table>
@@ -378,13 +225,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.__eq__">
-<tt class="descname">__eq__</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.__eq__" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <tt class="docutils literal"><span class="pre">==</span></tt> operator is overloaded to perform equality testing as defined for the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><tt class="xref py py-meth docutils literal"><span class="pre">equals()</span></tt></a> method below.</p>
+<code class="descname">__eq__</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.__eq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal"><span class="pre">==</span></code> operator is overloaded to perform equality testing as defined for the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><code class="xref py py-meth docutils literal"><span class="pre">equals()</span></code></a> method below.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <tt class="docutils literal"><span class="pre">True</span></tt> = conditions for equality are met; <tt class="docutils literal"><span class="pre">False</span></tt> = conditions for equality are not met</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <code class="docutils literal"><span class="pre">True</span></code> = conditions for equality are met; <code class="docutils literal"><span class="pre">False</span></code> = conditions for equality are not met</td>
 </tr>
 </tbody>
 </table>
@@ -392,13 +239,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.__neq__">
-<tt class="descname">__neq__</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.__neq__" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <tt class="docutils literal"><span class="pre">!=</span></tt> operator is overloaded to return the negation of the test for equality as it is defined in the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><tt class="xref py py-meth docutils literal"><span class="pre">equals()</span></tt></a> method below.</p>
+<code class="descname">__neq__</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.__neq__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal"><span class="pre">!=</span></code> operator is overloaded to return the negation of the test for equality as it is defined in the <a class="reference internal" href="#Naked.toolshed.types.XDict.equals" title="Naked.toolshed.types.XDict.equals"><code class="xref py py-meth docutils literal"><span class="pre">equals()</span></code></a> method below.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <tt class="docutils literal"><span class="pre">True</span></tt> = conditions for equality are not met; <tt class="docutils literal"><span class="pre">False</span></tt> = conditions for equality are met</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <code class="docutils literal"><span class="pre">True</span></code> = conditions for equality are not met; <code class="docutils literal"><span class="pre">False</span></code> = conditions for equality are met</td>
 </tr>
 </tbody>
 </table>
@@ -407,13 +254,13 @@
 <p><strong>Key Methods</strong></p>
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.difference">
-<tt class="descname">difference</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.difference" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the set of dictionary keys in the <tt class="docutils literal"><span class="pre">XDict</span></tt> that are not included in the <tt class="docutils literal"><span class="pre">other_dictionary</span></tt> parameter.</p>
+<code class="descname">difference</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.difference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the set of dictionary keys in the <code class="docutils literal"><span class="pre">XDict</span></code> that are not included in the <code class="docutils literal"><span class="pre">other_dictionary</span></code> parameter.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>set</em>) Returns a set of dictionary key strings that meet this definition.  Returns an empty set if there are no keys that meet the definition.</td>
 </tr>
@@ -423,13 +270,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.intersection">
-<tt class="descname">intersection</tt><big>(</big><em>other_dictionary</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.intersection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the set of dictionary keys in the <tt class="docutils literal"><span class="pre">XDict</span></tt> that are also included in the <tt class="docutils literal"><span class="pre">other_dictionary</span></tt> parameter.</p>
+<code class="descname">intersection</code><span class="sig-paren">(</span><em>other_dictionary</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the set of dictionary keys in the <code class="docutils literal"><span class="pre">XDict</span></code> that are also included in the <code class="docutils literal"><span class="pre">other_dictionary</span></code> parameter.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_dictionary</strong> (<em>dictionary</em>) &#8211; a Python dictionary or <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>set</em>) Returns a set of dictionary key strings tha meet this definition.  Returns an empty set if there are no keys that meet the definition.</td>
 </tr>
@@ -439,13 +286,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.key_xlist">
-<tt class="descname">key_xlist</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.key_xlist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a <tt class="docutils literal"><span class="pre">XList</span></tt> containing the keys in the <tt class="docutils literal"><span class="pre">XDict</span></tt> with preservation of the <tt class="docutils literal"><span class="pre">XDict</span></tt> attribute metadata in the returned <tt class="docutils literal"><span class="pre">XList</span></tt>.</p>
+<code class="descname">key_xlist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.key_xlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <code class="docutils literal"><span class="pre">XList</span></code> containing the keys in the <code class="docutils literal"><span class="pre">XDict</span></code> with preservation of the <code class="docutils literal"><span class="pre">XDict</span></code> attribute metadata in the returned <code class="docutils literal"><span class="pre">XList</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XList</em>) returns a XList that contains the <tt class="docutils literal"><span class="pre">XDict</span></tt> keys mapped to list items.  The attribute data in the <tt class="docutils literal"><span class="pre">XDict</span></tt> is preserved in the returned <tt class="docutils literal"><span class="pre">XList</span></tt>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XList</em>) returns a XList that contains the <code class="docutils literal"><span class="pre">XDict</span></code> keys mapped to list items.  The attribute data in the <code class="docutils literal"><span class="pre">XDict</span></code> is preserved in the returned <code class="docutils literal"><span class="pre">XList</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -454,19 +301,19 @@
 <p><strong>Value Methods</strong></p>
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.conditional_map_to_vals">
-<tt class="descname">conditional_map_to_vals</tt><big>(</big><em>conditional_func</em>, <em>map_func</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.conditional_map_to_vals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Map a function parameter <tt class="docutils literal"><span class="pre">map_func</span></tt> to every <tt class="docutils literal"><span class="pre">XDict</span></tt> value that has a <strong>key</strong> that returns <tt class="docutils literal"><span class="pre">True</span></tt> when the key is passed as a parameter to the <tt class="docutils literal"><span class="pre">conditional_func</span></tt> function.  Every <tt class="docutils literal"><span class="pre">XDict</span></tt> key is tested in the <tt class="docutils literal"><span class="pre">conditional_func</span></tt>.</p>
+<code class="descname">conditional_map_to_vals</code><span class="sig-paren">(</span><em>conditional_func</em>, <em>map_func</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.conditional_map_to_vals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Map a function parameter <code class="docutils literal"><span class="pre">map_func</span></code> to every <code class="docutils literal"><span class="pre">XDict</span></code> value that has a <strong>key</strong> that returns <code class="docutils literal"><span class="pre">True</span></code> when the key is passed as a parameter to the <code class="docutils literal"><span class="pre">conditional_func</span></code> function.  Every <code class="docutils literal"><span class="pre">XDict</span></code> key is tested in the <code class="docutils literal"><span class="pre">conditional_func</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>conditional_func</strong> (<em>function</em>) &#8211; a function that accepts a <tt class="docutils literal"><span class="pre">XDict</span></tt> key as the first parameter and returns a boolean value.  When the returned value is <tt class="docutils literal"><span class="pre">True</span></tt>, the value associated with this key is passed as the first parameter to the <tt class="docutils literal"><span class="pre">map_func</span></tt>.</li>
-<li><strong>map_func</strong> (<em>function</em>) &#8211; a function that accepts a <tt class="docutils literal"><span class="pre">XDict</span></tt> value as the first parameter and returns the object that will be used to update the value definition for the key in the returned <tt class="docutils literal"><span class="pre">XDict</span></tt>.</li>
+<li><strong>conditional_func</strong> (<em>function</em>) &#8211; a function that accepts a <code class="docutils literal"><span class="pre">XDict</span></code> key as the first parameter and returns a boolean value.  When the returned value is <code class="docutils literal"><span class="pre">True</span></code>, the value associated with this key is passed as the first parameter to the <code class="docutils literal"><span class="pre">map_func</span></code>.</li>
+<li><strong>map_func</strong> (<em>function</em>) &#8211; a function that accepts a <code class="docutils literal"><span class="pre">XDict</span></code> value as the first parameter and returns the object that will be used to update the value definition for the key in the returned <code class="docutils literal"><span class="pre">XDict</span></code>.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>XDict</em>) returns the <tt class="docutils literal"><span class="pre">XDict</span></tt> with values that are updated as defined by the <tt class="docutils literal"><span class="pre">conditional_func</span></tt> and <tt class="docutils literal"><span class="pre">map_func</span></tt> processing.  If the <tt class="docutils literal"><span class="pre">map_func</span></tt> does not return a value, the associated key is defined with <tt class="docutils literal"><span class="pre">None</span></tt>.  If you intend to maintain the original value, return the value that was passed as the parameter to the function.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(<em>XDict</em>) returns the <code class="docutils literal"><span class="pre">XDict</span></code> with values that are updated as defined by the <code class="docutils literal"><span class="pre">conditional_func</span></code> and <code class="docutils literal"><span class="pre">map_func</span></code> processing.  If the <code class="docutils literal"><span class="pre">map_func</span></code> does not return a value, the associated key is defined with <code class="docutils literal"><span class="pre">None</span></code>.  If you intend to maintain the original value, return the value that was passed as the parameter to the function.</p>
 </td>
 </tr>
 </tbody>
@@ -475,15 +322,15 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.map_to_vals">
-<tt class="descname">map_to_vals</tt><big>(</big><em>map_func</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.map_to_vals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Maps a function parameter <tt class="docutils literal"><span class="pre">map_func</span></tt> to every value in the <tt class="docutils literal"><span class="pre">XDict</span></tt>.  Every value in the <tt class="docutils literal"><span class="pre">XDict</span></tt> is passed to this function.</p>
+<code class="descname">map_to_vals</code><span class="sig-paren">(</span><em>map_func</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.map_to_vals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maps a function parameter <code class="docutils literal"><span class="pre">map_func</span></code> to every value in the <code class="docutils literal"><span class="pre">XDict</span></code>.  Every value in the <code class="docutils literal"><span class="pre">XDict</span></code> is passed to this function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>map_func</strong> (<em>function</em>) &#8211; a function that accepts a <tt class="docutils literal"><span class="pre">XDict</span></tt> value and returns the object that will be used to update the value definition for the key in the returned <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>map_func</strong> (<em>function</em>) &#8211; a function that accepts a <code class="docutils literal"><span class="pre">XDict</span></code> value and returns the object that will be used to update the value definition for the key in the returned <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns the <tt class="docutils literal"><span class="pre">XDict</span></tt> with values that are updated as defined by the returned values from the <tt class="docutils literal"><span class="pre">map_func</span></tt>.  If the <tt class="docutils literal"><span class="pre">map_func</span></tt> does not return a value, the associated key is defined with <tt class="docutils literal"><span class="pre">None</span></tt>.  If you intend to maintain the original value, return the value that was passed as the parameter to the function.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>XDict</em>) returns the <code class="docutils literal"><span class="pre">XDict</span></code> with values that are updated as defined by the returned values from the <code class="docutils literal"><span class="pre">map_func</span></code>.  If the <code class="docutils literal"><span class="pre">map_func</span></code> does not return a value, the associated key is defined with <code class="docutils literal"><span class="pre">None</span></code>.  If you intend to maintain the original value, return the value that was passed as the parameter to the function.</td>
 </tr>
 </tbody>
 </table>
@@ -491,13 +338,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.max_val">
-<tt class="descname">max_val</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.max_val" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a 2-item tuple containing the maximum value and associated key as defined by the Python built-in <tt class="docutils literal"><span class="pre">max()</span></tt> function.</p>
+<code class="descname">max_val</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.max_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a 2-item tuple containing the maximum value and associated key as defined by the Python built-in <code class="docutils literal"><span class="pre">max()</span></code> function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) returns a 2-item tuple that includes (<tt class="docutils literal"><span class="pre">max</span> <span class="pre">value</span></tt>, <tt class="docutils literal"><span class="pre">key</span></tt>). The maximum numeric value is returned for numeric types.  The value at the top of the reverse alphabetic order is returned for strings.  For other types, the returned value is defined by the Python built-in <tt class="docutils literal"><span class="pre">max()</span></tt> function (if supported).</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) returns a 2-item tuple that includes (<code class="docutils literal"><span class="pre">max</span> <span class="pre">value</span></code>, <code class="docutils literal"><span class="pre">key</span></code>). The maximum numeric value is returned for numeric types.  The value at the top of the reverse alphabetic order is returned for strings.  For other types, the returned value is defined by the Python built-in <code class="docutils literal"><span class="pre">max()</span></code> function (if supported).</td>
 </tr>
 </tbody>
 </table>
@@ -505,13 +352,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.min_val">
-<tt class="descname">min_val</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.min_val" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a 2-item tuple containing the minimum value and associated key as defined by the Python built-in <tt class="docutils literal"><span class="pre">min()</span></tt> function.</p>
+<code class="descname">min_val</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.min_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a 2-item tuple containing the minimum value and associated key as defined by the Python built-in <code class="docutils literal"><span class="pre">min()</span></code> function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) returns a 2-item tuple that includes (<tt class="docutils literal"><span class="pre">min</span> <span class="pre">value</span></tt>, <tt class="docutils literal"><span class="pre">key</span></tt>). The minimum numeric value is returned for numeric types.  The value at the top of the alphabetic order is returned for strings.  For other types, the returned value is as defined for the Python built-in <tt class="docutils literal"><span class="pre">max()</span></tt> function (if supported).</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) returns a 2-item tuple that includes (<code class="docutils literal"><span class="pre">min</span> <span class="pre">value</span></code>, <code class="docutils literal"><span class="pre">key</span></code>). The minimum numeric value is returned for numeric types.  The value at the top of the alphabetic order is returned for strings.  For other types, the returned value is as defined for the Python built-in <code class="docutils literal"><span class="pre">max()</span></code> function (if supported).</td>
 </tr>
 </tbody>
 </table>
@@ -519,15 +366,15 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.sum_vals">
-<tt class="descname">sum_vals</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.sum_vals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the sum of the values as determined by the Python built-in <tt class="docutils literal"><span class="pre">sum()</span></tt> function.</p>
+<code class="descname">sum_vals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.sum_vals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sum of the values as determined by the Python built-in <code class="docutils literal"><span class="pre">sum()</span></code> function.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>numeric</em>) returns the sum as a numeric type defined by the input types</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><tt class="docutils literal"><span class="pre">TypeError</span></tt> for unsupported operand types encountered as values in the <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><code class="docutils literal"><span class="pre">TypeError</span></code> for unsupported operand types encountered as values in the <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -535,15 +382,15 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.val_count">
-<tt class="descname">val_count</tt><big>(</big><em>the_value</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.val_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the count of <tt class="docutils literal"><span class="pre">the_value</span></tt> values in the <tt class="docutils literal"><span class="pre">XDict</span></tt>.  Values are counted if they meet the criterion <tt class="docutils literal"><span class="pre">XDict()[key]</span> <span class="pre">==</span> <span class="pre">the_value</span></tt>.</p>
+<code class="descname">val_count</code><span class="sig-paren">(</span><em>the_value</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.val_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the count of <code class="docutils literal"><span class="pre">the_value</span></code> values in the <code class="docutils literal"><span class="pre">XDict</span></code>.  Values are counted if they meet the criterion <code class="docutils literal"><span class="pre">XDict()[key]</span> <span class="pre">==</span> <span class="pre">the_value</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>the_value</strong> (<em>object</em>) &#8211; the value type and definition to be counted in the <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>the_value</strong> (<em>object</em>) &#8211; the value type and definition to be counted in the <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>integer</em>) returns the count of <tt class="docutils literal"><span class="pre">the_value</span></tt> in the <tt class="docutils literal"><span class="pre">XDict</span></tt> as an integer.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>integer</em>) returns the count of <code class="docutils literal"><span class="pre">the_value</span></code> in the <code class="docutils literal"><span class="pre">XDict</span></code> as an integer.</td>
 </tr>
 </tbody>
 </table>
@@ -551,15 +398,15 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.val_count_ci">
-<tt class="descname">val_count_ci</tt><big>(</big><em>the_value</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.val_count_ci" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the count of a case-insensitive test for <tt class="docutils literal"><span class="pre">the_value</span></tt> string in the <tt class="docutils literal"><span class="pre">XDict</span></tt> values.  This method <strong>can</strong> be used with <tt class="docutils literal"><span class="pre">XDict</span></tt> that include value types that do not support the <tt class="docutils literal"><span class="pre">string.lower()</span></tt> method that is used in the case-insensitive testing.</p>
+<code class="descname">val_count_ci</code><span class="sig-paren">(</span><em>the_value</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.val_count_ci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the count of a case-insensitive test for <code class="docutils literal"><span class="pre">the_value</span></code> string in the <code class="docutils literal"><span class="pre">XDict</span></code> values.  This method <strong>can</strong> be used with <code class="docutils literal"><span class="pre">XDict</span></code> that include value types that do not support the <code class="docutils literal"><span class="pre">string.lower()</span></code> method that is used in the case-insensitive testing.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>the_value</strong> (<em>string</em>) &#8211; the string value that is to be used for a case-insensitive count across all <tt class="docutils literal"><span class="pre">XDict</span></tt> values</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>the_value</strong> (<em>string</em>) &#8211; the string value that is to be used for a case-insensitive count across all <code class="docutils literal"><span class="pre">XDict</span></code> values</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>integer</em>) returns the count of strings that match <tt class="docutils literal"><span class="pre">the_value</span></tt> in a case-insensitive test.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>integer</em>) returns the count of strings that match <code class="docutils literal"><span class="pre">the_value</span></code> in a case-insensitive test.</td>
 </tr>
 </tbody>
 </table>
@@ -567,13 +414,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.val_xlist">
-<tt class="descname">val_xlist</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.val_xlist" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a <tt class="docutils literal"><span class="pre">XList</span></tt> that contains the <tt class="docutils literal"><span class="pre">XDict</span></tt> values mapped to list items.</p>
+<code class="descname">val_xlist</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.val_xlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <code class="docutils literal"><span class="pre">XList</span></code> that contains the <code class="docutils literal"><span class="pre">XDict</span></code> values mapped to list items.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XList</em>) returns a <tt class="docutils literal"><span class="pre">XList</span></tt> that contains <tt class="docutils literal"><span class="pre">XDict</span></tt> values that are mapped to list items.  Any attribute metadata from the original <tt class="docutils literal"><span class="pre">XDict</span></tt> is maintained in the returned <tt class="docutils literal"><span class="pre">XList</span></tt>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>XList</em>) returns a <code class="docutils literal"><span class="pre">XList</span></code> that contains <code class="docutils literal"><span class="pre">XDict</span></code> values that are mapped to list items.  Any attribute metadata from the original <code class="docutils literal"><span class="pre">XDict</span></code> is maintained in the returned <code class="docutils literal"><span class="pre">XList</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -582,15 +429,15 @@
 <p><strong>Other Methods</strong></p>
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.equals">
-<tt class="descname">equals</tt><big>(</big><em>other_object</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.equals" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <tt class="docutils literal"><span class="pre">equals()</span></tt> method performs equality testing between a <tt class="docutils literal"><span class="pre">XDict</span></tt> and another object.  The <tt class="docutils literal"><span class="pre">==</span></tt> operator can also be used to perform this test between the left (<tt class="docutils literal"><span class="pre">XDict</span></tt>) and right (<tt class="docutils literal"><span class="pre">other_object</span></tt>) sided operands.  Equality testing is defined by meeting the criteria: (1) the type of the <tt class="docutils literal"><span class="pre">XDict</span></tt> and the <tt class="docutils literal"><span class="pre">other_object</span></tt> are the same; (2) the dictionary keys and values are the same in the <tt class="docutils literal"><span class="pre">XDict</span></tt> and the <tt class="docutils literal"><span class="pre">other_object</span></tt>; (3) the attribute metadata (if present) are the same in the <tt class="docutils literal"><span class="pre">XDict</span></tt> and the <tt class="docutils literal"><span class="pre">other_object</span></tt>.</p>
+<code class="descname">equals</code><span class="sig-paren">(</span><em>other_object</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.equals" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal"><span class="pre">equals()</span></code> method performs equality testing between a <code class="docutils literal"><span class="pre">XDict</span></code> and another object.  The <code class="docutils literal"><span class="pre">==</span></code> operator can also be used to perform this test between the left (<code class="docutils literal"><span class="pre">XDict</span></code>) and right (<code class="docutils literal"><span class="pre">other_object</span></code>) sided operands.  Equality testing is defined by meeting the criteria: (1) the type of the <code class="docutils literal"><span class="pre">XDict</span></code> and the <code class="docutils literal"><span class="pre">other_object</span></code> are the same; (2) the dictionary keys and values are the same in the <code class="docutils literal"><span class="pre">XDict</span></code> and the <code class="docutils literal"><span class="pre">other_object</span></code>; (3) the attribute metadata (if present) are the same in the <code class="docutils literal"><span class="pre">XDict</span></code> and the <code class="docutils literal"><span class="pre">other_object</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other_object</strong> (<em>object</em>) &#8211; an object that is to be tested for equality</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <tt class="docutils literal"><span class="pre">True</span></tt> = conditions for equality are met; <tt class="docutils literal"><span class="pre">False</span></tt> = conditions for equality are not met</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>boolean</em>) <code class="docutils literal"><span class="pre">True</span></code> = conditions for equality are met; <code class="docutils literal"><span class="pre">False</span></code> = conditions for equality are not met</td>
 </tr>
 </tbody>
 </table>
@@ -598,8 +445,8 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.random">
-<tt class="descname">random</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.random" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a single, random key:value pair as a Python dictionary.  The random pair is identified with the Python <tt class="docutils literal"><span class="pre">random.sample()</span></tt> method.</p>
+<code class="descname">random</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a single, random key:value pair as a Python dictionary.  The random pair is identified with the Python <code class="docutils literal"><span class="pre">random.sample()</span></code> method.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -612,15 +459,15 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.random_sample">
-<tt class="descname">random_sample</tt><big>(</big><em>number</em><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.random_sample" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <tt class="docutils literal"><span class="pre">number</span></tt> random key:value pair(s) in a Python dictionary.  The random pairs are identified with the Python <tt class="docutils literal"><span class="pre">random.sample()</span></tt> method.  The random sampling is performed without replacement.</p>
+<code class="descname">random_sample</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.random_sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">number</span></code> random key:value pair(s) in a Python dictionary.  The random pairs are identified with the Python <code class="docutils literal"><span class="pre">random.sample()</span></code> method.  The random sampling is performed without replacement.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>number</strong> (<em>integer</em>) &#8211; the number of random key:value pairs to return</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>dictionary</em>) a Python dictionary that contains <tt class="docutils literal"><span class="pre">number</span></tt> key:value pairs</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(<em>dictionary</em>) a Python dictionary that contains <code class="docutils literal"><span class="pre">number</span></code> key:value pairs</td>
 </tr>
 </tbody>
 </table>
@@ -628,13 +475,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.xitems">
-<tt class="descname">xitems</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.xitems" title="Permalink to this definition">¶</a></dt>
-<dd><p>A generator that yields 2-item tuples of key:value pairs from the <tt class="docutils literal"><span class="pre">XDict</span></tt>.  This utilizes the <tt class="docutils literal"><span class="pre">dict.iteritems()</span></tt> generator when the Python 2 interpreter is used and the <tt class="docutils literal"><span class="pre">dict.items()</span></tt> generator when the Python 3 interpreter is used.</p>
+<code class="descname">xitems</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.xitems" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator that yields 2-item tuples of key:value pairs from the <code class="docutils literal"><span class="pre">XDict</span></code>.  This utilizes the <code class="docutils literal"><span class="pre">dict.iteritems()</span></code> generator when the Python 2 interpreter is used and the <code class="docutils literal"><span class="pre">dict.items()</span></code> generator when the Python 3 interpreter is used.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) yields a 2-item tuple <tt class="docutils literal"><span class="pre">(key,</span> <span class="pre">value)</span></tt> on each iteration.  Iteration ends when all <tt class="docutils literal"><span class="pre">XDict</span></tt> key:value pairs have been returned.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(<em>tuple</em>) yields a 2-item tuple <code class="docutils literal"><span class="pre">(key,</span> <span class="pre">value)</span></code> on each iteration.  Iteration ends when all <code class="docutils literal"><span class="pre">XDict</span></code> key:value pairs have been returned.</td>
 </tr>
 </tbody>
 </table>
@@ -642,13 +489,13 @@
 
 <dl class="method">
 <dt id="Naked.toolshed.types.XDict.type">
-<tt class="descname">type</tt><big>(</big><big>)</big><a class="headerlink" href="#Naked.toolshed.types.XDict.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the type of the <tt class="docutils literal"><span class="pre">XDict</span></tt> object.</p>
+<code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Naked.toolshed.types.XDict.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of the <code class="docutils literal"><span class="pre">XDict</span></code> object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(type) returns the type of the <tt class="docutils literal"><span class="pre">XDict</span></tt></td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(type) returns the type of the <code class="docutils literal"><span class="pre">XDict</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -779,26 +626,32 @@
 </div>
 
 
+           </div>
+          </div>
           <footer>
   
-    <div class="rst-footer-buttons">
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="toolshed_types_xlist.html" class="btn btn-neutral float-right" title="Toolshed: types : XList"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="toolshed_types_xlist.html" class="btn btn-neutral float-right" title="Toolshed: types : XList" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="toolshed_types_nakedobject.html" class="btn btn-neutral" title="Toolshed: types : NakedObject"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="toolshed_types_nakedobject.html" class="btn btn-neutral" title="Toolshed: types : NakedObject" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
 
   <hr/>
 
-  <p>
-      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
-  </p>
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Christopher Simpkins. CC BY-SA 4.0 license.
 
-  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
+
         </div>
       </div>
 
@@ -806,6 +659,38 @@
 
   </div>
   
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.30',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
 
 </body>
 </html>

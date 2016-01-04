@@ -44,7 +44,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Naked'
-copyright = u'2014, Christopher Simpkins. CC BY-SA 4.0 license'
+copyright = u'2016, Christopher Simpkins. CC BY-SA 4.0 license'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -272,7 +272,7 @@ texinfo_documents = [
 epub_title = u'Naked'
 epub_author = u'Christopher Simpkins'
 epub_publisher = u'Christopher Simpkins'
-epub_copyright = u'2014, Christopher Simpkins'
+epub_copyright = u'2016, Christopher Simpkins'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'Naked'

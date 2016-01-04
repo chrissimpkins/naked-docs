@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Naked Project Structure &mdash; Naked 0.1.30 documentation</title>
@@ -14,24 +15,9 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
-
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:'./',
-        VERSION:'0.1.30',
-        COLLAPSE_INDEX:false,
-        FILE_SUFFIX:'.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
     
 
   
@@ -39,7 +25,8 @@
   
   
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
   
 
   
@@ -47,300 +34,179 @@
         <link rel="next" title="Help, Usage, and Version Commands" href="help_usage_version.html"/>
         <link rel="prev" title="Naked Executable" href="executable.html"/> 
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  
+  <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> Naked</a>
-        <form class="wy-form" action="search.html" method="get">
-  <input type="text" name="q" placeholder="Search docs" />
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-      </div>
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-source-code">The Source Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#the-developer-log">The Developer Log</a></li>
-<li class="toctree-l2"><a class="reference internal" href="resources.html#issue-reports">Issue Reports</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#install-with-pip">Install with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#git-clone-and-install">Git Clone and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#download-and-install">Download and Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#confirm-install">Confirm Install</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#upgrade-with-pip">Upgrade with pip</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#git-clone-and-upgrade">Git Clone and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#download-and-upgrade">Download and Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="upgrade.html#confirm-upgrade">Confirm Upgrade</a></li>
-</ul>
-</li>
+          
+            <a href="index.html" class="icon icon-home"> Naked
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.30
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Naked Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade.html">Upgrade Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Definitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-your-own-spam-and-eggs">Make Your Own Spam and Eggs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#make-a-new-project-with-naked-make">Make a New Project with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#test-your-application-version-command">Test Your Application Version Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#inspect-your-project-files">Inspect Your Project Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-application">Create Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#handle-command-line-arguments-for-your-application">Handle Command Line Arguments for Your Application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-help-text">Create Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#create-your-usage-text">Create Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#testing-with-naked-test">Testing with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#profiling-with-naked-profile">Profiling with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="quickstart.html#distribution-to-pypi-with-naked-dist">Distribution to PyPI with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">dist</span></tt></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-args-command">The Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-build-command">The Build Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-classify-command">The Classify Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-dist-command">The Dist Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-locate-command">The Locate Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-make-command">The Make Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-profile-command">The Profile Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-pyh-command">The pyh Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="executable.html#the-test-command">The Test Command</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">QuickStart Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executable.html">Naked Executable</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Naked Project Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#a-naked-project">A Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#directories">Directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#files">Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-naked-project">A Naked Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#directory-structure">Directory Structure</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#implementation-of-commands-in-a-naked-project">Implementation of Commands in a Naked Project</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-help-text">How to Set Your Help Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-usage-text">How to Set Your Usage Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-set-your-version-text">How to Set Your Version Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help_usage_version.html#how-to-remove-the-help-version-usage-commands">How to Remove the Help, Version, &amp; Usage Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#directories">Directories</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#commands-directory">commands Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docs-directory">docs Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#lib-directory">lib Directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tests-directory">tests Directory</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-it-works">How it Works</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-import-the-command-line-parser">How to Import the Command Line Parser</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#how-to-instantiate-a-command-object">How to Instantiate a Command Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-primary-and-secondary-commands">The Primary and Secondary Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#options">Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#arguments-to-options">Arguments to Options</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#other-available-command-attributes">Other Available Command Attributes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#the-naked-executable-args-command">The naked Executable Args Command</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_line_parser.html#syntax-validation">Syntax Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#files">Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app-py-file">app.py File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#license-file">LICENSE File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manifest-in-file">MANIFEST.in File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#profiler-py-file">profiler.py File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#readme-md-file">README.md File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#readme-rst-file">README.rst File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#settings-py-file">settings.py File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-cfg-file">setup.cfg File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-py-file">setup.py File</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#benchmarking-module">Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#casts-module">Casts Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#file-module">File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#ink-module">Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#network-module">Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#python-module">Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#shell-module">Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#state-module">State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#system-module">System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_overview.html#types-module">Types Module</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <tt class="docutils literal"><span class="pre">benchmarking</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-module">Import Benchmarking Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#import-benchmarking-c-module">Import Benchmarking C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#decorators">Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_benchmarking.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <tt class="docutils literal"><span class="pre">file</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-module">Import File Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#import-file-c-module">Import File C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_file.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <tt class="docutils literal"><span class="pre">ink</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-module">Import Ink Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#import-ink-c-module">Import Ink C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_ink.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <tt class="docutils literal"><span class="pre">network</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-module">Import Network Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#import-network-c-module">Import Network C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#the-response-object">The Response Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_network.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <tt class="docutils literal"><span class="pre">python</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-module">Import Python Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#import-python-c-module">Import Python C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_python.html#functions">Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <tt class="docutils literal"><span class="pre">shell</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-module">Import Shell Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#import-shell-c-module">Import Shell C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#functions-for-the-execution-of-system-commands">Functions for the Execution of System Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#javascript-node-js-execution-functions">JavaScript (Node.js) Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#ruby-script-execution-functions">Ruby Script Execution Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#shell-command-execution-function-examples">Shell Command Execution Function Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-class">Environment Class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_shell.html#environment-examples">Environment Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <tt class="docutils literal"><span class="pre">state</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-module">Import State Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#import-state-c-module">Import State C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#add-your-own-attributes-to-the-stateobject">Add Your Own Attributes to the StateObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_state.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <tt class="docutils literal"><span class="pre">system</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-module">Import System Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#import-system-c-module">Import System C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-functions">File and Directory Path Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorators">File Path Decorators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-functions">File and Directory Testing Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-functions">File Metadata Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-functions">File Listings Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-function">Directory Write Function</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#symbolic-link-functions">Symbolic Link Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-functions">Data Stream Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-functions">Application Exit Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-path-examples">File and Directory Path Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-path-decorator-examples">File Path Decorator Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-and-directory-testing-examples">File and Directory Testing Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-metadata-examples">File Metadata Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#file-listings-examples">File Listings Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#directory-write-examples">Directory Write Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#data-stream-examples">Data Stream Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_system.html#application-exit-examples">Application Exit Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#import-nakedobject-from-c-module">Import <tt class="docutils literal"><span class="pre">NakedObject</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_nakedobject.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xdict.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XDict</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#import-xdict">Import <tt class="docutils literal"><span class="pre">XDict</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#import-xdict-from-c-module">Import <tt class="docutils literal"><span class="pre">XDict</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xdict.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XList</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist">Import <tt class="docutils literal"><span class="pre">XList</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#import-xlist-from-c-module">Import <tt class="docutils literal"><span class="pre">XList</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xlist.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#import-xmaxheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMaxHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xmaxheap.html#examples">Examples</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <tt class="docutils literal"><span class="pre">types</span></tt> : <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt></a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#import-xminheap-from-c-module">Import <tt class="docutils literal"><span class="pre">XMinHeap</span></tt> from C Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="toolshed_types_xminheap.html#examples">Examples</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="help_usage_version.html">Help, Usage, and Version Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line_parser.html">Command Line Parser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_overview.html">The Toolshed Library Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_benchmarking.html">Toolshed: <code class="docutils literal"><span class="pre">benchmarking</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_file.html">Toolshed: <code class="docutils literal"><span class="pre">file</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_ink.html">Toolshed: <code class="docutils literal"><span class="pre">ink</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_network.html">Toolshed: <code class="docutils literal"><span class="pre">network</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_python.html">Toolshed: <code class="docutils literal"><span class="pre">python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_shell.html">Toolshed: <code class="docutils literal"><span class="pre">shell</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_state.html">Toolshed: <code class="docutils literal"><span class="pre">state</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_system.html">Toolshed: <code class="docutils literal"><span class="pre">system</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_nakedobject.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">NakedObject</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xdict.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XDict</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xlist.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XList</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xmaxheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMaxHeap</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolshed_types_xminheap.html">Toolshed: <code class="docutils literal"><span class="pre">types</span></code> : <code class="docutils literal"><span class="pre">XMinHeap</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="change_log.html">Changes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-framework-license">Naked Framework License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="licenses.html#naked-documentation-license">Naked Documentation License</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="licenses.html">Licenses</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top">
-        <i data-toggle="wy-nav-top" class="icon icon-reorder"></i>
-        <a href="/">Naked</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Naked</a>
       </nav>
 
 
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <ul class="wy-breadcrumbs">
-  <li><a href="index.html">Docs</a> &raquo;</li>
-  <li><a href="">Naked Project Structure</a></li>
-  
-</ul>
-<hr/>
-
           
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Naked Project Structure</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/naked_project_structure.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
   <div class="section" id="naked-project-structure">
 <h1>Naked Project Structure<a class="headerlink" href="#naked-project-structure" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-naked-project">
 <h2>A Naked Project<a class="headerlink" href="#a-naked-project" title="Permalink to this headline">¶</a></h2>
-<p>A Naked project is generated with the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command (<a class="reference external" href="executable.html#the-make-command">Make Command Docs</a>).  Here is the structure of the project.</p>
+<p>A Naked project is generated with the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> command (<a class="reference external" href="executable.html#the-make-command">Make Command Docs</a>).  Here is the structure of the project.</p>
 <div class="section" id="directory-structure">
 <h3>Directory Structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>PROJECT---|
-      |
-      docs---|
-      |      LICENSE
-      |      |
-      |      README.rst
-      |
+<div class="highlight-bash"><div class="highlight"><pre>PROJECT---<span class="p">|</span>
+      <span class="p">|</span>
+      docs---<span class="p">|</span>
+      <span class="p">|</span>      LICENSE
+      <span class="p">|</span>      <span class="p">|</span>
+      <span class="p">|</span>      README.rst
+      <span class="p">|</span>
       tests---<span class="o">(</span>__init__.py<span class="o">)</span>
-      |
-      |
-      lib----|
-      |      PROJECT-------|
-      |      |             commands---<span class="o">(</span>__init__.py<span class="o">)</span>
-      |      |             |
-      |      profiler.py   app.py
-      |                    |
-      |                    settings.py
-      |
+      <span class="p">|</span>
+      <span class="p">|</span>
+      lib----<span class="p">|</span>
+      <span class="p">|</span>      PROJECT-------<span class="p">|</span>
+      <span class="p">|</span>      <span class="p">|</span>             commands---<span class="o">(</span>__init__.py<span class="o">)</span>
+      <span class="p">|</span>      <span class="p">|</span>             <span class="p">|</span>
+      <span class="p">|</span>      profiler.py   app.py
+      <span class="p">|</span>                    <span class="p">|</span>
+      <span class="p">|</span>                    settings.py
+      <span class="p">|</span>
       MANIFEST.in
-      |
+      <span class="p">|</span>
       README.md
-      |
+      <span class="p">|</span>
       setup.cfg
-      |
+      <span class="p">|</span>
       setup.py
 </pre></div>
 </div>
@@ -361,11 +227,11 @@
 </div>
 <div class="section" id="docs-directory">
 <h3>docs Directory<a class="headerlink" href="#docs-directory" title="Permalink to this headline">¶</a></h3>
-<p>This directory contains your LICENSE and README.rst files.  The <tt class="docutils literal"><span class="pre">naked</span></tt> executable will make an attempt to generate a complete license file for you if you use the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command.  See the <a class="reference external" href="executable.html#the-project-license">naked executable documentation</a> for details.</p>
+<p>This directory contains your LICENSE and README.rst files.  The <code class="docutils literal"><span class="pre">naked</span></code> executable will make an attempt to generate a complete license file for you if you use the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> command.  See the <a class="reference external" href="executable.html#the-project-license">naked executable documentation</a> for details.</p>
 </div>
 <div class="section" id="lib-directory">
 <h3>lib Directory<a class="headerlink" href="#lib-directory" title="Permalink to this headline">¶</a></h3>
-<p>This directory is the top level of your application source code and the site within which your setup.py file is instructed to search for your Python source files.  In order to establish your project name as the top level directory for Python imports, the project name is repeated as a sub-directory in the lib directory (with an associated <tt class="docutils literal"><span class="pre">__init__.py</span></tt> file).  This allows you to perform imports with the syntax:</p>
+<p>This directory is the top level of your application source code and the site within which your setup.py file is instructed to search for your Python source files.  In order to establish your project name as the top level directory for Python imports, the project name is repeated as a sub-directory in the lib directory (with an associated <code class="docutils literal"><span class="pre">__init__.py</span></code> file).  This allows you to perform imports with the syntax:</p>
 <div class="highlight-python"><div class="highlight"><pre>import &lt;PROJECT&gt;.commands.&lt;COMMAND-MODULE&gt;
 </pre></div>
 </div>
@@ -373,19 +239,19 @@
 <div class="highlight-python"><div class="highlight"><pre>from &lt;PROJECT&gt;.&lt;directory&gt;.&lt;module&gt; import &lt;object&gt;
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">lib/PROJECT</span></tt> directory contains:</p>
+<p>The <code class="docutils literal"><span class="pre">lib/PROJECT</span></code> directory contains:</p>
 <ul class="simple">
 <li><strong>commands</strong> directory : the location for your application command modules (see above)</li>
 <li><strong>app.py</strong> : your main application script (see below)</li>
-<li><strong>settings.py</strong> : a project settings script (see below). This is also the location of your help, usage, and version strings if you use the commands that the <tt class="docutils literal"><span class="pre">naked</span></tt> executable generates for you with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> (<a class="reference external" href="executable.html#the-make-command">Make Command Docs</a>).</li>
+<li><strong>settings.py</strong> : a project settings script (see below). This is also the location of your help, usage, and version strings if you use the commands that the <code class="docutils literal"><span class="pre">naked</span></code> executable generates for you with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> (<a class="reference external" href="executable.html#the-make-command">Make Command Docs</a>).</li>
 </ul>
 </div>
 <div class="section" id="tests-directory">
 <h3>tests Directory<a class="headerlink" href="#tests-directory" title="Permalink to this headline">¶</a></h3>
-<p>This is an &#8220;empty&#8221; directory (it actually includes an <tt class="docutils literal"><span class="pre">__init__.py</span></tt> file) for your unit tests if you choose to include them.</p>
+<p>This is an &#8220;empty&#8221; directory (it actually includes an <code class="docutils literal"><span class="pre">__init__.py</span></code> file) for your unit tests if you choose to include them.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></tt> command expects your unit tests and/or test runners to be in this directory in order to run the tests.</p>
+<p class="last">The <code class="docutils literal"><span class="pre">naked</span> <span class="pre">test</span></code> command expects your unit tests and/or test runners to be in this directory in order to run the tests.</p>
 </div>
 </div>
 </div>
@@ -393,11 +259,11 @@
 <h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="app-py-file">
 <h3>app.py File<a class="headerlink" href="#app-py-file" title="Permalink to this headline">¶</a></h3>
-<p>The app.py file is the main application script and the start of your script execution.  Your application begins execution in the main() function in this module.  It is pre-populated with module imports, the Naked command line parser, the Naked StateObject, and the necessary code to implement help, usage, and version commands if you use the <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> command to create your project.</p>
+<p>The app.py file is the main application script and the start of your script execution.  Your application begins execution in the main() function in this module.  It is pre-populated with module imports, the Naked command line parser, the Naked StateObject, and the necessary code to implement help, usage, and version commands if you use the <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> command to create your project.</p>
 </div>
 <div class="section" id="license-file">
 <h3>LICENSE File<a class="headerlink" href="#license-file" title="Permalink to this headline">¶</a></h3>
-<p>The LICENSE file is generated in the docs directory and the text of the license is automatically inserted if you use <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> with one of the supported open source licenses.  More details are available in the <a class="reference external" href="executable.html#the-project-license">naked executable documentation</a>.</p>
+<p>The LICENSE file is generated in the docs directory and the text of the license is automatically inserted if you use <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> with one of the supported open source licenses.  More details are available in the <a class="reference external" href="executable.html#the-project-license">naked executable documentation</a>.</p>
 </div>
 <div class="section" id="manifest-in-file">
 <h3>MANIFEST.in File<a class="headerlink" href="#manifest-in-file" title="Permalink to this headline">¶</a></h3>
@@ -405,7 +271,7 @@
 </div>
 <div class="section" id="profiler-py-file">
 <h3>profiler.py File<a class="headerlink" href="#profiler-py-file" title="Permalink to this headline">¶</a></h3>
-<p>The profiler.py file is a profiling runner script.  Insert the code that you would like to profile in the designated code block and run it with the command <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></tt>.  cProfile and pstats are implemented for you.</p>
+<p>The profiler.py file is a profiling runner script.  Insert the code that you would like to profile in the designated code block and run it with the command <code class="docutils literal"><span class="pre">naked</span> <span class="pre">profile</span></code>.  cProfile and pstats are implemented for you.</p>
 </div>
 <div class="section" id="readme-md-file">
 <h3>README.md File<a class="headerlink" href="#readme-md-file" title="Permalink to this headline">¶</a></h3>
@@ -421,7 +287,7 @@
 </div>
 <div class="section" id="settings-py-file">
 <h3>settings.py File<a class="headerlink" href="#settings-py-file" title="Permalink to this headline">¶</a></h3>
-<p>The settings.py file contains project-specific settings.  This includes the string variables for your help, usage, and version implementations if you use the default Naked project that is generated with <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt>.</p>
+<p>The settings.py file contains project-specific settings.  This includes the string variables for your help, usage, and version implementations if you use the default Naked project that is generated with <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code>.</p>
 </div>
 <div class="section" id="setup-cfg-file">
 <h3>setup.cfg File<a class="headerlink" href="#setup-cfg-file" title="Permalink to this headline">¶</a></h3>
@@ -429,32 +295,38 @@
 </div>
 <div class="section" id="setup-py-file">
 <h3>setup.py File<a class="headerlink" href="#setup-py-file" title="Permalink to this headline">¶</a></h3>
-<p>A Python project distribution &amp; install settings file.  <tt class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></tt> populates this file with your project name, developer/organization name, and license type. (<a class="reference external" href="http://docs.python.org/2/distutils/setupscript.html">setup documentation</a>)</p>
+<p>A Python project distribution &amp; install settings file.  <code class="docutils literal"><span class="pre">naked</span> <span class="pre">make</span></code> populates this file with your project name, developer/organization name, and license type. (<a class="reference external" href="http://docs.python.org/2/distutils/setupscript.html">setup documentation</a>)</p>
 </div>
 </div>
 </div>
 
 
+           </div>
+          </div>
           <footer>
   
-    <div class="rst-footer-buttons">
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="help_usage_version.html" class="btn btn-neutral float-right" title="Help, Usage, and Version Commands"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="help_usage_version.html" class="btn btn-neutral float-right" title="Help, Usage, and Version Commands" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="executable.html" class="btn btn-neutral" title="Naked Executable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="executable.html" class="btn btn-neutral" title="Naked Executable" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
 
   <hr/>
 
-  <p>
-      &copy; Copyright 2014, Christopher Simpkins. CC BY-SA 4.0 license.
-  </p>
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Christopher Simpkins. CC BY-SA 4.0 license.
 
-  <a href="https://www.github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="http://readthedocs.org">Read the Docs</a>
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
 </footer>
+
         </div>
       </div>
 
@@ -462,6 +334,38 @@
 
   </div>
   
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.30',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
 
 </body>
 </html>
